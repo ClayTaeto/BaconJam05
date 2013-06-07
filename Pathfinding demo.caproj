@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Pathfinding demo</name>
+    <description></description>
+    <version>1.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>uzos4ezzjulo</unique-id>
+    <saved-with-version>13200</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>800</width>
+        <height>600</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use iOS retina display">All devices</prop>
+    </configuration-settings>
+    <object-folder expanded="1">
+        <object-type name="Enemy" sid="7178115717866501">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="health" sid="3763008400110728" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="5242919199660855">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="4662185220758665">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6572909221621217" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="9552402307720076">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="GridBackground" sid="8490008515589252">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Wall" sid="7721767474675941">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="7249524964621144">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="EnemyTarget" sid="7305284139772999">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9311978852796327" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Turret" sid="1024189438637195">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Turret" sid="6673538042865407">
+                    <behavior id="Turret" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2861191582476308" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.941176" y="0.5" />
+                        <collision-poly>
+                            <point x="0.176471" y="0.176471" />
+                            <point x="0.558824" y="0.0588235" />
+                            <point x="0.882353" y="0.264706" />
+                            <point x="0.970588" y="0.5" />
+                            <point x="0.882353" y="0.764706" />
+                            <point x="0.558824" y="0.941176" />
+                            <point x="0.205882" y="0.823529" />
+                            <point x="0.0588235" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bullet" sid="5593662311723194">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="9907394636034787">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8103758540061763" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.6">
+                        <image-point name="Imagepoint 1" x="1" y="0.6" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemySpawner" sid="8288316297739961">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8242890616807625" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BulletImpactParticles" sid="6510048392121083">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="EnemyDeadParticles" sid="4247828159880818">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="Text" sid="4061122955329679">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder expanded="1">
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder expanded="1">
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="29">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder expanded="1" />
+    <music-folder expanded="1" />
+    <files-folder expanded="1" />
+</c2project>
