@@ -10,6 +10,7 @@
     <unique-id>uzos4ezzjulo</unique-id>
     <saved-with-version>13200</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -22,8 +23,8 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
-        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -171,6 +172,77 @@
         </object-type>
         <object-type name="Keyboard" sid="7641239542626698">
             <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="bloodLabel" sid="9873150500164479">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="fearLabel" sid="3838979615482597">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="bloodCount" sid="8886688958218746">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="fearCount" sid="6629179997584817">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="unitsLabel" sid="1983037481672381">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="unitCount" sid="4680498329490296">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="divider" sid="521046456041154">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="unitTotal" sid="8906072773001025">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="clock" sid="1791756668263385">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6004333110976168" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.21875" y="0.21875" />
+                            <point x="0.5" y="0.101563" />
+                            <point x="0.789063" y="0.210938" />
+                            <point x="0.921875" y="0.5" />
+                            <point x="0.804688" y="0.804688" />
+                            <point x="0.5" y="0.929688" />
+                            <point x="0.203125" y="0.796875" />
+                            <point x="0.09375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="clockOverlay" sid="1828615692272153">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1764466242716212" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0.0507813" />
+                            <point x="0.824219" y="0.175781" />
+                            <point x="0.964844" y="0.5" />
+                            <point x="0.832031" y="0.832031" />
+                            <point x="0.5" y="0.964844" />
+                            <point x="0.179688" y="0.820313" />
+                            <point x="0.0546875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spawnMonster1" sid="2773867145483192">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="spawnMonster2" sid="6563869085640265">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="spawnMonster3" sid="4297260852176939">
+            <plugin id="Button" />
         </object-type>
     </object-folder>
     <families />
