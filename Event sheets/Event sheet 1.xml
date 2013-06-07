@@ -132,7 +132,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="6812024341345744" title="Turret control">
+        <event-group collapsed="1" description="" sid="6812024341345744" title="Turret control">
             <sub-events>
                 <comment>Tell the turrets to target the enemies.</comment>
                 <event-block sid="9470998694995575">
