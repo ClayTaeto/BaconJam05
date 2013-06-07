@@ -198,5 +198,74 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group collapsed="1" description="" sid="9672051528681001" title="Player Control">
+            <sub-events>
+                <event-block sid="8914379310589778">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="4535954710545478" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="214851714749193" type="Player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3811096328638299">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="3772375334327757" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="2920502682190665" type="Player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7637077465056391">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="7315519017465818" type="Keyboard">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="3338747756868501" type="Player">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9585994681630424">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="597711818871017" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="4327446228923075" type="Player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8575499396397283">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="8415087722605849" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="8176558305621102" type="System">
+                            <param id="0" name="Object to create">Enemy</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">Touch.X</param>
+                            <param id="3" name="Y">Touch.Y</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="6007359418121851" type="Enemy">
+                            <param id="0" name="X">EnemyTarget.X</param>
+                            <param id="1" name="Y">EnemyTarget.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
