@@ -276,7 +276,7 @@
                 </behavior-type>
             </behaviors>
             <container>
-                <type>Sprite2</type>
+                <type>highlight</type>
                 <type>Enemy2</type>
             </container>
             <animation-folder expanded="1">
@@ -391,7 +391,7 @@
             <plugin id="NinePatch" />
             <texture />
         </object-type>
-        <object-type name="Sprite2" sid="4671846999904507">
+        <object-type name="highlight" sid="4671846999904507">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Pin" sid="5506486002353097">
@@ -399,7 +399,7 @@
                 </behavior-type>
             </behaviors>
             <container>
-                <type>Sprite2</type>
+                <type>highlight</type>
                 <type>Enemy2</type>
             </container>
             <animation-folder expanded="1">

@@ -75,11 +75,11 @@
                 <condition id="-18" name="On created" sid="2564823951588617" type="Enemy2" />
             </conditions>
             <actions>
-                <action behavior="Pin" id="0" name="Pin to object" sid="1226770852279986" type="Sprite2">
+                <action behavior="Pin" id="0" name="Pin to object" sid="1226770852279986" type="highlight">
                     <param id="0" name="Pin to">Enemy2</param>
                     <param id="1" name="Mode">1</param>
                 </action>
-                <action id="-25" name="Move to bottom" sid="1013654537726533" type="Sprite2" />
+                <action id="-25" name="Move to bottom" sid="1013654537726533" type="highlight" />
             </actions>
         </event-block>
         <event-block sid="6258638149317571">
@@ -89,7 +89,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="5572199381325687" type="Sprite2">
+                <action id="-15" name="Set visible" sid="5572199381325687" type="highlight">
                     <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
@@ -101,7 +101,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="9360436461482583" type="Sprite2">
+                <action id="-15" name="Set visible" sid="9360436461482583" type="highlight">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
