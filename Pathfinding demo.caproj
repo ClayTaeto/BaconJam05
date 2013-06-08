@@ -21,11 +21,12 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
@@ -263,6 +264,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="health" sid="9809835695156435" type="number" />
+                <instance-variable name="Selected" sid="9806440756765526" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="5174377329338228">
@@ -272,6 +274,10 @@
                     <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
+            <container>
+                <type>Sprite2</type>
+                <type>Enemy2</type>
+            </container>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1677880459628897" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -383,6 +389,23 @@
         <object-type name="9patch" sid="188957477049367">
             <plugin id="NinePatch" />
             <texture />
+        </object-type>
+        <object-type name="Sprite2" sid="4671846999904507">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="5506486002353097">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Sprite2</type>
+                <type>Enemy2</type>
+            </container>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3664083505812286" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

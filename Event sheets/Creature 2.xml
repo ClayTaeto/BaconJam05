@@ -59,5 +59,29 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="187356376973532">
+            <conditions>
+                <condition id="-18" name="On created" sid="2564823951588617" type="Enemy2" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="1226770852279986" type="Sprite2">
+                    <param id="0" name="Pin to">Enemy2</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="1013654537726533" type="Sprite2" />
+            </actions>
+        </event-block>
+        <event-block sid="6258638149317571">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="4953629180894124" type="Enemy2">
+                    <param id="0" name="Instance variable">Selected</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="5572199381325687" type="Sprite2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

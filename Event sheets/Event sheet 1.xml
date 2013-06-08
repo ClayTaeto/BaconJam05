@@ -10,7 +10,7 @@
         <include>Creature 2</include>
         <variable constant="0" name="Blood" sid="7342975472718901" static="0" type="number">1000</variable>
         <variable comment="Seconds interval between spawning a new enemy." constant="0" name="EnemySpawnTime" sid="9040819094045715" static="0" type="number">2</variable>
-        <event-group description="" sid="4710446642274308" title="Enemy control">
+        <event-group collapsed="1" description="" sid="4710446642274308" title="Enemy control">
             <sub-events>
                 <comment>Kick off the first enemy moving.</comment>
                 <event-block sid="1484688944814421">
@@ -461,42 +461,45 @@
                                 <action id="-10" name="Add to" sid="9851077952260914" type="System">
                                     <param id="0" name="Variable">CurFear</param>
                                     <param id="1" name="Value">1</param>
-</action>
+                                </action>
                             </actions>
                         </event-block>
-                        <event-block sid="6168601539636549">
+                        <event-block any="1" sid="8736438715004925">
                             <conditions>
-                                <condition id="3" name="On key released" sid="6748961792568376" type="Keyboard">
+                                <condition id="3" name="On key released" sid="5059536441974594" type="Keyboard">
                                     <param id="0" name="Key">27 (Esc)</param>
+                                </condition>
+                                <condition id="3" name="On button released" sid="142515127773283" type="Mouse">
+                                    <param id="0" name="Mouse button">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-12" name="Set group active" sid="2400265639716432" type="System">
+                                <action id="-12" name="Set group active" sid="4537183399858466" type="System">
                                     <param id="0" name="Group name">&quot;NoContext&quot;</param>
                                     <param id="1" name="State">1</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="5225974625561314" type="System">
+                                <action id="-12" name="Set group active" sid="6687700076356041" type="System">
                                     <param id="0" name="Group name">&quot;QueCreature3&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="9182443720719259" type="System">
+                                <action id="-12" name="Set group active" sid="1204304634482442" type="System">
                                     <param id="0" name="Group name">&quot;QueFirstCreature&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
-                                <action id="-12" name="Set group active" sid="292107088723279" type="System">
+                                <action id="-12" name="Set group active" sid="5485499133530695" type="System">
                                     <param id="0" name="Group name">&quot;QueCreature2&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="9938646622433677">
+                                <event-block sid="2772625848744327">
                                     <conditions>
-                                        <condition id="-16" name="Is on layer" sid="5839263539694631" type="Enemy">
+                                        <condition id="-16" name="Is on layer" sid="4251385684020678" type="Enemy">
                                             <param id="0" name="Layer">3</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="8361840360745757" type="Enemy">
+                                        <action id="-15" name="Set visible" sid="69471648364093" type="Enemy">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                     </actions>
@@ -526,7 +529,7 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="6368619134729083" title="QueCreature2">
+                <event-group description="" sid="6368619134729083" title="QueCreature2">
                     <sub-events>
                         <event-block sid="6889264945558852">
                             <conditions>
@@ -554,6 +557,48 @@
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="7303433572696019" type="Enemy3">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="6609048196446418">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="5520916912025483" type="Keyboard">
+                                    <param id="0" name="Key">27 (Esc)</param>
+                                </condition>
+                                <condition id="3" name="On button released" sid="464361059261726" type="Mouse">
+                                    <param id="0" name="Mouse button">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="37696366595421" type="System">
+                                    <param id="0" name="Group name">&quot;NoContext&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="846213643055169" type="System">
+                                    <param id="0" name="Group name">&quot;QueCreature3&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="9899701398074731" type="System">
+                                    <param id="0" name="Group name">&quot;QueFirstCreature&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="303464003747568" type="System">
+                                    <param id="0" name="Group name">&quot;QueCreature2&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="9509270937100176">
+                                    <conditions>
+                                        <condition id="-16" name="Is on layer" sid="8319698284502104" type="Enemy2">
+                                            <param id="0" name="Layer">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="9061131226138965" type="Enemy2">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                     </actions>
@@ -592,47 +637,8 @@
                                 <action id="-10" name="Add to" sid="7503574586119883" type="System">
                                     <param id="0" name="Variable">CurFear</param>
                                     <param id="1" name="Value">2</param>
-</action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9714060207972578">
-                            <conditions>
-                                <condition id="3" name="On key released" sid="2522958111000626" type="Keyboard">
-                                    <param id="0" name="Key">27 (Esc)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Set group active" sid="9988783279455309" type="System">
-                                    <param id="0" name="Group name">&quot;NoContext&quot;</param>
-                                    <param id="1" name="State">1</param>
-                                </action>
-                                <action id="-12" name="Set group active" sid="8391032968447873" type="System">
-                                    <param id="0" name="Group name">&quot;QueCreature3&quot;</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action id="-12" name="Set group active" sid="6428824885979448" type="System">
-                                    <param id="0" name="Group name">&quot;QueFirstCreature&quot;</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action id="-12" name="Set group active" sid="2774308580623876" type="System">
-                                    <param id="0" name="Group name">&quot;QueCreature2&quot;</param>
-                                    <param id="1" name="State">0</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="6015865420054568">
-                                    <conditions>
-                                        <condition id="-16" name="Is on layer" sid="7762703544059131" type="Enemy2">
-                                            <param id="0" name="Layer">3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="1416648283784078" type="Enemy2">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                         <event-block sid="7160302067326366">
                             <conditions>
@@ -659,45 +665,6 @@
                 </event-group>
                 <event-group description="" sid="2398578521124017" title="QueCreature3">
                     <sub-events>
-                        <event-block sid="1320520112938023">
-                            <conditions>
-                                <condition id="3" name="On key released" sid="8407236415742382" type="Keyboard">
-                                    <param id="0" name="Key">27 (Esc)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-12" name="Set group active" sid="5592320152674632" type="System">
-                                    <param id="0" name="Group name">&quot;NoContext&quot;</param>
-                                    <param id="1" name="State">1</param>
-                                </action>
-                                <action id="-12" name="Set group active" sid="4796336952962743" type="System">
-                                    <param id="0" name="Group name">&quot;QueCreature3&quot;</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action id="-12" name="Set group active" sid="7135088789442197" type="System">
-                                    <param id="0" name="Group name">&quot;QueFirstCreature&quot;</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                                <action id="-12" name="Set group active" sid="8465878941024638" type="System">
-                                    <param id="0" name="Group name">&quot;QueCreature2&quot;</param>
-                                    <param id="1" name="State">0</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="9966480007902502">
-                                    <conditions>
-                                        <condition id="-16" name="Is on layer" sid="7516985418019979" type="Enemy3">
-                                            <param id="0" name="Layer">3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="2428625152588643" type="Enemy3">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
                         <event-block sid="3429205205575361">
                             <conditions>
                                 <condition id="-16" name="Is on layer" sid="4451541865806895" type="Enemy2">
@@ -721,6 +688,48 @@
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block any="1" sid="9182458842253976">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="16974182090409" type="Keyboard">
+                                    <param id="0" name="Key">27 (Esc)</param>
+                                </condition>
+                                <condition id="3" name="On button released" sid="975427408358604" type="Mouse">
+                                    <param id="0" name="Mouse button">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="598092705032527" type="System">
+                                    <param id="0" name="Group name">&quot;NoContext&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="756193677249957" type="System">
+                                    <param id="0" name="Group name">&quot;QueCreature3&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="723296040790685" type="System">
+                                    <param id="0" name="Group name">&quot;QueFirstCreature&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="6518834687897599" type="System">
+                                    <param id="0" name="Group name">&quot;QueCreature2&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="463672485776829">
+                                    <conditions>
+                                        <condition id="-16" name="Is on layer" sid="1881905765500963" type="Enemy3">
+                                            <param id="0" name="Layer">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="9215386121925516" type="Enemy3">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="8575499396397283">
                             <conditions>
@@ -930,32 +939,46 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="4794294742187509">
+                    </sub-events>
+                </event-group>
+                <event-block sid="5072551909019524">
+                    <conditions>
+                        <condition id="3" name="On button released" sid="8198011529221693" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="3322035774618027" type="9patch">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="898713943557628">
                             <conditions>
-                                <condition id="3" name="On button released" sid="6740881493716721" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
+                                <condition id="1" name="Is overlapping another object" sid="8199314890318175" type="Enemy">
+                                    <param id="0" name="Object">9patch</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="2887037570404191" type="9patch">
-                                    <param id="0" name="Visibility">0</param>
+                                <action behavior="Pathfinding" id="2" name="Stop" sid="3564904498478811" type="Enemy" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="6331554687796084">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="3279773292648049" type="Enemy2">
+                                    <param id="0" name="Object">9patch</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="2" name="Stop" sid="1044815814278263" type="Enemy2" />
+                                <action id="-13" name="Set boolean" sid="1274873216744863" type="Enemy2">
+                                    <param id="0" name="Instance variable">Selected</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="9207797924230652">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="1778169918607084" type="Enemy">
-                                            <param id="0" name="Object">9patch</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Pathfinding" id="2" name="Stop" sid="4624674433106565" type="Enemy" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
                     </sub-events>
-                </event-group>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="125126570447209" title="Paused">
