@@ -3,7 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <variable constant="0" name="Blood" sid="7342975472718901" static="0" type="number">100</variable>
+        <include>Creature 3</include>
+        <include>Creature 2</include>
+        <variable constant="0" name="Blood" sid="7342975472718901" static="0" type="number">1000</variable>
         <variable comment="Seconds interval between spawning a new enemy." constant="0" name="EnemySpawnTime" sid="9040819094045715" static="0" type="number">2</variable>
         <event-group collapsed="1" description="" sid="4710446642274308" title="Enemy control">
             <sub-events>
@@ -199,7 +201,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="9672051528681001" title="Player Control">
+        <event-group description="" sid="9672051528681001" title="Player Control">
             <sub-events>
                 <event-block sid="8914379310589778">
                     <conditions>
@@ -237,7 +239,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="9585994681630424">
+                <event-block sid="1844068944007671">
                     <conditions>
                         <condition id="2" name="Key is down" sid="597711818871017" type="Keyboard">
                             <param id="0" name="Key">68 (D)</param>
@@ -249,32 +251,182 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="8575499396397283">
+                <event-block sid="9585994681630424">
                     <conditions>
-                        <condition id="1" name="On any touch end" sid="8415087722605849" type="Touch" />
-                        <condition id="-14" name="Compare variable" sid="4469943782629017" type="System">
-                            <param id="0" name="Variable">Blood</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">10</param>
+                        <condition id="3" name="On key released" sid="9077303062055645" type="Keyboard">
+                            <param id="0" name="Key">49 (1)</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="8176558305621102" type="System">
-                            <param id="0" name="Object to create">Enemy</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">Touch.X</param>
-                            <param id="3" name="Y">Touch.Y</param>
+                        <action id="-12" name="Set group active" sid="6794908815403283" type="System">
+                            <param id="0" name="Group name">&quot;QueFirstCreature&quot;</param>
+                            <param id="1" name="State">1</param>
                         </action>
-                        <action behavior="Pathfinding" id="0" name="Find path" sid="6007359418121851" type="Enemy">
-                            <param id="0" name="X">EnemyTarget.X</param>
-                            <param id="1" name="Y">EnemyTarget.Y</param>
+                        <action id="-12" name="Set group active" sid="3826267722935619" type="System">
+                            <param id="0" name="Group name">&quot;QueCreature2&quot;</param>
+                            <param id="1" name="State">0</param>
                         </action>
-                        <action id="-11" name="Subtract from" sid="6472622537196469" type="System">
-                            <param id="0" name="Variable">Blood</param>
-                            <param id="1" name="Value">10</param>
+                        <action id="-12" name="Set group active" sid="7204501597028991" type="System">
+                            <param id="0" name="Group name">&quot;QueCreature3&quot;</param>
+                            <param id="1" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="7677469837537414">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="9297624385010553" type="Keyboard">
+                            <param id="0" name="Key">50 (2)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="274880566994233" type="System">
+                            <param id="0" name="Group name">&quot;QueCreature2&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5882703158621401" type="System">
+                            <param id="0" name="Group name">&quot;QueFirstCreature&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="8078808527168507" type="System">
+                            <param id="0" name="Group name">&quot;QueCreature3&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7299953505963225">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="2461513840280582" type="Keyboard">
+                            <param id="0" name="Key">51 (3)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="75865904941625" type="System">
+                            <param id="0" name="Group name">&quot;QueCreature3&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="7247065295747573" type="System">
+                            <param id="0" name="Group name">&quot;QueFirstCreature&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="9015938894990414" type="System">
+                            <param id="0" name="Group name">&quot;QueCreature2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8524059437359193" title="Spawning">
+            <sub-events>
+                <event-block sid="1336530422566161">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="5033507053392256" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="3172763333310277" type="System">
+                            <param id="0" name="Group name">&quot;QueCreature3&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="2596233018210087" type="System">
+                            <param id="0" name="Group name">&quot;QueFirstCreature&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="444113795247692" type="System">
+                            <param id="0" name="Group name">&quot;QueCreature2&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="9689225383640753" title="QueFirstCreature">
+                    <sub-events>
+                        <event-block sid="8575499396397283">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="8415087722605849" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="4469943782629017" type="System">
+                                    <param id="0" name="Variable">Blood</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="6990979379492462" type="System">
+                                    <param id="0" name="Object to create">Enemy</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">Touch.X</param>
+                                    <param id="3" name="Y">Touch.Y</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="6007359418121851" type="Enemy">
+                                    <param id="0" name="X">EnemyTarget.X</param>
+                                    <param id="1" name="Y">EnemyTarget.Y</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="6472622537196469" type="System">
+                                    <param id="0" name="Variable">Blood</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="6368619134729083" title="QueCreature2">
+                    <sub-events>
+                        <event-block sid="8575499396397283">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="8415087722605849" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="4469943782629017" type="System">
+                                    <param id="0" name="Variable">Blood</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="8176558305621102" type="System">
+                                    <param id="0" name="Object to create">Enemy2</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">Touch.X</param>
+                                    <param id="3" name="Y">Touch.Y</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="6007359418121851" type="Enemy2">
+                                    <param id="0" name="X">EnemyTarget.X</param>
+                                    <param id="1" name="Y">EnemyTarget.Y</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="6472622537196469" type="System">
+                                    <param id="0" name="Variable">Blood</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="2398578521124017" title="QueCreature3">
+                    <sub-events>
+                        <event-block sid="8575499396397283">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="8415087722605849" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="4469943782629017" type="System">
+                                    <param id="0" name="Variable">Blood</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="8176558305621102" type="System">
+                                    <param id="0" name="Object to create">Enemy3</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">Touch.X</param>
+                                    <param id="3" name="Y">Touch.Y</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="6007359418121851" type="Enemy3">
+                                    <param id="0" name="X">EnemyTarget.X</param>
+                                    <param id="1" name="Y">EnemyTarget.Y</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="6472622537196469" type="System">
+                                    <param id="0" name="Variable">Blood</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
     </events>
