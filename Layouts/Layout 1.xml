@@ -62,6 +62,7 @@
                     <instance-variables>
                         <health>30</health>
                         <Selected>false</Selected>
+                        <Move>false</Move>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">

@@ -59,6 +59,7 @@
             <instance-variables>
                 <instance-variable name="health" sid="3763008400110728" type="number" />
                 <instance-variable name="Selected" sid="1578795669004201" type="boolean" />
+                <instance-variable name="Move" sid="3177255096108568" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="5242919199660855">

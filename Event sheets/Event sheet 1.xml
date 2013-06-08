@@ -47,6 +47,9 @@
                 <event-block sid="7901325410843667">
                     <conditions>
                         <condition behavior="Pathfinding" id="0" name="On path found" sid="5386102689221836" type="Enemy" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="2822512110494792" type="Enemy">
+                            <param id="0" name="Instance variable">Move</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Pathfinding" id="1" name="Move along path" sid="6223254490044665" type="Enemy" />
@@ -1151,6 +1154,23 @@
                             </conditions>
                             <actions>
                                 <action behavior="Pathfinding" id="2" name="Stop" sid="3564904498478811" type="Enemy" />
+                                <action id="-13" name="Set boolean" sid="8583672443230257" type="Enemy">
+                                    <param id="0" name="Instance variable">Selected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6520648694928792">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="7152543911031843" type="Enemy">
+                                    <param id="0" name="Object">9patch</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="4976981725312313" type="Enemy">
+                                    <param id="0" name="Instance variable">Selected</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="6331554687796084">
@@ -1180,6 +1200,33 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="4517433059773486">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="6158836269580741" type="Enemy3">
+                                    <param id="0" name="Object">9patch</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="2" name="Stop" sid="3826297040888348" type="Enemy3" />
+                                <action id="-13" name="Set boolean" sid="5058115286342865" type="Enemy3">
+                                    <param id="0" name="Instance variable">Selected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3399207248570553">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="6450828947049652" type="Enemy3">
+                                    <param id="0" name="Object">9patch</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="9817963441678301" type="Enemy3">
+                                    <param id="0" name="Instance variable">Selected</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="7827845033037409">
@@ -1197,16 +1244,50 @@
                     <sub-events>
                         <event-block sid="381021720225303">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="20846606828074" type="Enemy2">
+                                <condition id="-8" name="Is boolean instance variable set" sid="20846606828074" type="Enemy">
                                     <param id="0" name="Instance variable">Selected</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="3483290627766392" type="Enemy2">
+                                <action id="-13" name="Set boolean" sid="3483290627766392" type="Enemy">
                                     <param id="0" name="Instance variable">Move</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="3083962175347386" type="Enemy2">
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="3083962175347386" type="Enemy">
+                                    <param id="0" name="X">EnemyTarget.X</param>
+                                    <param id="1" name="Y">EnemyTarget.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2502259310990398">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="9476694183652013" type="Enemy2">
+                                    <param id="0" name="Instance variable">Selected</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="9299409639811804" type="Enemy2">
+                                    <param id="0" name="Instance variable">Move</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="177167159671996" type="Enemy2">
+                                    <param id="0" name="X">EnemyTarget.X</param>
+                                    <param id="1" name="Y">EnemyTarget.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7596343475875335">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="4648601164060677" type="Enemy3">
+                                    <param id="0" name="Instance variable">Selected</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="419958772706842" type="Enemy3">
+                                    <param id="0" name="Instance variable">Move</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="4354357649685238" type="Enemy3">
                                     <param id="0" name="X">EnemyTarget.X</param>
                                     <param id="1" name="Y">EnemyTarget.Y</param>
                                 </action>

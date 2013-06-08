@@ -6,6 +6,9 @@
         <event-block sid="8594027617545866">
             <conditions>
                 <condition behavior="Pathfinding" id="0" name="On path found" sid="8589248657922774" type="Enemy3" />
+                <condition id="-8" name="Is boolean instance variable set" sid="1031461376169737" type="Enemy3">
+                    <param id="0" name="Instance variable">Move</param>
+                </condition>
             </conditions>
             <actions>
                 <action behavior="Pathfinding" id="1" name="Move along path" sid="6094485834222057" type="Enemy3" />
