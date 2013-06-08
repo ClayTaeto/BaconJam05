@@ -12,6 +12,8 @@
     <used-plugins>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -44,7 +46,7 @@
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
-        <prop name="Hide address bar">No</prop>
+        <prop name="Hide address bar">Yes</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Preview browser">(default)</prop>
         <prop name="Sampling">Linear</prop>
@@ -55,6 +57,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="health" sid="3763008400110728" type="number" />
+                <instance-variable name="Selected" sid="1578795669004201" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="5242919199660855">
@@ -215,11 +218,6 @@
         </object-type>
         <object-type name="clockOverlay" sid="1828615692272153">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Anchor" sid="7165814989861867">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1764466242716212" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -299,6 +297,93 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Mouse" sid="3720387382403969">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Black" sid="7088187314876883">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="1783165590230491">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="DarkOrange" sid="7920666243636101">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="DarkPurple" sid="1487793104355452">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="9224189331711608">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Sprite" sid="1360172647759572">
+            <plugin id="Sprite" />
+            <container>
+                <type>Torch</type>
+                <type>TorchBase</type>
+                <type>Sprite</type>
+            </container>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7560809273156494" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.405" y="0.405" />
+                            <point x="0.5" y="0.3675" />
+                            <point x="0.5975" y="0.4025" />
+                            <point x="0.6425" y="0.5" />
+                            <point x="0.605" y="0.605" />
+                            <point x="0.5" y="0.645" />
+                            <point x="0.4" y="0.6" />
+                            <point x="0.365" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Torch" sid="7806734619265391">
+            <plugin id="Sprite" />
+            <container>
+                <type>Torch</type>
+                <type>TorchBase</type>
+                <type>Sprite</type>
+            </container>
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9446839667374565" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TorchBase" sid="3040391291876547">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="323972429545691">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Torch</type>
+                <type>TorchBase</type>
+                <type>Sprite</type>
+            </container>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8013761470715152" speed="5">
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="9patch" sid="188957477049367">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -308,6 +393,7 @@
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Creature 2.xml</event-sheet>
         <event-sheet>Creature 3.xml</event-sheet>
+        <event-sheet>DayNight Cycle.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="29">
@@ -316,6 +402,7 @@
             </properties>
         </global-instance>
         <global-instance type="Keyboard" uid="5" />
+        <global-instance type="Mouse" uid="13" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
