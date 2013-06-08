@@ -4,6 +4,7 @@
     <name>Event sheet 1</name>
     <events>
         <variable comment="Maximum Fear the user has available" constant="0" name="TotFear" sid="2163160469199888" static="0" type="number">20</variable>
+        <variable comment="Amount of Fear the user currently has" constant="0" name="CurFear" sid="3571698055154923" static="0" type="number">0</variable>
         <include>DayNight Cycle</include>
         <include>Creature 3</include>
         <include>Creature 2</include>
@@ -457,6 +458,10 @@
                                     <param id="0" name="Variable">Blood</param>
                                     <param id="1" name="Value">10</param>
                                 </action>
+                                <action id="-10" name="Add to" sid="9851077952260914" type="System">
+                                    <param id="0" name="Variable">CurFear</param>
+                                    <param id="1" name="Value">1</param>
+</action>
                             </actions>
                         </event-block>
                         <event-block sid="6168601539636549">
@@ -584,6 +589,10 @@
                                     <param id="0" name="Variable">Blood</param>
                                     <param id="1" name="Value">10</param>
                                 </action>
+                                <action id="-10" name="Add to" sid="7503574586119883" type="System">
+                                    <param id="0" name="Variable">CurFear</param>
+                                    <param id="1" name="Value">2</param>
+</action>
                             </actions>
                         </event-block>
                         <event-block sid="9714060207972578">
