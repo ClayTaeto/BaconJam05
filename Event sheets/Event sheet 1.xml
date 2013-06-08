@@ -10,7 +10,7 @@
         <include>Creature 2</include>
         <variable constant="0" name="Blood" sid="7342975472718901" static="0" type="number">1000</variable>
         <variable comment="Seconds interval between spawning a new enemy." constant="0" name="EnemySpawnTime" sid="9040819094045715" static="0" type="number">2</variable>
-        <event-group collapsed="1" description="" sid="4710446642274308" title="Enemy control">
+        <event-group description="" sid="4710446642274308" title="Enemy control">
             <sub-events>
                 <comment>Kick off the first enemy moving.</comment>
                 <event-block sid="1484688944814421">
@@ -872,6 +872,15 @@
                         <condition id="0" name="On key pressed" sid="6721619191978097" type="Keyboard">
                             <param id="0" name="Key">27 (Esc)</param>
                         </condition>
+                        <condition id="-15" inverted="1" name="Is group active" sid="862895011094863" type="System">
+                            <param id="0" name="Group name">&quot;QueFirstCreature&quot;</param>
+                        </condition>
+                        <condition id="-15" inverted="1" name="Is group active" sid="8931586298126012" type="System">
+                            <param id="0" name="Group name">&quot;QueCreature2&quot;</param>
+                        </condition>
+                        <condition id="-15" inverted="1" name="Is group active" sid="7061592288761847" type="System">
+                            <param id="0" name="Group name">&quot;QueCreature3&quot;</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -985,7 +994,7 @@
             <sub-events>
                 <event-block sid="7640353785339016">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="2192582506145108" type="Keyboard">
+                        <condition id="3" name="On key released" sid="2192582506145108" type="Keyboard">
                             <param id="0" name="Key">27 (Esc)</param>
                         </condition>
                     </conditions>
