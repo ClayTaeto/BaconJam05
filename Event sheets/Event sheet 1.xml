@@ -25,7 +25,7 @@
                     </actions>
                 </event-block>
                 <comment>Every 2 seconds, but gradually reducing the interval, spawn a new enemy and move it to the target.</comment>
-                <event-block sid="3170365284224344">
+                <event-block disabled="1" sid="3170365284224344">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="4214202651677772" type="System">
                             <param id="0" name="Interval (seconds)">EnemySpawnTime</param>
@@ -44,7 +44,7 @@
                     </actions>
                     <sub-events>
                         <comment>Every time an enemy spawn, the spawn interval reduces slightly.  This makes them very gradually come faster!  Make sure it doesn&apos;t go below every 0.5 seconds though.</comment>
-                        <event-block sid="2092912505732876">
+                        <event-block disabled="1" sid="2092912505732876">
                             <conditions>
                                 <condition id="-14" name="Compare variable" sid="9765037640057071" type="System">
                                     <param id="0" name="Variable">EnemySpawnTime</param>
@@ -208,7 +208,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9672051528681001" title="Player Control">
+        <event-group collapsed="1" description="" sid="9672051528681001" title="Player Control">
             <sub-events>
                 <event-block sid="8914379310589778">
                     <conditions>
@@ -350,8 +350,8 @@
                         <action id="-3" name="Create object" sid="6990979379492462" type="System">
                             <param id="0" name="Object to create">Enemy</param>
                             <param id="1" name="Layer">3</param>
-                            <param id="2" name="X">Touch.X</param>
-                            <param id="3" name="Y">Touch.Y</param>
+                            <param id="2" name="X">-200</param>
+                            <param id="3" name="Y">-200</param>
                         </action>
                         <action id="-15" name="Set visible" sid="5136154775548218" type="Enemy">
                             <param id="0" name="Visibility">0</param>
@@ -359,8 +359,8 @@
                         <action id="-3" name="Create object" sid="9171458954140022" type="System">
                             <param id="0" name="Object to create">Enemy2</param>
                             <param id="1" name="Layer">3</param>
-                            <param id="2" name="X">Touch.X</param>
-                            <param id="3" name="Y">Touch.Y</param>
+                            <param id="2" name="X">-200</param>
+                            <param id="3" name="Y">-200</param>
                         </action>
                         <action id="-15" name="Set visible" sid="3058165614508534" type="Enemy2">
                             <param id="0" name="Visibility">0</param>
@@ -368,11 +368,20 @@
                         <action id="-3" name="Create object" sid="6207986878425605" type="System">
                             <param id="0" name="Object to create">Enemy3</param>
                             <param id="1" name="Layer">3</param>
-                            <param id="2" name="X">Touch.X</param>
-                            <param id="3" name="Y">Touch.Y</param>
+                            <param id="2" name="X">-200</param>
+                            <param id="3" name="Y">-200</param>
                         </action>
                         <action id="-15" name="Set visible" sid="7504291359466634" type="Enemy3">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="6012633659840347" type="Enemy2">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="411005075157042" type="Enemy">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="4153667727755134" type="Enemy3">
+                            <param id="0" name="Collisions">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -416,11 +425,11 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="2738184193948553" type="Enemy">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
                                         <action id="-15" name="Set visible" sid="6576649402541116" type="Enemy2">
                                             <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="2738184193948553" type="Enemy">
+                                            <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="1358977162911945" type="Enemy3">
                                             <param id="0" name="Visibility">0</param>
@@ -724,7 +733,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="9215386121925516" type="Enemy3">
+                                        <action disabled="1" id="-15" name="Set visible" sid="9215386121925516" type="Enemy3">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                     </actions>
@@ -791,7 +800,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5655471655657409" title="UI">
+        <event-group collapsed="1" description="" sid="5655471655657409" title="UI">
             <sub-events>
                 <event-block sid="4954009397237554">
                     <conditions>
@@ -865,7 +874,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7842806570830404" title="NoContext">
+        <event-group collapsed="1" description="" sid="7842806570830404" title="NoContext">
             <sub-events>
                 <event-block sid="2691478570133195">
                     <conditions>
@@ -981,7 +990,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="125126570447209" title="Paused">
+        <event-group collapsed="1" description="" sid="125126570447209" title="Paused">
             <sub-events>
                 <event-block sid="7640353785339016">
                     <conditions>
