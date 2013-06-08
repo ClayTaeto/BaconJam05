@@ -42,24 +42,6 @@
                             <param id="1" name="Y">EnemyTarget.Y</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <comment>Every time an enemy spawn, the spawn interval reduces slightly.  This makes them very gradually come faster!  Make sure it doesn&apos;t go below every 0.5 seconds though.</comment>
-                        <event-block sid="2092912505732876">
-                            <conditions>
-                                <condition disabled="1" id="-14" name="Compare variable" sid="9765037640057071" type="System">
-                                    <param id="0" name="Variable">EnemySpawnTime</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0.5</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action disabled="1" id="-11" name="Subtract from" sid="5573817914630814" type="System">
-                                    <param id="0" name="Variable">EnemySpawnTime</param>
-                                    <param id="1" name="Value">0.01</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <comment>Once a path has been found, start moving along it.</comment>
                 <event-block sid="7901325410843667">
