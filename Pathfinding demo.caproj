@@ -10,6 +10,7 @@
     <unique-id>uzos4ezzjulo</unique-id>
     <saved-with-version>13200</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -22,6 +23,7 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -171,6 +173,67 @@
         </object-type>
         <object-type name="Keyboard" sid="7641239542626698">
             <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="bloodCount" sid="8886688958218746">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="fearCount" sid="6629179997584817">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="unitCount" sid="4680498329490296">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="clock" sid="1791756668263385">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="5235173628425485">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6004333110976168" speed="5">
+                    <frame duration="1" hotspotX="0.503906" hotspotY="0.503906">
+                        <collision-poly>
+                            <point x="0.78125" y="0.21875" />
+                            <point x="0.898437" y="0.5" />
+                            <point x="0.789062" y="0.789063" />
+                            <point x="0.5" y="0.921875" />
+                            <point x="0.195312" y="0.804688" />
+                            <point x="0.070312" y="0.5" />
+                            <point x="0.203125" y="0.203125" />
+                            <point x="0.5" y="0.09375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="clockOverlay" sid="1828615692272153">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1764466242716212" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.1875" y="0.1875" />
+                            <point x="0.5" y="0.0507813" />
+                            <point x="0.824219" y="0.175781" />
+                            <point x="0.964844" y="0.5" />
+                            <point x="0.832031" y="0.832031" />
+                            <point x="0.5" y="0.964844" />
+                            <point x="0.179688" y="0.820313" />
+                            <point x="0.0546875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spawnMonster1" sid="2773867145483192">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="spawnMonster2" sid="6563869085640265">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="spawnMonster3" sid="4297260852176939">
+            <plugin id="Button" />
         </object-type>
         <object-type name="Enemy2" sid="6611070487297803">
             <plugin id="Sprite" />
