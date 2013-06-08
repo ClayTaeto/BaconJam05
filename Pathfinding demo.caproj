@@ -265,6 +265,7 @@
             <instance-variables>
                 <instance-variable name="health" sid="9809835695156435" type="number" />
                 <instance-variable name="Selected" sid="9806440756765526" type="boolean" />
+                <instance-variable comment="Tells unit if it should be moving along its path." name="Move" sid="4461390934544604" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="5174377329338228">

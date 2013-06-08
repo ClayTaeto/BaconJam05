@@ -6,6 +6,9 @@
         <event-block sid="5904234828982759">
             <conditions>
                 <condition behavior="Pathfinding" id="0" name="On path found" sid="2701520931391261" type="Enemy2" />
+                <condition id="-8" name="Is boolean instance variable set" sid="742210100922643" type="Enemy2">
+                    <param id="0" name="Instance variable">Move</param>
+                </condition>
             </conditions>
             <actions>
                 <action behavior="Pathfinding" id="1" name="Move along path" sid="1110638678631834" type="Enemy2" />
@@ -26,6 +29,10 @@
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="-9" name="Destroy" sid="7294951966877864" type="Enemy2" />
+                <action id="-11" name="Subtract from" sid="4109640625547895" type="System">
+                    <param id="0" name="Variable">CurFear</param>
+                    <param id="1" name="Value">2</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="1480676911898603">
@@ -35,10 +42,14 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="8056385315506728" type="Enemy2" />
-                <action id="-11" name="Subtract from" sid="3200044908768283" type="System">
+                <action disabled="1" id="-9" name="Destroy" sid="8056385315506728" type="Enemy2" />
+                <action disabled="1" id="-11" name="Subtract from" sid="3200044908768283" type="System">
                     <param id="0" name="Variable">CurFear</param>
                     <param id="1" name="Value">2</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="7926756165046365" type="Enemy2">
+                    <param id="0" name="Instance variable">Move</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
             <sub-events>
@@ -80,6 +91,18 @@
             <actions>
                 <action id="-15" name="Set visible" sid="5572199381325687" type="Sprite2">
                     <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3907126309318045">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="268500469785695" type="Enemy2">
+                    <param id="0" name="Instance variable">Selected</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="9360436461482583" type="Sprite2">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
