@@ -180,16 +180,7 @@
         <object-type name="fearCount" sid="6629179997584817">
             <plugin id="Text" />
         </object-type>
-        <object-type name="unitsLabel" sid="1983037481672381">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="unitCount" sid="4680498329490296">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="divider" sid="521046456041154">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="unitTotal" sid="8906072773001025">
             <plugin id="Text" />
         </object-type>
         <object-type name="clock" sid="1791756668263385">

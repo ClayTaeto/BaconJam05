@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable comment="Maximum Units the user can have at once" constant="0" name="TotUnits" sid="2163160469199888" static="0" type="number">5</variable>
+        <variable comment="Number of Units the user currently has" constant="0" name="CurUnits" sid="3571698055154923" static="0" type="number">0</variable>
         <variable constant="0" name="Fear" sid="2364123027172711" static="0" type="number">100</variable>
         <variable constant="0" name="Blood" sid="7342975472718901" static="0" type="number">100</variable>
         <variable comment="Seconds interval between spawning a new enemy." constant="0" name="EnemySpawnTime" sid="9040819094045715" static="0" type="number">2</variable>
@@ -256,7 +258,12 @@
                         <condition id="-14" name="Compare variable" sid="4469943782629017" type="System">
                             <param id="0" name="Variable">Blood</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">10</param>
+                            <param id="2" name="Value">9</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7909792267935986" type="System">
+                            <param id="0" name="Variable">CurUnits</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">TotUnits</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -274,6 +281,10 @@
                             <param id="0" name="Variable">Blood</param>
                             <param id="1" name="Value">10</param>
                         </action>
+                        <action id="-10" name="Add to" sid="9851077952260914" type="System">
+                            <param id="0" name="Variable">CurUnits</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -288,6 +299,9 @@
                 </action>
                 <action id="0" name="Set text" sid="5358789143955659" type="fearCount">
                     <param id="0" name="Text">&quot;Fear: &quot; &amp; Fear</param>
+                </action>
+                <action id="0" name="Set text" sid="6537876147330342" type="unitCount">
+                    <param id="0" name="Text">&quot;Units: &quot; &amp; CurUnits &amp; &quot; / &quot; &amp; TotUnits</param>
                 </action>
             </actions>
         </event-block>
