@@ -27,7 +27,7 @@
                 <comment>Every 2 seconds, but gradually reducing the interval, spawn a new enemy and move it to the target.</comment>
                 <event-block sid="3170365284224344">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="4214202651677772" type="System">
+                        <condition disabled="1" id="-6" name="Every X seconds" sid="4214202651677772" type="System">
                             <param id="0" name="Interval (seconds)">EnemySpawnTime</param>
                         </condition>
                     </conditions>
@@ -37,7 +37,7 @@
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action behavior="Pathfinding" id="0" name="Find path" sid="9314192216507948" type="Enemy">
+                        <action behavior="Pathfinding" disabled="1" id="0" name="Find path" sid="9314192216507948" type="Enemy">
                             <param id="0" name="X">EnemyTarget.X</param>
                             <param id="1" name="Y">EnemyTarget.Y</param>
                         </action>
@@ -46,14 +46,14 @@
                         <comment>Every time an enemy spawn, the spawn interval reduces slightly.  This makes them very gradually come faster!  Make sure it doesn&apos;t go below every 0.5 seconds though.</comment>
                         <event-block sid="2092912505732876">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="9765037640057071" type="System">
+                                <condition disabled="1" id="-14" name="Compare variable" sid="9765037640057071" type="System">
                                     <param id="0" name="Variable">EnemySpawnTime</param>
                                     <param id="1" name="Comparison">4</param>
                                     <param id="2" name="Value">0.5</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-11" name="Subtract from" sid="5573817914630814" type="System">
+                                <action disabled="1" id="-11" name="Subtract from" sid="5573817914630814" type="System">
                                     <param id="0" name="Variable">EnemySpawnTime</param>
                                     <param id="1" name="Value">0.01</param>
                                 </action>
@@ -638,6 +638,10 @@
                                     <param id="0" name="Variable">CurFear</param>
                                     <param id="1" name="Value">2</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="3140323832422539" type="Enemy2">
+                                    <param id="0" name="Instance variable">Selected</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="7160302067326366">
@@ -898,6 +902,24 @@
                                     <param id="0" name="Group name">&quot;Paused&quot;</param>
                                     <param id="1" name="State">0</param>
                                 </action>
+                                <action id="-15" name="Set visible" sid="8081615755890292" type="pauseMask">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set enabled" sid="7198236239063995" type="spawnMonster1">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                                <action id="3" name="Set enabled" sid="8463405971331577" type="spawnMonster2">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                                <action id="3" name="Set enabled" sid="5528330713805122" type="spawnMonster3">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="9853060372181588" type="pauseImage">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="6011842427912003" type="pauseText">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="3839120270825024">
@@ -911,6 +933,24 @@
                                 <action id="-12" name="Set group active" sid="6137248750588016" type="System">
                                     <param id="0" name="Group name">&quot;Paused&quot;</param>
                                     <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="6955446996470502" type="pauseMask">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="3" name="Set enabled" sid="6583671312426052" type="spawnMonster1">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                                <action id="3" name="Set enabled" sid="314754345312207" type="spawnMonster2">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                                <action id="3" name="Set enabled" sid="593988948245914" type="spawnMonster3">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2475941536135971" type="pauseImage">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2378692276923522" type="pauseText">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -987,6 +1027,19 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="7827845033037409">
+                    <conditions>
+                        <condition id="3" name="On button released" sid="5213765541820654" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="8906017000620749" type="EnemyTarget">
+                            <param id="0" name="X">Mouse.X</param>
+                            <param id="1" name="Y">Mouse.Y</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

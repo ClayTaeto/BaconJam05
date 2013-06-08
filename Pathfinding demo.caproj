@@ -407,6 +407,40 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="pauseMask" sid="6761078162077586">
+            <plugin id="Sprite" />
+            <container>
+                <type>pauseText</type>
+                <type>pauseImage</type>
+                <type>pauseMask</type>
+            </container>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2626435714812535" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pauseImage" sid="7306487971123301">
+            <plugin id="Sprite" />
+            <container>
+                <type>pauseText</type>
+                <type>pauseImage</type>
+                <type>pauseMask</type>
+            </container>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7693184943480302" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pauseText" sid="1580662398967389">
+            <plugin id="Text" />
+            <container>
+                <type>pauseText</type>
+                <type>pauseImage</type>
+                <type>pauseMask</type>
+            </container>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
