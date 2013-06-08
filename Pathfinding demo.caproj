@@ -19,6 +19,7 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
@@ -49,7 +50,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-type name="Enemy" sid="7178115717866501">
             <plugin id="Sprite" />
             <instance-variables>
@@ -182,6 +183,11 @@
         </object-type>
         <object-type name="unitCount" sid="4680498329490296">
             <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="3617861576438856">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="clock" sid="1791756668263385">
             <plugin id="Sprite" />
@@ -209,6 +215,11 @@
         </object-type>
         <object-type name="clockOverlay" sid="1828615692272153">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="7165814989861867">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1764466242716212" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -228,12 +239,27 @@
         </object-type>
         <object-type name="spawnMonster1" sid="2773867145483192">
             <plugin id="Button" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="9669593095328866">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="spawnMonster2" sid="6563869085640265">
             <plugin id="Button" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="7644396573271276">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="spawnMonster3" sid="4297260852176939">
             <plugin id="Button" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="3763158356173454">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="Enemy2" sid="6611070487297803">
             <plugin id="Sprite" />
