@@ -14,10 +14,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet active="1">Event sheet 1</event-sheet>
         <event-sheet>Creature 2</event-sheet>
         <event-sheet>Creature 3</event-sheet>
+        <event-sheet>DayNight Cycle</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
-        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Project settings" />
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
