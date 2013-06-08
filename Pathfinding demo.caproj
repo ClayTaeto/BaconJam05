@@ -444,6 +444,51 @@
                 <type>pauseMask</type>
             </container>
         </object-type>
+        <object-type name="Wall2" sid="6618872247980239">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="4814678025048927">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Wall3" sid="1884758883691483">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="2825543975842281">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Wall4" sid="2483831253577589">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="9374711618098182">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Wall5" sid="7462547684658684">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="1599547225339113">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Wall6" sid="3598671905937562">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5743394761075775">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
