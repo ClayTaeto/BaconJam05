@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>DayNight Cycle</name>
+    <events>
+        <variable constant="0" name="Period" sid="5806452153841481" static="0" type="number">0</variable>
+        <event-block sid="2606727865369688">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6939026851423174" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="244473957812593" type="System">
+                    <param id="0" name="Variable">Period</param>
+                    <param id="1" name="Value">time*4</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Darken the sky when period is below 0.2 (morning/evening is darker than middle of day)</comment>
+                <comment>lerp gradually increases the opacity from 0 to 60 or reverse depending on the value of unlerp, which gives the progress based on range between 0.2 and -0.5 (well into night, when it should be max darkness). Clamp makes sure opacity stays in the 0 - 60 range.</comment>
+                <event-block sid="4209403159048467">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1668745918013499" type="System">
+                            <param id="0" name="First value">sin(Period)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">0.2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="4882077558061779" type="Black">
+                            <param id="0" name="Opacity">clamp(lerp(0,60, unlerp(0.2, -0.5, sin(Period))),0,60)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Similar to above, except we only tint orange around sine 0. 20 is the highest opacity DarkOrange goes.</comment>
+                <event-block sid="3308591708233851">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="505520556331623" type="System">
+                            <param id="0" name="Value">sin(Period)</param>
+                            <param id="1" name="Lower bound">-0.4</param>
+                            <param id="2" name="Upper bound">-0.2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="1830848113768997" type="DarkOrange">
+                            <param id="0" name="Opacity">lerp(0,20,unlerp(0.3,0,abs(sin(Period))))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7736081596913233">
+                    <conditions>
+                        <condition id="-21" name="Is between values" sid="651729512351701" type="System">
+                            <param id="0" name="Value">sin(Period)</param>
+                            <param id="1" name="Lower bound">0.2</param>
+                            <param id="2" name="Upper bound">0.4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="7072116657511447" type="DarkPurple">
+                            <param id="0" name="Opacity">lerp(0,20,unlerp(0.3,0,abs(sin(Period))))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Play around with different values!</comment>
+            </sub-events>
+        </event-block>
+        <event-block sid="2564163781656998">
+            <conditions>
+                <condition id="-18" name="On created" sid="7494036428268986" type="Sprite" />
+            </conditions>
+            <actions>
+                <action id="-26" name="Move to layer" sid="1979917245228314" type="Sprite">
+                    <param id="0" name="Layer">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
