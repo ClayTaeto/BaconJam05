@@ -36,6 +36,10 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="5983517127848691" type="Enemy3" />
+                <action id="-11" name="Subtract from" sid="6909807503167729" type="System">
+                    <param id="0" name="Variable">CurFear</param>
+                    <param id="1" name="Value">3</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="5677102407205822">
