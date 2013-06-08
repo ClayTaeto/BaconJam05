@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="Fear" sid="2364123027172711" static="0" type="number">100</variable>
         <variable constant="0" name="Blood" sid="7342975472718901" static="0" type="number">100</variable>
         <variable comment="Seconds interval between spawning a new enemy." constant="0" name="EnemySpawnTime" sid="9040819094045715" static="0" type="number">2</variable>
         <event-group collapsed="1" description="" sid="4710446642274308" title="Enemy control">
@@ -277,5 +278,18 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="4954009397237554">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="4222990201913276" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="5692670805689159" type="bloodCount">
+                    <param id="0" name="Text">&quot;Blood: &quot; &amp; Blood</param>
+                </action>
+                <action id="0" name="Set text" sid="5358789143955659" type="fearCount">
+                    <param id="0" name="Text">&quot;Fear: &quot; &amp; Fear</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
