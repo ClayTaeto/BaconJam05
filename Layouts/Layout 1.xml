@@ -66,7 +66,7 @@
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
                             <properties>
-                                <cell-size>32</cell-size>
+                                <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
                                 <max-speed>60</max-speed>
@@ -82,8 +82,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>608</x>
-                        <y>-48</y>
+                        <x>256</x>
+                        <y>287</y>
                         <z>0</z>
                         <width>20</width>
                         <height>20</height>
