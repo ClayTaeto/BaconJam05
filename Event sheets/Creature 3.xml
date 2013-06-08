@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Creature 3</name>
+    <events>
+        <event-block sid="8594027617545866">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="8589248657922774" type="Enemy3" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="6094485834222057" type="Enemy3" />
+            </actions>
+        </event-block>
+        <event-block sid="5140600712883401">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="7404455392955431" type="Enemy3">
+                    <param id="0" name="Instance variable">health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="4994719855561825" type="Enemy3">
+                    <param id="0" name="Object">EnemyDeadParticles</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="8783589701974423" type="Enemy3" />
+            </actions>
+        </event-block>
+        <event-block sid="141931100720045">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6654994164743606" type="Enemy3">
+                    <param id="0" name="Object">EnemyTarget</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5983517127848691" type="Enemy3" />
+            </actions>
+            <sub-events>
+                <event-block sid="5677102407205822">
+                    <conditions>
+                        <condition id="-16" name="Pick random instance" sid="6921658723068218" type="System">
+                            <param id="0" name="Object">Turret</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9447096892606076" type="Turret" />
+                        <action id="0" name="Spawn another object" sid="8022225722811153" type="Turret">
+                            <param id="0" name="Object">EnemyDeadParticles</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
