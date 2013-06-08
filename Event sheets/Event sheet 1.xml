@@ -951,6 +951,63 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="5853496707827191">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5013454343430113" type="System">
+                            <param id="0" name="Variable">Blood</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7871458613630751" type="System">
+                            <param id="0" name="Variable">CurFear</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">TotFear</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set enabled" sid="6904062887509882" type="spawnMonster1">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="541732729641315">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9174762425550115" type="System">
+                            <param id="0" name="Variable">Blood</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="4322718565357684" type="System">
+                            <param id="0" name="Variable">CurFear</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">TotFear - 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set enabled" sid="6194303140904504" type="spawnMonster2">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2248493382786948">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7457814529143816" type="System">
+                            <param id="0" name="Variable">Blood</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="9708809371329527" type="System">
+                            <param id="0" name="Variable">CurFear</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">TotFear - 2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set enabled" sid="9407142039004149" type="spawnMonster3">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="7842806570830404" title="NoContext">

@@ -35,14 +35,14 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="5983517127848691" type="Enemy3" />
-                <action id="-11" name="Subtract from" sid="6909807503167729" type="System">
+                <action disabled="1" id="-9" name="Destroy" sid="5983517127848691" type="Enemy3" />
+                <action disabled="1" id="-11" name="Subtract from" sid="6909807503167729" type="System">
                     <param id="0" name="Variable">CurFear</param>
                     <param id="1" name="Value">3</param>
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="5677102407205822">
+                <event-block disabled="1" sid="5677102407205822">
                     <conditions>
                         <condition id="-16" name="Pick random instance" sid="6921658723068218" type="System">
                             <param id="0" name="Object">Turret</param>
@@ -63,7 +63,48 @@
             <conditions>
                 <condition id="-18" name="On created" sid="9766473050226471" type="Enemy3" />
             </conditions>
-            <actions />
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="5348312141585092" type="highlight">
+                    <param id="0" name="Pin to">Enemy3</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="746770346060329" type="highlight" />
+            </actions>
+        </event-block>
+        <event-block sid="8944349319013961">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="6256243653401525" type="Enemy3">
+                    <param id="0" name="Instance variable">Selected</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="8847010886450057" type="highlight">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1149089122849734">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2764897854304969" type="Enemy3">
+                    <param id="0" name="Instance variable">Selected</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6817049225668175" type="highlight">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6474739424561863">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="5094570816508068" type="Enemy3" />
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="8892751043235251" type="System">
+                    <param id="0" name="Variable">CurFear</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
