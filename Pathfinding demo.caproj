@@ -497,6 +497,10 @@
                     <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
+            <container>
+                <type>Sprite_Zombie</type>
+                <type>Zombie2</type>
+            </container>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3973232216956899" speed="5">
                     <frame duration="1" hotspotX="0.513889" hotspotY="0.513889" />
@@ -537,6 +541,10 @@
                     <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
+            <container>
+                <type>Sprite_Goblin</type>
+                <type>Goblin2</type>
+            </container>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2396257004860764" speed="5">
                     <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
@@ -712,6 +720,15 @@
         </object-type>
         <object-type name="Sprite_Zombie" sid="5968939632260297">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="1529094716263698">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Sprite_Zombie</type>
+                <type>Zombie2</type>
+            </container>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4208284141386802" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
@@ -744,6 +761,15 @@
         </object-type>
         <object-type name="Sprite_Goblin" sid="7586076396722429">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="1231757459099285">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Sprite_Goblin</type>
+                <type>Goblin2</type>
+            </container>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8455755232285983" speed="5">
                     <frame duration="1" hotspotX="0.511111" hotspotY="0.5">
@@ -832,6 +858,7 @@
         <event-sheet>Bunny.xml</event-sheet>
         <event-sheet>Ghost.xml</event-sheet>
         <event-sheet>Zombie.xml</event-sheet>
+        <event-sheet>Goblin.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="65">

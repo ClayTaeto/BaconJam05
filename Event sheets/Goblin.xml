@@ -3,57 +3,114 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Goblin</name>
     <events>
-        <event-block sid="5059145067783086">
+        <event-block sid="7224121635764353">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="3095889212442126" type="System" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="381236787827258" type="GoblinSprite" />
-            </actions>
-        </event-block>
-        <event-block sid="9940546967472054">
-            <conditions>
-                <condition id="-18" name="On created" sid="182750051642417" type="Creature32" />
-            </conditions>
-            <actions>
-                <action behavior="Pin" id="0" name="Pin to object" sid="5661838475952798" type="H_Goblin">
-                    <param id="0" name="Pin to">Creature32</param>
-                    <param id="1" name="Mode">1</param>
-                </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="6009341128182936" type="GoblinSprite">
-                    <param id="0" name="Pin to">Creature32</param>
-                    <param id="1" name="Mode">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="9580745270770147" type="Creature32">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6888455348681544">
-            <conditions>
-                <condition id="-13" name="Is between angles" sid="3151106109771106" type="Creature32">
-                    <param id="0" name="First angle">91</param>
-                    <param id="1" name="Second angle">180</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="7" name="Set mirrored" sid="388832072891576" type="GoblinSprite">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2150130003273647">
-            <conditions>
-                <condition id="-13" name="Is between angles" sid="4760644128291369" type="Creature32">
+                <condition id="-13" name="Is between angles" sid="9037329851301092" type="Goblin2">
                     <param id="0" name="First angle">0</param>
                     <param id="1" name="Second angle">90</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="4366229263176637" type="GoblinSprite">
+                <action id="7" name="Set mirrored" sid="1903436670930325" type="Sprite_Goblin">
                     <param id="0" name="State">1</param>
                 </action>
-                <action disabled="1" id="2" name="Stop" sid="2709284499407248" type="GoblinSprite" />
+            </actions>
+            <sub-events>
+                <event-block sid="75675860549875">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="9854826423025694" type="Sprite_Goblin">
+                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1948506330353508" type="Sprite_Goblin">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="898981330682487">
+            <conditions>
+                <condition id="-13" name="Is between angles" sid="4452799504252031" type="Goblin2">
+                    <param id="0" name="First angle">91</param>
+                    <param id="1" name="Second angle">180</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="280226545353696" type="Sprite_Goblin">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="138496169466021">
+                    <conditions>
+                        <condition id="2" name="Is playing" sid="949564763140637" type="Sprite_Goblin">
+                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6582277660263911" type="Sprite_Goblin">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3672232892541998">
+            <conditions>
+                <condition id="-18" name="On created" sid="7094338782484615" type="Goblin2" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="2806861083525794" type="Goblin2">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="5832774599824724" type="Sprite_Goblin">
+                    <param id="0" name="Pin to">Goblin2</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1264389512808625">
+            <conditions>
+                <condition id="-13" name="Is between angles" sid="6173291893076733" type="Goblin2">
+                    <param id="0" name="First angle">91</param>
+                    <param id="1" name="Second angle">180</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="547562655097086" type="Sprite_Goblin">
+                    <param id="0" name="Animation">&quot;Back&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="4959233893657934" type="Sprite_Goblin">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7568261089967707">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7973287854109616">
+            <conditions>
+                <condition id="-13" name="Is between angles" sid="6393188573747874" type="Goblin2">
+                    <param id="0" name="First angle">180</param>
+                    <param id="1" name="Second angle">358</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9680061313206131" type="Sprite_Goblin">
+                    <param id="0" name="Animation">&quot;Back&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="9883987271866237" type="Sprite_Goblin">
+                    <param id="0" name="State">1</param>
+                </action>
             </actions>
         </event-block>
     </events>
