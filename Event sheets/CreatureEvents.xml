@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CreatureEvents</name>
+    <events>
+        <event-block sid="3736673969599942">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="3868253019751547" type="Creatures" />
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="9802123582096317" type="System">
+                    <param id="0" name="Variable">CurFear</param>
+                    <param id="1" name="Value">Creatures.FearCost</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5193490638353468">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1624912447967152" type="Creatures">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="211342389808012" type="Creatures">
+                    <param id="0" name="Object">EnemyDeadParticles</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="8229882478216757" type="Creatures" />
+            </actions>
+        </event-block>
+        <event-block sid="8019245279228538">
+            <conditions>
+                <condition behavior="Pathfinding2" id="0" name="On path found" sid="5079686799692273" type="Creatures" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding2" id="1" name="Move along path" sid="2288048220078854" type="Creatures" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

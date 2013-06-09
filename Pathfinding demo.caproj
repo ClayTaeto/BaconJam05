@@ -492,11 +492,6 @@
         </object-type>
         <object-type name="Zombie2" sid="2590242546663949">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="health" sid="3327513751994989" type="number" />
-                <instance-variable name="Selected" sid="2794695469097089" type="boolean" />
-                <instance-variable name="Move" sid="8369343147238664" type="boolean" />
-            </instance-variables>
             <behaviors>
                 <behavior-type name="Flash" sid="6773236533707395">
                     <behavior id="Flash" />
@@ -510,11 +505,6 @@
         </object-type>
         <object-type name="Ghost2" sid="5952521879253164">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="health" sid="5844723608753504" type="number" />
-                <instance-variable name="Selected" sid="2698441795513336" type="boolean" />
-                <instance-variable comment="Tells unit if it should be moving along its path." name="Move" sid="3924110725126424" type="boolean" />
-            </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="2951418389432291">
                     <behavior id="Pathfinding" />
@@ -531,11 +521,6 @@
         </object-type>
         <object-type name="Goblin2" sid="9188943414862881">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="health" sid="8899040924367017" type="number" />
-                <instance-variable name="Selected" sid="3502415858772593" type="boolean" />
-                <instance-variable name="Move" sid="8748219538525329" type="boolean" />
-            </instance-variables>
             <behaviors>
                 <behavior-type name="Flash" sid="4540896677080217">
                     <behavior id="Flash" />
@@ -621,6 +606,13 @@
                 <member>Goblin2</member>
                 <member>Zombie2</member>
             </members>
+            <instance-variables>
+                <instance-variable name="Health" sid="6913181233653111" type="number" />
+                <instance-variable name="Selected" sid="6768484393272873" type="boolean" />
+                <instance-variable name="FearCost" sid="1107531385508438" type="number" />
+                <instance-variable name="BloodCost" sid="6270541537394002" type="number" />
+                <instance-variable name="Move" sid="2519773066023432" type="boolean" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding2" sid="7544338440909875">
                     <behavior id="Pathfinding" />
@@ -642,6 +634,13 @@
                 <member>Bunny</member>
                 <member>LumberJack</member>
             </members>
+            <instance-variables>
+                <instance-variable name="Fear" sid="2806536010934075" type="number" />
+                <instance-variable name="Health" sid="3155579857120602" type="number" />
+                <instance-variable name="FearThreashold" sid="9840625298716401" type="number" />
+                <instance-variable name="canStarve" sid="6763877132283197" type="boolean" />
+                <instance-variable name="Hunger" sid="7731560046494476" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="8887270074296493">
                     <behavior id="Pathfinding" />
@@ -655,11 +654,13 @@
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
     </layout-folder>
-    <event-folder expanded="0">
+    <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Creature 2.xml</event-sheet>
         <event-sheet>Creature 3.xml</event-sheet>
         <event-sheet>DayNight Cycle.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
+        <event-sheet>CreatureEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="29">
