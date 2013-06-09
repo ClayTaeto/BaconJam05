@@ -329,7 +329,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8524059437359193" title="Spawning">
+        <event-group description="" sid="8524059437359193" title="Spawning">
             <sub-events>
                 <event-block sid="3863908715721051">
                     <conditions>
@@ -363,6 +363,7 @@
                         <action id="-15" name="Set visible" sid="7504291359466634" type="Goblin">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-25" name="Move to bottom" sid="7374270294186746" type="TiledBackground" />
                     </actions>
                 </event-block>
                 <event-block sid="1336530422566161">
@@ -784,7 +785,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5655471655657409" title="UI">
+        <event-group description="" sid="5655471655657409" title="UI">
             <sub-events>
                 <event-block sid="4954009397237554">
                     <conditions>
