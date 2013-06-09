@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <include>Bunny</include>
+        <include>Event sheet 2</include>
         <include>CreatureEvents</include>
         <variable comment="Maximum Fear the user has available" constant="0" name="TotFear" sid="2163160469199888" static="0" type="number">20</variable>
         <variable comment="Amount of Fear the user currently has" constant="0" name="CurFear" sid="3571698055154923" static="0" type="number">0</variable>
@@ -1100,7 +1102,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="8906017000620749" type="EnemyTarget">
+                                <action disabled="1" id="-3" name="Set position" sid="8906017000620749" type="EnemyTarget">
                                     <param id="0" name="X">Mouse.X</param>
                                     <param id="1" name="Y">Mouse.Y</param>
                                 </action>
