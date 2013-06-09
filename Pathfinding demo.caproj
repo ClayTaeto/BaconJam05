@@ -640,6 +640,8 @@
                 <instance-variable name="FearThreashold" sid="9840625298716401" type="number" />
                 <instance-variable name="canStarve" sid="6763877132283197" type="boolean" />
                 <instance-variable name="Hunger" sid="7731560046494476" type="number" />
+                <instance-variable name="TempX" sid="7256646250867577" type="number" />
+                <instance-variable name="TempY" sid="2633820628621943" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding" sid="8887270074296493">
@@ -661,6 +663,7 @@
         <event-sheet>DayNight Cycle.xml</event-sheet>
         <event-sheet>Event sheet 2.xml</event-sheet>
         <event-sheet>CreatureEvents.xml</event-sheet>
+        <event-sheet>Bunny.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="29">
