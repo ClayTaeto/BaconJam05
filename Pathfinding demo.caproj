@@ -11,7 +11,7 @@
     <saved-with-version>13000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
@@ -19,11 +19,12 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
@@ -54,6 +55,251 @@
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
     <object-folder expanded="1">
+        <object-folder expanded="0" name="Creatures">
+            <object-type name="Creature1" sid="1595347357343462">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="1885124264131312">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Creature1</type>
+                    <type>H_Zombie</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7999271080091751" speed="5">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.888889">
+                            <collision-poly>
+                                <point x="0.322222" y="0.794445" />
+                                <point x="0.716667" y="0.794445" />
+                                <point x="0.716667" y="1" />
+                                <point x="0.322222" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Creature3" sid="6925836023136809">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="7766781456886597">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Creature3</type>
+                    <type>H_Goblin</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8372168602610158" speed="5">
+                        <frame duration="1" hotspotX="0.466667" hotspotY="0.9" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Creature2" sid="2411865592628206">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="9088065088749747">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Creature2</type>
+                    <type>H_Ghost</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7310918816594741" speed="5">
+                        <frame duration="1" hotspotX="0.511111" hotspotY="0.911111" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="0" name="UI">
+            <object-folder expanded="0" name="Select Highlights">
+                <object-type name="H_Ghost" sid="5441018480045324">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>Creature2</type>
+                        <type>H_Ghost</type>
+                    </container>
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="253429144559643" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="H_Goblin" sid="2792880825172703">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>Creature3</type>
+                        <type>H_Goblin</type>
+                    </container>
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="728883031997081" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="H_Zombie" sid="5853410821947111">
+                    <plugin id="Sprite" />
+                    <container>
+                        <type>Creature1</type>
+                        <type>H_Zombie</type>
+                    </container>
+                    <animation-folder expanded="1">
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2384251575134166" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="9patch" sid="188957477049367">
+                <plugin id="NinePatch" />
+                <texture />
+            </object-type>
+            <object-type name="bloodCount" sid="8886688958218746">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="clock" sid="1791756668263385">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Rotate" sid="5235173628425485">
+                        <behavior id="Rotate" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6004333110976168" speed="5">
+                        <frame duration="1" hotspotX="0.503906" hotspotY="0.503906">
+                            <collision-poly>
+                                <point x="0.78125" y="0.21875" />
+                                <point x="0.898437" y="0.5" />
+                                <point x="0.789062" y="0.789063" />
+                                <point x="0.5" y="0.921875" />
+                                <point x="0.195312" y="0.804688" />
+                                <point x="0.070312" y="0.5" />
+                                <point x="0.203125" y="0.203125" />
+                                <point x="0.5" y="0.09375" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="clockOverlay" sid="1828615692272153">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1764466242716212" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.1875" y="0.1875" />
+                                <point x="0.5" y="0.0507813" />
+                                <point x="0.824219" y="0.175781" />
+                                <point x="0.964844" y="0.5" />
+                                <point x="0.832031" y="0.832031" />
+                                <point x="0.5" y="0.964844" />
+                                <point x="0.179688" y="0.820313" />
+                                <point x="0.0546875" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="fearCount" sid="6629179997584817">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="pauseText" sid="1580662398967389">
+                <plugin id="Text" />
+                <container>
+                    <type>pauseText</type>
+                    <type>pauseImage</type>
+                    <type>pauseMask</type>
+                </container>
+            </object-type>
+            <object-type name="pauseMask" sid="6761078162077586">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="7082823062789264">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>pauseText</type>
+                    <type>pauseImage</type>
+                    <type>pauseMask</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2626435714812535" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="pauseImage" sid="7306487971123301">
+                <plugin id="Sprite" />
+                <container>
+                    <type>pauseText</type>
+                    <type>pauseImage</type>
+                    <type>pauseMask</type>
+                </container>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7693184943480302" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="spawnMonster1" sid="2773867145483192">
+                <plugin id="Button" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="9669593095328866">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="spawnMonster2" sid="6563869085640265">
+                <plugin id="Button" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="7644396573271276">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="spawnMonster3" sid="4297260852176939">
+                <plugin id="Button" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="3763158356173454">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+        </object-folder>
+        <object-folder expanded="0" name="Light Objects">
+            <object-type name="Black" sid="7088187314876883">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="1783165590230491">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="DarkPurple" sid="1487793104355452">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="9224189331711608">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="DarkOrange" sid="7920666243636101">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="1649701605316299">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+        </object-folder>
         <object-type name="Enemy" sid="7178115717866501">
             <plugin id="Sprite" />
             <instance-variables>
@@ -180,83 +426,10 @@
         <object-type name="Keyboard" sid="7641239542626698">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="bloodCount" sid="8886688958218746">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="fearCount" sid="6629179997584817">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="unitCount" sid="4680498329490296">
             <plugin id="Text" />
             <behaviors>
                 <behavior-type name="Anchor" sid="3617861576438856">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-        </object-type>
-        <object-type name="clock" sid="1791756668263385">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Rotate" sid="5235173628425485">
-                    <behavior id="Rotate" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6004333110976168" speed="5">
-                    <frame duration="1" hotspotX="0.503906" hotspotY="0.503906">
-                        <collision-poly>
-                            <point x="0.78125" y="0.21875" />
-                            <point x="0.898437" y="0.5" />
-                            <point x="0.789062" y="0.789063" />
-                            <point x="0.5" y="0.921875" />
-                            <point x="0.195312" y="0.804688" />
-                            <point x="0.070312" y="0.5" />
-                            <point x="0.203125" y="0.203125" />
-                            <point x="0.5" y="0.09375" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="clockOverlay" sid="1828615692272153">
-            <plugin id="Sprite" />
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1764466242716212" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.1875" y="0.1875" />
-                            <point x="0.5" y="0.0507813" />
-                            <point x="0.824219" y="0.175781" />
-                            <point x="0.964844" y="0.5" />
-                            <point x="0.832031" y="0.832031" />
-                            <point x="0.5" y="0.964844" />
-                            <point x="0.179688" y="0.820313" />
-                            <point x="0.0546875" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="spawnMonster1" sid="2773867145483192">
-            <plugin id="Button" />
-            <behaviors>
-                <behavior-type name="Anchor" sid="9669593095328866">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-        </object-type>
-        <object-type name="spawnMonster2" sid="6563869085640265">
-            <plugin id="Button" />
-            <behaviors>
-                <behavior-type name="Anchor" sid="7644396573271276">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-        </object-type>
-        <object-type name="spawnMonster3" sid="4297260852176939">
-            <plugin id="Button" />
-            <behaviors>
-                <behavior-type name="Anchor" sid="3763158356173454">
                     <behavior id="Anchor" />
                 </behavior-type>
             </behaviors>
@@ -276,10 +449,6 @@
                     <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
-            <container>
-                <type>highlight</type>
-                <type>Enemy2</type>
-            </container>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1677880459628897" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -309,28 +478,6 @@
         </object-type>
         <object-type name="Mouse" sid="3720387382403969">
             <plugin id="Mouse" />
-        </object-type>
-        <object-type name="Black" sid="7088187314876883">
-            <plugin id="TiledBg" />
-            <behaviors>
-                <behavior-type name="Anchor" sid="1783165590230491">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-            <texture />
-        </object-type>
-        <object-type name="DarkOrange" sid="7920666243636101">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="DarkPurple" sid="1487793104355452">
-            <plugin id="TiledBg" />
-            <behaviors>
-                <behavior-type name="Anchor" sid="9224189331711608">
-                    <behavior id="Anchor" />
-                </behavior-type>
-            </behaviors>
-            <texture />
         </object-type>
         <object-type name="Sprite" sid="1360172647759572">
             <plugin id="Sprite" />
@@ -390,10 +537,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="9patch" sid="188957477049367">
-            <plugin id="NinePatch" />
-            <texture />
-        </object-type>
         <object-type name="highlight" sid="4671846999904507">
             <plugin id="Sprite" />
             <behaviors>
@@ -401,49 +544,11 @@
                     <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
-            <container>
-                <type>highlight</type>
-                <type>Enemy2</type>
-            </container>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3664083505812286" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="pauseMask" sid="6761078162077586">
-            <plugin id="Sprite" />
-            <container>
-                <type>pauseText</type>
-                <type>pauseImage</type>
-                <type>pauseMask</type>
-            </container>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2626435714812535" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="pauseImage" sid="7306487971123301">
-            <plugin id="Sprite" />
-            <container>
-                <type>pauseText</type>
-                <type>pauseImage</type>
-                <type>pauseMask</type>
-            </container>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7693184943480302" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="pauseText" sid="1580662398967389">
-            <plugin id="Text" />
-            <container>
-                <type>pauseText</type>
-                <type>pauseImage</type>
-                <type>pauseMask</type>
-            </container>
         </object-type>
         <object-type name="Wall2" sid="6618872247980239">
             <plugin id="TiledBg" />
@@ -490,42 +595,69 @@
             </behaviors>
             <texture />
         </object-type>
-        <object-type name="Creature1" sid="1595347357343462">
+        <object-type name="Function" sid="2179257207835136">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="PersonPrototype" sid="8479195557282587">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Flash" sid="1885124264131312">
-                    <behavior id="Flash" />
+                <behavior-type name="Turret" sid="9437530914858316">
+                    <behavior id="Turret" />
+                </behavior-type>
+                <behavior-type name="Pathfinding" sid="4636901587982102">
+                    <behavior id="Pathfinding" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7999271080091751" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3915553747190776" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
+                </animation>
+                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="9170625732406858" speed="5">
                     <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Creature2" sid="2411865592628206">
+        <object-type name="Node" sid="2307635242804928">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Flash" sid="9088065088749747">
-                    <behavior id="Flash" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7310918816594741" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1773944894871573" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Creature3" sid="6925836023136809">
+        <object-type name="PersonPrototype2" sid="7398934321962208">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Flash" sid="7766781456886597">
-                    <behavior id="Flash" />
-                </behavior-type>
-            </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8372168602610158" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8066343804540128" speed="5">
+                    <frame duration="1" hotspotX="0.488889" hotspotY="0.688889">
+                        <collision-poly>
+                            <point x="0.138889" y="0.630556" />
+                            <point x="0.455555" y="0.511111" />
+                            <point x="0.791667" y="0.669444" />
+                            <point x="0.483333" y="0.844444" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="5336263027177914" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PersonPrototype3" sid="2980534200694617">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1491144345180474" speed="5">
+                    <frame duration="1" hotspotX="0.488889" hotspotY="0.688889">
+                        <collision-poly>
+                            <point x="0.138889" y="0.630556" />
+                            <point x="0.455555" y="0.511111" />
+                            <point x="0.791667" y="0.669444" />
+                            <point x="0.483333" y="0.844444" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="7223508329817634" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -543,10 +675,42 @@
                 <instance-variable name="Move" sid="9391038775748111" type="boolean" />
                 <instance-variable name="FearCost" sid="3316799439593122" type="number" />
                 <instance-variable name="BloodCost" sid="5582952443288073" type="number" />
+                <instance-variable name="HighLightUID" sid="1169375545497144" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pathfinding2" sid="5381460634789318">
                     <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="HighLightSelected" plugin-id="Sprite" sid="2904704529063829">
+            <members>
+                <member>H_Ghost</member>
+                <member>H_Goblin</member>
+                <member>H_Zombie</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="9048516192918007">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="People1" plugin-id="Sprite" sid="3274058886519957">
+            <members>
+                <member>PersonPrototype</member>
+            </members>
+        </family>
+        <family name="People" plugin-id="Sprite" sid="2467439761099973">
+            <members>
+                <member>PersonPrototype2</member>
+                <member>PersonPrototype3</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="6176275517525328">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="Turret" sid="1402233399136069">
+                    <behavior id="Turret" />
                 </behavior-type>
             </behaviors>
         </family>
@@ -555,11 +719,17 @@
         <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
+        <event-folder expanded="0" name="Creature Events">
+            <event-sheet>Creature Events.xml</event-sheet>
+            <event-sheet>Zombie.xml</event-sheet>
+            <event-sheet>Ghost.xml</event-sheet>
+            <event-sheet>Goblin.xml</event-sheet>
+        </event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Creature 2.xml</event-sheet>
         <event-sheet>Creature 3.xml</event-sheet>
         <event-sheet>DayNight Cycle.xml</event-sheet>
-        <event-sheet>Creature Events.xml</event-sheet>
+        <event-sheet>PeopleEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="29">
@@ -569,6 +739,7 @@
         </global-instance>
         <global-instance type="Keyboard" uid="5" />
         <global-instance type="Mouse" uid="13" />
+        <global-instance type="Function" uid="59" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

@@ -3,12 +3,20 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <include>Creature Events</include>
+        <event-group description="" sid="8963081337899502" title="Includes">
+            <sub-events>
+                <include>PeopleEvents</include>
+                <include>Creature Events</include>
+                <include>Goblin</include>
+                <include>Ghost</include>
+                <include>Zombie</include>
+                <include>DayNight Cycle</include>
+                <include>Creature 3</include>
+                <include>Creature 2</include>
+            </sub-events>
+        </event-group>
         <variable comment="Maximum Fear the user has available" constant="0" name="TotFear" sid="2163160469199888" static="0" type="number">20</variable>
         <variable comment="Amount of Fear the user currently has" constant="0" name="CurFear" sid="3571698055154923" static="0" type="number">0</variable>
-        <include>DayNight Cycle</include>
-        <include>Creature 3</include>
-        <include>Creature 2</include>
         <variable constant="0" name="Blood" sid="7342975472718901" static="0" type="number">1000</variable>
         <variable comment="Seconds interval between spawning a new enemy." constant="0" name="EnemySpawnTime" sid="9040819094045715" static="0" type="number">2</variable>
         <event-group collapsed="1" description="" sid="4710446642274308" title="Enemy control">
@@ -421,32 +429,30 @@
                                 <condition id="-14" name="Compare variable" sid="4469943782629017" type="System">
                                     <param id="0" name="Variable">Blood</param>
                                     <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">10</param>
+                                    <param id="2" name="Value">Creature1.BloodCost</param>
                                 </condition>
                                 <condition id="-14" name="Compare variable" sid="5993380252992689" type="System">
                                     <param id="0" name="Variable">CurFear</param>
                                     <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Value">TotFear</param>
+                                    <param id="2" name="Value">TotFear + Creature1.FearCost</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="5789437434188027" type="System">
-                                    <param id="0" name="Object to create">Enemy</param>
+                                <action id="-3" name="Create object" sid="7438676721701561" type="System">
+                                    <param id="0" name="Object to create">H_Zombie</param>
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="X">Touch.X</param>
                                     <param id="3" name="Y">Touch.Y</param>
                                 </action>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="6007359418121851" type="Enemy">
+                                <action disabled="1" id="-3" name="Create object" sid="5789437434188027" type="System">
+                                    <param id="0" name="Object to create">Creature1</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Touch.X</param>
+                                    <param id="3" name="Y">Touch.Y</param>
+                                </action>
+                                <action behavior="Pathfinding2" disabled="1" id="0" name="Find path" sid="6007359418121851" type="Creature1">
                                     <param id="0" name="X">EnemyTarget.X</param>
                                     <param id="1" name="Y">EnemyTarget.Y</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="6472622537196469" type="System">
-                                    <param id="0" name="Variable">Blood</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="9851077952260914" type="System">
-                                    <param id="0" name="Variable">CurFear</param>
-                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -607,22 +613,23 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="8176558305621102" type="System">
-                                    <param id="0" name="Object to create">Enemy2</param>
+                                    <param id="0" name="Object to create">Creature2</param>
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="X">Touch.X</param>
                                     <param id="3" name="Y">Touch.Y</param>
                                 </action>
+                                <action disabled="1" id="0" name="Spawn another object" sid="7269650604882949" type="Creature2">
+                                    <param id="0" name="Object">H_Ghost</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="8841742046590927" type="H_Ghost">
+                                    <param id="0" name="Pin to">Creature2</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
                                 <action behavior="Pathfinding" id="0" name="Find path" sid="6007359418121851" type="Enemy2">
                                     <param id="0" name="X">EnemyTarget.X</param>
                                     <param id="1" name="Y">EnemyTarget.Y</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="6472622537196469" type="System">
-                                    <param id="0" name="Variable">Blood</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="7503574586119883" type="System">
-                                    <param id="0" name="Variable">CurFear</param>
-                                    <param id="1" name="Value">2</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="3140323832422539" type="Enemy2">
                                     <param id="0" name="Instance variable">Selected</param>
@@ -737,22 +744,14 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="8176558305621102" type="System">
-                                    <param id="0" name="Object to create">Enemy3</param>
+                                    <param id="0" name="Object to create">Creature3</param>
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="X">Touch.X</param>
                                     <param id="3" name="Y">Touch.Y</param>
                                 </action>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="6007359418121851" type="Enemy3">
+                                <action behavior="Pathfinding" disabled="1" id="0" name="Find path" sid="6007359418121851" type="Enemy3">
                                     <param id="0" name="X">EnemyTarget.X</param>
                                     <param id="1" name="Y">EnemyTarget.Y</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="6472622537196469" type="System">
-                                    <param id="0" name="Variable">Blood</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="3864837288553299" type="System">
-                                    <param id="0" name="Variable">CurFear</param>
-                                    <param id="1" name="Value">3</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -781,7 +780,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="5655471655657409" title="UI">
+        <event-group description="" sid="5655471655657409" title="UI">
             <sub-events>
                 <event-block sid="4954009397237554">
                     <conditions>
@@ -1101,7 +1100,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-group description="" sid="8473860959824277" title="Select Units">
+                <event-group collapsed="1" description="" sid="8473860959824277" title="Select Units">
                     <sub-events>
                         <event-block sid="5072551909019524">
                             <conditions>
@@ -1115,19 +1114,6 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="6394039266208943">
-                                    <conditions>
-                                        <condition id="1" name="Is overlapping another object" sid="1086674661668932" type="Creatures">
-                                            <param id="0" name="Object">9patch</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="420422017393889" type="Creatures">
-                                            <param id="0" name="Instance variable">Selected</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
                                 <event-block sid="3744767440701658">
                                     <conditions>
                                         <condition id="1" inverted="1" name="Is overlapping another object" sid="3528016598648236" type="Creatures">
@@ -1138,6 +1124,19 @@
                                         <action id="-13" name="Set boolean" sid="9544827407276748" type="Creatures">
                                             <param id="0" name="Instance variable">Selected</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6394039266208943">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="1086674661668932" type="Creatures">
+                                            <param id="0" name="Object">9patch</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="420422017393889" type="Creatures">
+                                            <param id="0" name="Instance variable">Selected</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1180,7 +1179,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="8906017000620749" type="EnemyTarget">
+                                <action disabled="1" id="-3" name="Set position" sid="8906017000620749" type="EnemyTarget">
                                     <param id="0" name="X">Mouse.X</param>
                                     <param id="1" name="Y">Mouse.Y</param>
                                 </action>
@@ -1198,8 +1197,8 @@
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action behavior="Pathfinding2" id="0" name="Find path" sid="3083962175347386" type="Creatures">
-                                            <param id="0" name="X">EnemyTarget.X</param>
-                                            <param id="1" name="Y">EnemyTarget.Y</param>
+                                            <param id="0" name="X">Mouse.X</param>
+                                            <param id="1" name="Y">Mouse.Y</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1209,7 +1208,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="125126570447209" title="Paused">
+        <event-group description="" sid="125126570447209" title="Paused">
             <sub-events>
                 <event-block sid="7640353785339016">
                     <conditions>

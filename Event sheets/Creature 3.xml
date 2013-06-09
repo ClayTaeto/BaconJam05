@@ -62,7 +62,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="4195515851860994">
+        <event-block disabled="1" sid="4195515851860994">
             <conditions>
                 <condition id="-18" name="On created" sid="9766473050226471" type="Enemy3" />
             </conditions>
@@ -74,7 +74,7 @@
                 <action id="-25" name="Move to bottom" sid="746770346060329" type="highlight" />
             </actions>
         </event-block>
-        <event-block sid="8944349319013961">
+        <event-block disabled="1" sid="8944349319013961">
             <conditions>
                 <condition id="-8" name="Is boolean instance variable set" sid="6256243653401525" type="Enemy3">
                     <param id="0" name="Instance variable">Selected</param>
@@ -86,7 +86,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1149089122849734">
+        <event-block disabled="1" sid="1149089122849734">
             <conditions>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2764897854304969" type="Enemy3">
                     <param id="0" name="Instance variable">Selected</param>
@@ -98,7 +98,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="6474739424561863">
+        <event-block disabled="1" sid="6474739424561863">
             <conditions>
                 <condition id="-19" name="On destroyed" sid="5094570816508068" type="Enemy3" />
             </conditions>
