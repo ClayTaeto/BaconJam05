@@ -52,7 +52,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy" uid="1">
+                <instance type="Zombie" uid="1">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -427,7 +427,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy2" uid="6">
+                <instance type="Ghost" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -470,7 +470,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy3" uid="7">
+                <instance type="Goblin" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
