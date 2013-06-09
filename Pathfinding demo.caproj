@@ -606,6 +606,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="CamperGirl1" sid="785448902296454">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7150051900756681" speed="5">
+                    <frame duration="1" hotspotX="0.488889" hotspotY="0.488889" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Creatures" plugin-id="Sprite" sid="433876966173693">
