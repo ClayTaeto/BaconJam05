@@ -26,7 +26,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="4882077558061779" type="Black">
+                        <action id="-16" name="Set opacity" sid="4882077558061779" type="Black1">
                             <param id="0" name="Opacity">clamp(lerp(0,60, unlerp(0.2, -0.5, sin(Period))),0,60)</param>
                         </action>
                     </actions>
@@ -41,7 +41,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="1830848113768997" type="DarkOrange">
+                        <action id="-16" name="Set opacity" sid="1830848113768997" type="DarkOrange2">
                             <param id="0" name="Opacity">lerp(0,20,unlerp(0.3,0,abs(sin(Period))))</param>
                         </action>
                     </actions>
@@ -55,7 +55,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="7072116657511447" type="DarkPurple">
+                        <action id="-16" name="Set opacity" sid="7072116657511447" type="DarkPurple1">
                             <param id="0" name="Opacity">lerp(0,20,unlerp(0.3,0,abs(sin(Period))))</param>
                         </action>
                     </actions>

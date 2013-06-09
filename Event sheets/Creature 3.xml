@@ -5,40 +5,40 @@
     <events>
         <event-block sid="8594027617545866">
             <conditions>
-                <condition behavior="Pathfinding" id="0" name="On path found" sid="8589248657922774" type="Goblin" />
-                <condition id="-8" name="Is boolean instance variable set" sid="1031461376169737" type="Goblin">
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="8589248657922774" type="Enemy3" />
+                <condition id="-8" name="Is boolean instance variable set" sid="1031461376169737" type="Enemy3">
                     <param id="0" name="Instance variable">Move</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="6094485834222057" type="Goblin" />
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="6094485834222057" type="Enemy3" />
             </actions>
         </event-block>
         <event-block sid="5140600712883401">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="7404455392955431" type="Goblin">
+                <condition id="-7" name="Compare instance variable" sid="7404455392955431" type="Enemy3">
                     <param id="0" name="Instance variable">health</param>
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="4994719855561825" type="Goblin">
+                <action id="0" name="Spawn another object" sid="4994719855561825" type="Enemy3">
                     <param id="0" name="Object">EnemyDeadParticles</param>
                     <param id="1" name="Layer">&quot;Game&quot;</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="-9" name="Destroy" sid="8783589701974423" type="Goblin" />
+                <action id="-9" name="Destroy" sid="8783589701974423" type="Enemy3" />
             </actions>
         </event-block>
         <event-block sid="141931100720045">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="6654994164743606" type="Goblin">
+                <condition id="0" name="On collision with another object" sid="6654994164743606" type="Enemy3">
                     <param id="0" name="Object">EnemyTarget</param>
                 </condition>
             </conditions>
             <actions>
-                <action disabled="1" id="-9" name="Destroy" sid="5983517127848691" type="Goblin" />
+                <action disabled="1" id="-9" name="Destroy" sid="5983517127848691" type="Enemy3" />
                 <action disabled="1" id="-11" name="Subtract from" sid="6909807503167729" type="System">
                     <param id="0" name="Variable">CurFear</param>
                     <param id="1" name="Value">3</param>
@@ -62,21 +62,21 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="4195515851860994">
+        <event-block disabled="1" sid="4195515851860994">
             <conditions>
-                <condition id="-18" name="On created" sid="9766473050226471" type="Goblin" />
+                <condition id="-18" name="On created" sid="9766473050226471" type="Enemy3" />
             </conditions>
             <actions>
                 <action behavior="Pin" id="0" name="Pin to object" sid="5348312141585092" type="highlight">
-                    <param id="0" name="Pin to">Goblin</param>
+                    <param id="0" name="Pin to">Enemy3</param>
                     <param id="1" name="Mode">1</param>
                 </action>
                 <action id="-25" name="Move to bottom" sid="746770346060329" type="highlight" />
             </actions>
         </event-block>
-        <event-block sid="8944349319013961">
+        <event-block disabled="1" sid="8944349319013961">
             <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="6256243653401525" type="Goblin">
+                <condition id="-8" name="Is boolean instance variable set" sid="6256243653401525" type="Enemy3">
                     <param id="0" name="Instance variable">Selected</param>
                 </condition>
             </conditions>
@@ -86,9 +86,9 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1149089122849734">
+        <event-block disabled="1" sid="1149089122849734">
             <conditions>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2764897854304969" type="Goblin">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2764897854304969" type="Enemy3">
                     <param id="0" name="Instance variable">Selected</param>
                 </condition>
             </conditions>
@@ -98,9 +98,9 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="6474739424561863">
+        <event-block disabled="1" sid="6474739424561863">
             <conditions>
-                <condition id="-19" name="On destroyed" sid="5094570816508068" type="Goblin" />
+                <condition id="-19" name="On destroyed" sid="5094570816508068" type="Enemy3" />
             </conditions>
             <actions>
                 <action id="-11" name="Subtract from" sid="8892751043235251" type="System">

@@ -45,40 +45,35 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="2439507971335726">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="8442163902703861" type="Creatures">
-                    <param id="0" name="Instance variable">Selected</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="6745021329579727" type="highlight">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5500366830947671">
-            <conditions>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8674868215448398" type="Creatures">
-                    <param id="0" name="Instance variable">Selected</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="1197054122048144" type="highlight">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="1546367212778507">
+        <event-block disabled="1" sid="1546367212778507">
             <conditions>
                 <condition id="-18" name="On created" sid="2828481954395421" type="Creatures" />
+                <condition id="1" name="Is overlapping another object" sid="1334401034749867" type="HighLightSelected">
+                    <param id="0" name="Object">Creatures</param>
+                </condition>
+                <condition disabled="1" id="-15" name="Pick nearest/furthest" sid="145032523086893" type="HighLightSelected">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="X">Creatures.X</param>
+                    <param id="2" name="Y">Creatures.Y</param>
+                </condition>
             </conditions>
             <actions>
-                <action behavior="Pin" id="0" name="Pin to object" sid="3283485813382708" type="highlight">
-                    <param id="0" name="Pin to">Creatures</param>
-                    <param id="1" name="Mode">1</param>
+                <action id="-10" name="Add to" sid="4971161125318746" type="System">
+                    <param id="0" name="Variable">CurFear</param>
+                    <param id="1" name="Value">Creatures.FearCost</param>
                 </action>
-                <action id="-25" name="Move to bottom" sid="7924085489590055" type="highlight" />
+                <action id="-11" name="Subtract from" sid="3496798982363914" type="System">
+                    <param id="0" name="Variable">Blood</param>
+                    <param id="1" name="Value">Creatures.BloodCost</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="7792297867346479" type="HighLightSelected">
+                    <param id="0" name="Pin to">Creatures</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-29" name="Move to object" sid="5869531956568969" type="HighLightSelected">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">Creatures</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="7353145855798667">
@@ -107,6 +102,62 @@
                     <param id="2" name="Image point">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="2493425683373886" type="Creatures" />
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="9643109321270966">
+            <conditions>
+                <condition id="-18" name="On created" sid="2873854114575199" type="HighLightSelected" />
+                <condition disabled="1" id="1" name="Is overlapping another object" sid="246560228297335" type="HighLightSelected">
+                    <param id="0" name="Object">Creatures</param>
+                </condition>
+                <condition disabled="1" id="1" name="Is overlapping another object" sid="7128165277781066" type="Creatures">
+                    <param id="0" name="Object">HighLightSelected</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="1177146960599604" type="HighLightSelected">
+                    <param id="0" name="Pin to">Creatures</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-29" name="Move to object" sid="5113765618210228" type="HighLightSelected">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">Creatures</param>
+                </action>
+                <action disabled="1" id="-15" name="Set visible" sid="8669149987865244" type="HighLightSelected">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="4454978419958724" type="System">
+                    <param id="0" name="Object to create">BulletImpactParticles</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">Creatures.X</param>
+                    <param id="3" name="Y">Creatures.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="1021065727756806">
+            <conditions>
+                <condition id="-13" name="Is between angles" sid="2988264687280371" type="Creatures">
+                    <param id="0" name="First angle">0</param>
+                    <param id="1" name="Second angle">90</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="6061826219056424" type="Creatures">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="7375888975976678">
+            <conditions>
+                <condition id="-13" name="Is between angles" sid="5637905748555906" type="Creatures">
+                    <param id="0" name="First angle">91</param>
+                    <param id="1" name="Second angle">180</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="910011649987945" type="Creatures">
+                    <param id="0" name="State">0</param>
+                </action>
             </actions>
         </event-block>
     </events>
