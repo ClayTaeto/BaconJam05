@@ -86,11 +86,11 @@
                         <x>608</x>
                         <y>-48</y>
                         <z>0</z>
-                        <width>20</width>
-                        <height>20</height>
+                        <width>45</width>
+                        <height>45</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.51111114</hotspotX>
+                        <hotspotY>0.51111114</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -461,11 +461,11 @@
                         <x>448</x>
                         <y>-48</y>
                         <z>0</z>
-                        <width>20</width>
-                        <height>20</height>
+                        <width>45</width>
+                        <height>45</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.51111114</hotspotX>
+                        <hotspotY>0.51111114</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
