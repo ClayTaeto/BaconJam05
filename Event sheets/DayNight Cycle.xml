@@ -15,7 +15,7 @@
                 </action>
             </actions>
             <sub-events>
-                <comment>Darken the sky when period is below 0.2 (morning/evening is darker than middle of day)</comment>
+                <comment>Darken the sky when period is below 0.2 (morning/evening is darker than middle of day) EDTOIWHENTR </comment>
                 <comment>lerp gradually increases the opacity from 0 to 60 or reverse depending on the value of unlerp, which gives the progress based on range between 0.2 and -0.5 (well into night, when it should be max darkness). Clamp makes sure opacity stays in the 0 - 60 range.</comment>
                 <event-block sid="4209403159048467">
                     <conditions>
@@ -26,7 +26,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="4882077558061779" type="Black1">
+                        <action id="-16" name="Set opacity" sid="4882077558061779" type="Black">
                             <param id="0" name="Opacity">clamp(lerp(0,60, unlerp(0.2, -0.5, sin(Period))),0,60)</param>
                         </action>
                     </actions>
@@ -41,7 +41,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="1830848113768997" type="DarkOrange2">
+                        <action id="-16" name="Set opacity" sid="1830848113768997" type="DarkOrange">
                             <param id="0" name="Opacity">lerp(0,20,unlerp(0.3,0,abs(sin(Period))))</param>
                         </action>
                     </actions>
@@ -55,7 +55,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="7072116657511447" type="DarkPurple1">
+                        <action id="-16" name="Set opacity" sid="7072116657511447" type="DarkPurple">
                             <param id="0" name="Opacity">lerp(0,20,unlerp(0.3,0,abs(sin(Period))))</param>
                         </action>
                     </actions>
