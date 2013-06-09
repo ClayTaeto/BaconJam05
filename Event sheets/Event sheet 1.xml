@@ -4,7 +4,7 @@
     <name>Event sheet 1</name>
     <events>
         <include>Bunny</include>
-        <include>Event sheet 2</include>
+        <include>People</include>
         <include>CreatureEvents</include>
         <variable comment="Maximum Fear the user has available" constant="0" name="TotFear" sid="2163160469199888" static="0" type="number">20</variable>
         <variable comment="Amount of Fear the user currently has" constant="0" name="CurFear" sid="3571698055154923" static="0" type="number">0</variable>

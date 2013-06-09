@@ -1047,7 +1047,7 @@
                     <instance-variables>
                         <Fear>0</Fear>
                         <Health>0</Health>
-                        <FearThreashold>0</FearThreashold>
+                        <FearThreashold>5</FearThreashold>
                         <canStarve>false</canStarve>
                         <Hunger>0</Hunger>
                         <TempX>0</TempX>
@@ -1104,7 +1104,7 @@
                     <instance-variables>
                         <Fear>0</Fear>
                         <Health>0</Health>
-                        <FearThreashold>0</FearThreashold>
+                        <FearThreashold>5</FearThreashold>
                         <canStarve>false</canStarve>
                         <Hunger>0</Hunger>
                         <TempX>0</TempX>
@@ -1161,7 +1161,7 @@
                     <instance-variables>
                         <Fear>0</Fear>
                         <Health>0</Health>
-                        <FearThreashold>0</FearThreashold>
+                        <FearThreashold>5</FearThreashold>
                         <canStarve>false</canStarve>
                         <Hunger>0</Hunger>
                         <TempX>0</TempX>
@@ -1274,7 +1274,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CamperBoy1" uid="57">
+                <instance type="CamperBoy1" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1286,6 +1286,50 @@
                     <world>
                         <x>1442</x>
                         <y>780</y>
+                        <z>0</z>
+                        <width>45</width>
+                        <height>45</height>
+                        <depth>0</depth>
+                        <hotspotX>0.48888889</hotspotX>
+                        <hotspotY>0.48888889</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Campfire1" uid="60">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1317</x>
+                        <y>964</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CamperGirl1" uid="61">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1373</x>
+                        <y>895</y>
                         <z>0</z>
                         <width>45</width>
                         <height>45</height>
@@ -1393,7 +1437,7 @@
                         <opacity>0.600000024</opacity>
                     </world>
                 </instance>
-                <instance type="Player" uid="4">
+                <instance type="Player" uid="5">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1433,7 +1477,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="GridBackground" uid="5">
+                <instance type="GridBackground" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -1470,7 +1514,7 @@
             <blend-mode>2</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="bloodCount" uid="11">
+                <instance type="bloodCount" uid="12">
                     <properties>
                         <text>blood</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1497,7 +1541,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="fearCount" uid="12">
+                <instance type="fearCount" uid="13">
                     <properties>
                         <text>fear</text>
                         <initial-visibility>Visible</initial-visibility>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 2</name>
+    <name>People</name>
     <events>
         <event-block sid="7074980929856351">
             <conditions>
@@ -26,14 +26,6 @@
                     <param id="2" name="X">People.X</param>
                     <param id="3" name="Y">People.Y</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="8293502682910415">
-            <conditions>
-                <condition behavior="Pathfinding" id="0" name="On path found" sid="3386180420273607" type="People" />
-            </conditions>
-            <actions>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="7197309924210636" type="People" />
             </actions>
         </event-block>
         <event-group description="" sid="1554980693834827" title="Attacking">
@@ -171,5 +163,13 @@
                 <event-group description="" sid="9237501000686197" title="Confident attacking" />
             </sub-events>
         </event-group>
+        <event-block sid="7112658364484056">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="6903888691656121" type="People" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="7183724324747391" type="People" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
