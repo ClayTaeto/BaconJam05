@@ -10,7 +10,6 @@
     <unique-id>uzos4ezzjulo</unique-id>
     <saved-with-version>13000</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
@@ -19,10 +18,11 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
@@ -710,6 +710,60 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
+        <object-type name="Sprite_Zombie" sid="5968939632260297">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4208284141386802" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.347222" y="0.347222" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.694444" y="0.305556" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.611111" y="0.611111" />
+                            <point x="0.5" y="0.958333" />
+                            <point x="0.347222" y="0.652778" />
+                            <point x="0.333333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="88713578986618" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.347222" y="0.347222" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.680556" y="0.319444" />
+                            <point x="0.611111" y="0.611111" />
+                            <point x="0.5" y="0.930556" />
+                            <point x="0.347222" y="0.652778" />
+                            <point x="0.333333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite_Goblin" sid="7586076396722429">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8455755232285983" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.133333" y="0.12" />
+                            <point x="0.488889" y="0" />
+                            <point x="0.733333" y="0.24" />
+                            <point x="0.777778" y="0.5" />
+                            <point x="0.577778" y="0.62" />
+                            <point x="0.488889" y="0.74" />
+                            <point x="0.288889" y="0.74" />
+                            <point x="0.177778" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="6808311763446851" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Creatures" plugin-id="Sprite" sid="433876966173693">
@@ -777,6 +831,7 @@
         <event-sheet>CreatureEvents.xml</event-sheet>
         <event-sheet>Bunny.xml</event-sheet>
         <event-sheet>Ghost.xml</event-sheet>
+        <event-sheet>Zombie.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="65">
