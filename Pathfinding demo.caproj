@@ -513,9 +513,20 @@
                     <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
+            <container>
+                <type>Ghost2</type>
+                <type>Sprite_Ghost</type>
+            </container>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1238874447987367" speed="5">
-                    <frame duration="1" hotspotX="0.516667" hotspotY="0.516667" />
+                    <frame duration="1" hotspotX="0.483333" hotspotY="0.916667">
+                        <collision-poly>
+                            <point x="0.40625" y="0.86875" />
+                            <point x="0.610416" y="0.864583" />
+                            <point x="0.677083" y="0.958333" />
+                            <point x="0.295833" y="0.966667" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -667,6 +678,31 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3191354409233223" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite_Ghost" sid="6625321710768276">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="3019774352161189">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="4529502262217005">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Ghost2</type>
+                <type>Sprite_Ghost</type>
+            </container>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7258068294296891" speed="5">
+                    <frame duration="1" hotspotX="0.483333" hotspotY="0.916667" />
+                </animation>
+                <animation framecount="3" loop="1" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="8077934527079018" speed="2">
+                    <frame duration="1" hotspotX="0.488889" hotspotY="0.911111" />
+                    <frame duration="1" hotspotX="0.488889" hotspotY="0.911111" />
+                    <frame duration="1" hotspotX="0.488889" hotspotY="0.911111" />
                 </animation>
             </animation-folder>
         </object-type>
