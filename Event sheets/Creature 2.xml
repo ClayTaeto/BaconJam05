@@ -5,41 +5,44 @@
     <events>
         <event-block sid="5904234828982759">
             <conditions>
-                <condition behavior="Pathfinding" id="0" name="On path found" sid="2701520931391261" type="Enemy2" />
-                <condition id="-8" name="Is boolean instance variable set" sid="742210100922643" type="Enemy2">
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="2701520931391261" type="Ghost" />
+                <condition id="-8" name="Is boolean instance variable set" sid="742210100922643" type="Ghost">
                     <param id="0" name="Instance variable">Move</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="1110638678631834" type="Enemy2" />
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="1110638678631834" type="Ghost" />
+                <action disabled="1" id="-18" name="Rotate clockwise" sid="87315951861765" type="BulletImpactParticles">
+                    <param id="0" name="Degrees">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="464853184486017">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="3817513108926442" type="Enemy2">
+                <condition id="-7" name="Compare instance variable" sid="3817513108926442" type="Ghost">
                     <param id="0" name="Instance variable">health</param>
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="8293297730665572" type="Enemy2">
+                <action id="0" name="Spawn another object" sid="8293297730665572" type="Ghost">
                     <param id="0" name="Object">EnemyDeadParticles</param>
                     <param id="1" name="Layer">&quot;Game&quot;</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="-9" name="Destroy" sid="7294951966877864" type="Enemy2" />
+                <action id="-9" name="Destroy" sid="7294951966877864" type="Ghost" />
             </actions>
         </event-block>
         <event-block sid="1480676911898603">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="6214325872337401" type="Enemy2">
+                <condition id="0" name="On collision with another object" sid="6214325872337401" type="Ghost">
                     <param id="0" name="Object">EnemyTarget</param>
                 </condition>
             </conditions>
             <actions>
-                <action disabled="1" id="-9" name="Destroy" sid="8056385315506728" type="Enemy2" />
-                <action id="-13" name="Set boolean" sid="7926756165046365" type="Enemy2">
+                <action disabled="1" id="-9" name="Destroy" sid="8056385315506728" type="Ghost" />
+                <action id="-13" name="Set boolean" sid="7926756165046365" type="Ghost">
                     <param id="0" name="Instance variable">Move</param>
                     <param id="1" name="Value">0</param>
                 </action>
@@ -62,21 +65,21 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block disabled="1" sid="187356376973532">
+        <event-block sid="187356376973532">
             <conditions>
-                <condition id="-18" name="On created" sid="2564823951588617" type="Enemy2" />
+                <condition id="-18" name="On created" sid="2564823951588617" type="Ghost" />
             </conditions>
             <actions>
                 <action behavior="Pin" id="0" name="Pin to object" sid="1226770852279986" type="highlight">
-                    <param id="0" name="Pin to">Enemy2</param>
+                    <param id="0" name="Pin to">Ghost</param>
                     <param id="1" name="Mode">1</param>
                 </action>
                 <action id="-25" name="Move to bottom" sid="1013654537726533" type="highlight" />
             </actions>
         </event-block>
-        <event-block disabled="1" sid="6258638149317571">
+        <event-block sid="6258638149317571">
             <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="4953629180894124" type="Enemy2">
+                <condition id="-8" name="Is boolean instance variable set" sid="4953629180894124" type="Ghost">
                     <param id="0" name="Instance variable">Selected</param>
                 </condition>
             </conditions>
@@ -86,9 +89,9 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="3907126309318045">
+        <event-block sid="3907126309318045">
             <conditions>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="268500469785695" type="Enemy2">
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="268500469785695" type="Ghost">
                     <param id="0" name="Instance variable">Selected</param>
                 </condition>
             </conditions>
@@ -100,7 +103,7 @@
         </event-block>
         <event-block sid="1566908917708879">
             <conditions>
-                <condition id="-19" name="On destroyed" sid="7624533531125795" type="Enemy2" />
+                <condition id="-19" name="On destroyed" sid="7624533531125795" type="Ghost" />
             </conditions>
             <actions>
                 <action id="-11" name="Subtract from" sid="1438192878773748" type="System">
