@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Creature Events</name>
+    <events>
+        <event-block sid="5000855008192173">
+            <conditions>
+                <condition behavior="Pathfinding2" id="0" name="On path found" sid="7561674098143502" type="Creatures" />
+                <condition id="-8" name="Is boolean instance variable set" sid="7453356424378053" type="Creatures">
+                    <param id="0" name="Instance variable">Move</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding2" id="1" name="Move along path" sid="2156743995112449" type="Creatures" />
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="4507638240434221">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3016052686180093" type="Enemy2">
+                    <param id="0" name="Object">EnemyTarget</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-9" name="Destroy" sid="3017784870572287" type="Enemy2" />
+                <action id="-13" name="Set boolean" sid="7219332285190382" type="Enemy2">
+                    <param id="0" name="Instance variable">Move</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block disabled="1" sid="6470812652553858">
+                    <conditions>
+                        <condition id="-16" name="Pick random instance" sid="5500719254907077" type="System">
+                            <param id="0" name="Object">Turret</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7440532802827798" type="Turret" />
+                        <action id="0" name="Spawn another object" sid="3755458525997544" type="Turret">
+                            <param id="0" name="Object">EnemyDeadParticles</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2439507971335726">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="8442163902703861" type="Creatures">
+                    <param id="0" name="Instance variable">Selected</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6745021329579727" type="highlight">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5500366830947671">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8674868215448398" type="Creatures">
+                    <param id="0" name="Instance variable">Selected</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="1197054122048144" type="highlight">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1546367212778507">
+            <conditions>
+                <condition id="-18" name="On created" sid="2828481954395421" type="Creatures" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="3283485813382708" type="highlight">
+                    <param id="0" name="Pin to">Creatures</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="7924085489590055" type="highlight" />
+            </actions>
+        </event-block>
+        <event-block sid="7353145855798667">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="2207118959607993" type="Creatures" />
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="8847947077566867" type="System">
+                    <param id="0" name="Variable">CurFear</param>
+                    <param id="1" name="Value">Creatures.FearCost</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6268828240369793">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="3373251652247482" type="Creatures">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="2803079538029875" type="Creatures">
+                    <param id="0" name="Object">EnemyDeadParticles</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="2493425683373886" type="Creatures" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

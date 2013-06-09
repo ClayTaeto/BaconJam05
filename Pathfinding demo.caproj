@@ -11,19 +11,19 @@
     <saved-with-version>13000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
-        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
@@ -490,16 +490,76 @@
             </behaviors>
             <texture />
         </object-type>
+        <object-type name="Creature1" sid="1595347357343462">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="1885124264131312">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7999271080091751" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Creature2" sid="2411865592628206">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="9088065088749747">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7310918816594741" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Creature3" sid="6925836023136809">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="7766781456886597">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8372168602610158" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Creatures" plugin-id="Sprite" sid="908855394566898">
+            <members>
+                <member>Creature1</member>
+                <member>Creature2</member>
+                <member>Creature3</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Health" sid="7716510318057872" type="number" />
+                <instance-variable name="Selected" sid="9543447192120032" type="boolean" />
+                <instance-variable name="Move" sid="9391038775748111" type="boolean" />
+                <instance-variable name="FearCost" sid="3316799439593122" type="number" />
+                <instance-variable name="BloodCost" sid="5582952443288073" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding2" sid="5381460634789318">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
     </layout-folder>
-    <event-folder expanded="0">
+    <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Creature 2.xml</event-sheet>
         <event-sheet>Creature 3.xml</event-sheet>
         <event-sheet>DayNight Cycle.xml</event-sheet>
+        <event-sheet>Creature Events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="29">
