@@ -744,6 +744,8 @@
         <family name="People" plugin-id="Sprite" sid="8540495921560056">
             <members>
                 <member>Bunny</member>
+                <member>CamperBoy1</member>
+                <member>CamperGirl1</member>
                 <member>LumberJack</member>
             </members>
             <instance-variables>
