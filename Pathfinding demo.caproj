@@ -736,15 +736,16 @@
         <event-sheet>People.xml</event-sheet>
         <event-sheet>CreatureEvents.xml</event-sheet>
         <event-sheet>Bunny.xml</event-sheet>
+        <event-sheet>Ghost.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Touch" uid="29">
+        <global-instance type="Touch" uid="65">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Keyboard" uid="58" />
-        <global-instance type="Mouse" uid="59" />
+        <global-instance type="Keyboard" uid="66" />
+        <global-instance type="Mouse" uid="67" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

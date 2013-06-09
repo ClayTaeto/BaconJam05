@@ -1161,7 +1161,7 @@
                     <instance-variables>
                         <Fear>0</Fear>
                         <Health>0</Health>
-                        <FearThreashold>5</FearThreashold>
+                        <FearThreashold>3</FearThreashold>
                         <canStarve>false</canStarve>
                         <Hunger>0</Hunger>
                         <TempX>0</TempX>
@@ -1384,7 +1384,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FoodCan1" uid="60">
+                <instance type="FoodCan1" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1406,7 +1406,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="RabbitLeg1" uid="61">
+                <instance type="RabbitLeg1" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1462,6 +1462,28 @@
                     <world>
                         <x>-134</x>
                         <y>32</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.75</opacity>
+                    </world>
+                </instance>
+                <instance type="BloodSplatter1" uid="68">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1401</x>
+                        <y>917</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1569,7 +1591,7 @@
                         <opacity>0.600000024</opacity>
                     </world>
                 </instance>
-                <instance type="Player" uid="5">
+                <instance type="Player" uid="12">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1609,7 +1631,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="GridBackground" uid="11">
+                <instance type="GridBackground" uid="13">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -1646,7 +1668,7 @@
             <blend-mode>2</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="bloodCount" uid="12">
+                <instance type="bloodCount" uid="19">
                     <properties>
                         <text>blood</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1673,7 +1695,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="fearCount" uid="13">
+                <instance type="fearCount" uid="20">
                     <properties>
                         <text>fear</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1700,7 +1722,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="clock" uid="19">
+                <instance type="clock" uid="22">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1730,7 +1752,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="clockOverlay" uid="20">
+                <instance type="clockOverlay" uid="23">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1752,7 +1774,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="spawnMonster1" uid="22">
+                <instance type="spawnMonster1" uid="29">
                     <properties>
                         <type>Button</type>
                         <text>spawn 1</text>
@@ -1786,7 +1808,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="spawnMonster2" uid="23">
+                <instance type="spawnMonster2" uid="30">
                     <properties>
                         <type>Button</type>
                         <text>spawn 2</text>
@@ -1820,7 +1842,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="spawnMonster3" uid="30">
+                <instance type="spawnMonster3" uid="33">
                     <properties>
                         <type>Button</type>
                         <text>spawn 3</text>
@@ -1854,7 +1876,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Sprite" uid="33">
+                <instance type="Sprite" uid="42">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1893,7 +1915,7 @@
             <blend-mode>2</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="pauseMask" uid="42">
+                <instance type="pauseMask" uid="43">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1915,7 +1937,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="pauseImage" uid="43">
+                <instance type="pauseImage" uid="44">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1937,7 +1959,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pauseText" uid="44">
+                <instance type="pauseText" uid="64">
                     <properties>
                         <text>Game Paused</text>
                         <initial-visibility>Invisible</initial-visibility>
