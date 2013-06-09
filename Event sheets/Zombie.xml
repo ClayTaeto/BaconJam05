@@ -5,11 +5,19 @@
     <events>
         <event-block sid="9941631039318918">
             <conditions>
+<<<<<<< HEAD
                 <condition id="-18" name="On created" sid="4992248098671745" type="Creature12" />
             </conditions>
             <actions>
                 <action behavior="Pin" id="0" name="Pin to object" sid="9794081023859491" type="H_Zombie">
                     <param id="0" name="Pin to">Creature12</param>
+=======
+                <condition id="-18" name="On created" sid="4992248098671745" type="Creature1" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="9794081023859491" type="H_Zombie">
+                    <param id="0" name="Pin to">Creature1</param>
+>>>>>>> 60c5858dac7de0b87da9164ed8da0ab91f79704e
                     <param id="1" name="Mode">0</param>
                 </action>
             </actions>

@@ -3,9 +3,15 @@
     <!--This is a UI state file - its content describes the user interface settings when the event sheet was last open.
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
+<<<<<<< HEAD:Event sheets/Goblin.uistate.xml
     <scroll-pos>0</scroll-pos>
     <conditions-column>192</conditions-column>
     <actions-namecolumn>109</actions-namecolumn>
+=======
+    <scroll-pos>2576</scroll-pos>
+    <conditions-column>212</conditions-column>
+    <actions-namecolumn>136</actions-namecolumn>
+>>>>>>> 60c5858dac7de0b87da9164ed8da0ab91f79704e:Event sheets/Event sheet 1.uistate.xml
     <condition-namecolumns>
         <nest>81</nest>
         <nest>18</nest>
