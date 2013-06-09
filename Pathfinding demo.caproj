@@ -11,14 +11,14 @@
     <saved-with-version>13000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
-        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
@@ -490,8 +490,168 @@
             </behaviors>
             <texture />
         </object-type>
+        <object-type name="Zombie2" sid="2590242546663949">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="health" sid="3327513751994989" type="number" />
+                <instance-variable name="Selected" sid="2794695469097089" type="boolean" />
+                <instance-variable name="Move" sid="8369343147238664" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Flash" sid="6773236533707395">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3973232216956899" speed="5">
+                    <frame duration="1" hotspotX="0.513889" hotspotY="0.513889" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ghost2" sid="5952521879253164">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="health" sid="5844723608753504" type="number" />
+                <instance-variable name="Selected" sid="2698441795513336" type="boolean" />
+                <instance-variable comment="Tells unit if it should be moving along its path." name="Move" sid="3924110725126424" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="2951418389432291">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="3414470846050289">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1238874447987367" speed="5">
+                    <frame duration="1" hotspotX="0.516667" hotspotY="0.516667" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Goblin2" sid="9188943414862881">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="health" sid="8899040924367017" type="number" />
+                <instance-variable name="Selected" sid="3502415858772593" type="boolean" />
+                <instance-variable name="Move" sid="8748219538525329" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Flash" sid="4540896677080217">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2396257004860764" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="highlight2" sid="6275416021225928">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="6918365677254645">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9470671299911336" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="highlight3" sid="2185140821175498">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="7084837682389292">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2860465732706797" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="highlight4" sid="4160488070838543">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="4387032201457064">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6864652051448566" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bunny" sid="1281918976590399">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4274868723573692" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111">
+                        <collision-poly>
+                            <point x="0.444444" y="0.444444" />
+                            <point x="0.488889" y="0.4" />
+                            <point x="0.577778" y="0.422222" />
+                            <point x="0.755556" y="0.488889" />
+                            <point x="0.711111" y="0.711111" />
+                            <point x="0.488889" y="0.933333" />
+                            <point x="0.177778" y="0.822222" />
+                            <point x="0.466667" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LumberJack" sid="5789607771593687">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6355766819353298" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Creatures" plugin-id="Sprite" sid="433876966173693">
+            <members>
+                <member>Ghost2</member>
+                <member>Goblin2</member>
+                <member>Zombie2</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pathfinding2" sid="7544338440909875">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="Turret" sid="9303679661692172">
+                    <behavior id="Turret" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="SelectorHighlight" plugin-id="Sprite" sid="5385894004099555">
+            <members>
+                <member>highlight2</member>
+                <member>highlight3</member>
+                <member>highlight4</member>
+            </members>
+        </family>
+        <family name="People" plugin-id="Sprite" sid="8540495921560056">
+            <members>
+                <member>Bunny</member>
+                <member>LumberJack</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="8887270074296493">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="Turret" sid="8348788848303543">
+                    <behavior id="Turret" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
     </layout-folder>
