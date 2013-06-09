@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Goblin</name>
+    <events>
+        <event-block sid="5059145067783086">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3095889212442126" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="381236787827258" type="GoblinSprite" />
+            </actions>
+        </event-block>
+        <event-block sid="9940546967472054">
+            <conditions>
+                <condition id="-18" name="On created" sid="182750051642417" type="Creature3" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="5661838475952798" type="H_Goblin">
+                    <param id="0" name="Pin to">Creature3</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="6009341128182936" type="GoblinSprite">
+                    <param id="0" name="Pin to">Creature3</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9580745270770147" type="Creature3">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6888455348681544">
+            <conditions>
+                <condition id="-13" name="Is between angles" sid="3151106109771106" type="Creature3">
+                    <param id="0" name="First angle">91</param>
+                    <param id="1" name="Second angle">180</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="388832072891576" type="GoblinSprite">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2150130003273647">
+            <conditions>
+                <condition id="-13" name="Is between angles" sid="4760644128291369" type="Creature3">
+                    <param id="0" name="First angle">0</param>
+                    <param id="1" name="Second angle">90</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="4366229263176637" type="GoblinSprite">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

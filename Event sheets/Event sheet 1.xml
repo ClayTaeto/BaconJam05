@@ -3,6 +3,22 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+<<<<<<< Updated upstream
+=======
+        <event-group description="" sid="8963081337899502" title="Includes">
+            <sub-events>
+                <include>PersonProto</include>
+                <include>PeopleEvents</include>
+                <include>Creature Events</include>
+                <include>Goblin</include>
+                <include>Ghost</include>
+                <include>Zombie</include>
+                <include>DayNight Cycle</include>
+                <include>Creature 3</include>
+                <include>Creature 2</include>
+            </sub-events>
+        </event-group>
+>>>>>>> Stashed changes
         <variable comment="Maximum Fear the user has available" constant="0" name="TotFear" sid="2163160469199888" static="0" type="number">20</variable>
         <variable comment="Amount of Fear the user currently has" constant="0" name="CurFear" sid="3571698055154923" static="0" type="number">0</variable>
         <include>DayNight Cycle</include>
@@ -325,7 +341,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8524059437359193" title="Spawning">
+        <event-group collapsed="1" description="" sid="8524059437359193" title="Spawning">
             <sub-events>
                 <event-block sid="3863908715721051">
                     <conditions>
@@ -780,7 +796,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5655471655657409" title="UI">
+        <event-group collapsed="1" description="" sid="5655471655657409" title="UI">
             <sub-events>
                 <event-block sid="4954009397237554">
                     <conditions>

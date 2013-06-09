@@ -856,6 +856,31 @@
                         <opacity>0.800000012</opacity>
                     </world>
                 </instance>
+                <instance type="GoblinSprite" uid="65">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1712</x>
+                        <y>688</y>
+                        <z>0</z>
+                        <width>45</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.51111114</hotspotX>
+                        <hotspotY>0.920000017</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1352,6 +1377,23 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="inventory" uid="66">
+            <instance-variables>
+                <Wood>0</Wood>
+                <Food>0</Food>
+                <Brush>0</Brush>
+                <Twigs>0</Twigs>
+                <Stone>0</Stone>
+            </instance-variables>
+        </instance>
+        <instance type="TimeOuts" uid="67">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>

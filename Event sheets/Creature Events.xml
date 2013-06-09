@@ -109,5 +109,31 @@
                 <action id="-9" name="Destroy" sid="2493425683373886" type="Creatures" />
             </actions>
         </event-block>
+        <event-block disabled="1" sid="1021065727756806">
+            <conditions>
+                <condition id="-13" name="Is between angles" sid="2988264687280371" type="Creatures">
+                    <param id="0" name="First angle">0</param>
+                    <param id="1" name="Second angle">90</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="6061826219056424" type="Creatures">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="7375888975976678">
+            <conditions>
+                <condition id="-13" name="Is between angles" sid="5637905748555906" type="Creatures">
+                    <param id="0" name="First angle">91</param>
+                    <param id="1" name="Second angle">180</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="910011649987945" type="Creatures">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

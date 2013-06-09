@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PersonProto</name>
+    <events>
+        <event-group description="" sid="6867861152036876" title="MindSets">
+            <sub-events>
+                <event-group description="" sid="6772601188299943" title="Crafting" />
+                <event-group description="" sid="1403364601744686" title="Scared" />
+                <event-group description="" sid="6528138821838615" title="Relaxing">
+                    <sub-events>
+                        <event-block sid="2048430293958793">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="6482480521658163" type="System">
+                                    <param id="0" name="Interval (seconds)">8</param>
+                                </condition>
+                                <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="4543045463835591" type="PersonPrototype2" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="2443094020938407" type="PersonPrototype2">
+                                    <param id="0" name="Instance variable">tempX</param>
+                                    <param id="1" name="Value">random(0, 399)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="2271033116751809" type="PersonPrototype2">
+                                    <param id="0" name="Instance variable">TempY</param>
+                                    <param id="1" name="Value">random(0, 399)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="5979768195610478">
+                                    <conditions>
+                                        <condition behavior="Pathfinding" id="2" name="Is cell obstacle" sid="4025014474630589" type="PersonPrototype2">
+                                            <param id="0" name="Cell X">PersonPrototype2.tempX + PersonPrototype2.X - 100</param>
+                                            <param id="1" name="Cell Y">PersonPrototype2.tempY + PersonPrototype2.Y - 100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Pathfinding" id="0" name="Find path" sid="4867512809019466" type="PersonPrototype2">
+                                            <param id="0" name="X">PersonPrototype2.tempX</param>
+                                            <param id="1" name="Y">PersonPrototype2.tempY</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="7613772014511188" title="Critical Thinking" />
+                <event-group description="" sid="9237501000686197" title="Confident attacking" />
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
