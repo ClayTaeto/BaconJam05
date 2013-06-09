@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Ghost</name>
+    <events>
+        <event-block sid="7879323522451466">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="5065697624553789" type="Creatures">
+                    <param id="0" name="Instance variable">Selected</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="3196634942588338" type="HighLightSelected">
+                    <param id="0" name="Object">Creatures</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6713335055824049" type="HighLightSelected">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8035678797663937">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3586673535786616" type="Creatures">
+                    <param id="0" name="Instance variable">Selected</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="1667864856771097" type="HighLightSelected">
+                    <param id="0" name="Object">Creatures</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="855321487974225" type="HighLightSelected">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9250762748845477">
+            <conditions>
+                <condition id="-18" name="On created" sid="6627182035159572" type="Creature22" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="9884851788443389" type="H_Ghost">
+                    <param id="0" name="Pin to">Creature22</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
