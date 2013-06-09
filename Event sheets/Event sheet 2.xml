@@ -98,7 +98,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="" sid="553028284856044" title="Basics">
+        <event-group description="" sid="553028284856044" title="Basics">
             <sub-events>
                 <event-block sid="6667017648187838">
                     <conditions>

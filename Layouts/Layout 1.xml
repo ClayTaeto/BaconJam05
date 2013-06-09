@@ -864,10 +864,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>0</Health>
+                        <Health>100</Health>
                         <Selected>false</Selected>
-                        <FearCost>0</FearCost>
-                        <BloodCost>0</BloodCost>
+                        <FearCost>2</FearCost>
+                        <BloodCost>10</BloodCost>
                         <Move>false</Move>
                     </instance-variables>
                     <behavior-instances>
@@ -919,8 +919,8 @@
                         <width>60</width>
                         <height>60</height>
                         <depth>0</depth>
-                        <hotspotX>0.516667008</hotspotX>
-                        <hotspotY>0.516667008</hotspotY>
+                        <hotspotX>0.516666651</hotspotX>
+                        <hotspotY>0.516666651</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -933,10 +933,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>0</Health>
+                        <Health>100</Health>
                         <Selected>false</Selected>
-                        <FearCost>0</FearCost>
-                        <BloodCost>0</BloodCost>
+                        <FearCost>2</FearCost>
+                        <BloodCost>10</BloodCost>
                         <Move>false</Move>
                     </instance-variables>
                     <behavior-instances>
@@ -975,7 +975,7 @@
                         <width>45</width>
                         <height>50</height>
                         <depth>0</depth>
-                        <hotspotX>0.511111021</hotspotX>
+                        <hotspotX>0.51111114</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -989,10 +989,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>0</Health>
+                        <Health>100</Health>
                         <Selected>false</Selected>
-                        <FearCost>0</FearCost>
-                        <BloodCost>0</BloodCost>
+                        <FearCost>2</FearCost>
+                        <BloodCost>10</BloodCost>
                         <Move>false</Move>
                     </instance-variables>
                     <behavior-instances>
@@ -1031,8 +1031,8 @@
                         <width>72</width>
                         <height>72</height>
                         <depth>0</depth>
-                        <hotspotX>0.513889015</hotspotX>
-                        <hotspotY>0.513889015</hotspotY>
+                        <hotspotX>0.513888896</hotspotX>
+                        <hotspotY>0.513888896</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

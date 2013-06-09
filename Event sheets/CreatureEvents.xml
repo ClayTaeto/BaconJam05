@@ -31,12 +31,12 @@
                 <action id="-9" name="Destroy" sid="8229882478216757" type="Creatures" />
             </actions>
         </event-block>
-        <event-block sid="8019245279228538">
+        <event-block sid="2264037087233212">
             <conditions>
-                <condition behavior="Pathfinding2" id="0" name="On path found" sid="5079686799692273" type="Creatures" />
+                <condition behavior="Pathfinding2" id="0" name="On path found" sid="5315968941159201" type="Creatures" />
             </conditions>
             <actions>
-                <action behavior="Pathfinding2" id="1" name="Move along path" sid="2288048220078854" type="Creatures" />
+                <action behavior="Pathfinding2" id="1" name="Move along path" sid="8545449201061944" type="Creatures" />
             </actions>
         </event-block>
     </events>
