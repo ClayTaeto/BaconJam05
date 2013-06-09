@@ -21,8 +21,8 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
@@ -598,6 +598,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="CamperBoy1" sid="1908034240453471">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2054016852482814" speed="5">
+                    <frame duration="1" hotspotX="0.488889" hotspotY="0.488889" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Creatures" plugin-id="Sprite" sid="433876966173693">
@@ -671,8 +679,8 @@
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Keyboard" uid="5" />
-        <global-instance type="Mouse" uid="13" />
+        <global-instance type="Keyboard" uid="13" />
+        <global-instance type="Mouse" uid="56" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

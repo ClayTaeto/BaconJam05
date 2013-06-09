@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Bunny</name>
+    <events>
+        <event-block sid="4262086131657135">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="292889326999927" type="System">
+                    <param id="0" name="Interval (seconds)">8</param>
+                </condition>
+                <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="4901798360566037" type="Bunny" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="9229000745557725" type="Bunny">
+                    <param id="0" name="Instance variable">TempX</param>
+                    <param id="1" name="Value">random(-200, 200) +Bunny.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="7407557654812794" type="Bunny">
+                    <param id="0" name="Instance variable">TempY</param>
+                    <param id="1" name="Value">random(-200, 200) + Bunny.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7545214169405273">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="2" name="Is cell obstacle" sid="4630268726147361" type="Bunny">
+                            <param id="0" name="Cell X">Bunny.TempX</param>
+                            <param id="1" name="Cell Y">Bunny.TempY</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="3544299046062024" type="Bunny">
+                            <param id="0" name="X">Bunny.TempX</param>
+                            <param id="1" name="Y">Bunny.TempY</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1208,6 +1208,50 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="CamperBoy1" uid="0">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-198</x>
+                        <y>-73</y>
+                        <z>0</z>
+                        <width>45</width>
+                        <height>45</height>
+                        <depth>0</depth>
+                        <hotspotX>0.48888889</hotspotX>
+                        <hotspotY>0.48888889</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CamperBoy1" uid="57">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1442</x>
+                        <y>780</y>
+                        <z>0</z>
+                        <width>45</width>
+                        <height>45</height>
+                        <depth>0</depth>
+                        <hotspotX>0.48888889</hotspotX>
+                        <hotspotY>0.48888889</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -1293,8 +1337,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-96</x>
-                        <y>-48</y>
+                        <x>-41</x>
+                        <y>-44</y>
                         <z>0</z>
                         <width>864</width>
                         <height>672</height>
@@ -1345,7 +1389,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="GridBackground" uid="0">
+                <instance type="GridBackground" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
