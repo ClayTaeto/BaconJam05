@@ -29,6 +29,9 @@
                     <param id="2" name="Image point">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="8229882478216757" type="Creatures" />
+                <action behavior="Turret" id="1" name="Add object to target" sid="5003693069130574" type="Creatures">
+                    <param id="0" name="Target">People</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9829399103968572">
@@ -38,6 +41,27 @@
             <actions>
                 <action behavior="Pathfinding2" id="1" name="Move along path" sid="4526115928976341" type="Creatures" />
             </actions>
+        </event-block>
+        <event-block sid="4753689475504149">
+            <conditions>
+                <condition behavior="Turret" id="0" name="Has target" sid="5990869459989598" type="Creatures" />
+                <condition behavior="Pathfinding2" id="4" inverted="1" name="Is moving along path" sid="8821700613944205" type="Creatures" />
+            </conditions>
+            <actions>
+                <action id="-17" name="Move forward" sid="567128951399327" type="Creatures">
+                    <param id="0" name="Distance">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="716297324367577">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="5076125921103814">
+            <conditions>
+                <condition behavior="Turret" id="1" name="On shoot" sid="6733904678322689" type="Creatures" />
+            </conditions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

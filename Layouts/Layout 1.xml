@@ -720,7 +720,7 @@
                         <bottom-margin>16</bottom-margin>
                         <edges>Stretch</edges>
                         <fill>Stretch</fill>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
                     </properties>
@@ -1547,8 +1547,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-<behavior-instances>
-</behavior-instances>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1571,8 +1572,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-<behavior-instances>
-</behavior-instances>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
