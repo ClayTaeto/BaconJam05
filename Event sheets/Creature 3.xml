@@ -3,25 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Creature 3</name>
     <events>
-        <event-block sid="8594027617545866">
-            <conditions>
-                <condition behavior="Pathfinding" id="0" name="On path found" sid="8589248657922774" type="Goblin" />
-                <condition id="-8" name="Is boolean instance variable set" sid="1031461376169737" type="Goblin">
-                    <param id="0" name="Instance variable">Move</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="6094485834222057" type="Goblin" />
-            </actions>
-        </event-block>
         <event-block sid="5140600712883401">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="7404455392955431" type="Goblin">
-                    <param id="0" name="Instance variable">health</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
+            <conditions />
             <actions>
                 <action id="0" name="Spawn another object" sid="4994719855561825" type="Goblin">
                     <param id="0" name="Object">EnemyDeadParticles</param>
@@ -75,11 +58,7 @@
             </actions>
         </event-block>
         <event-block sid="8944349319013961">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="6256243653401525" type="Goblin">
-                    <param id="0" name="Instance variable">Selected</param>
-                </condition>
-            </conditions>
+            <conditions />
             <actions>
                 <action id="-15" name="Set visible" sid="8847010886450057" type="highlight">
                     <param id="0" name="Visibility">1</param>
@@ -87,11 +66,7 @@
             </actions>
         </event-block>
         <event-block sid="1149089122849734">
-            <conditions>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2764897854304969" type="Goblin">
-                    <param id="0" name="Instance variable">Selected</param>
-                </condition>
-            </conditions>
+            <conditions />
             <actions>
                 <action id="-15" name="Set visible" sid="6817049225668175" type="highlight">
                     <param id="0" name="Visibility">0</param>

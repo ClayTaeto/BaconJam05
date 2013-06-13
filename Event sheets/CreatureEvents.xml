@@ -29,9 +29,6 @@
                     <param id="2" name="Image point">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="8229882478216757" type="Creatures" />
-                <action behavior="Turret" id="1" name="Add object to target" sid="5003693069130574" type="Creatures">
-                    <param id="0" name="Target">People</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="9829399103968572">
@@ -39,29 +36,542 @@
                 <condition behavior="Pathfinding2" id="0" name="On path found" sid="3725139432178235" type="Creatures" />
             </conditions>
             <actions>
-                <action behavior="Pathfinding2" id="1" name="Move along path" sid="4526115928976341" type="Creatures" />
-            </actions>
-        </event-block>
-        <event-block sid="4753689475504149">
-            <conditions>
-                <condition behavior="Turret" id="0" name="Has target" sid="5990869459989598" type="Creatures" />
-                <condition behavior="Pathfinding2" id="4" inverted="1" name="Is moving along path" sid="8821700613944205" type="Creatures" />
-            </conditions>
-            <actions>
-                <action id="-17" name="Move forward" sid="567128951399327" type="Creatures">
-                    <param id="0" name="Distance">2</param>
+                <action behavior="Pathfinding2" disabled="1" id="1" name="Move along path" sid="4526115928976341" type="Creatures" />
+                <action behavior="CustomMovement" disabled="1" id="5" name="Accelerate toward position" sid="2327484588677343" type="Creatures">
+                    <param id="0" name="Acceleration">1</param>
+                    <param id="1" name="X">Creatures.Pathfinding2.NodeXAt(0)</param>
+                    <param id="2" name="Y">Creatures.Pathfinding2.NodeYAt(0)</param>
+                </action>
+                <action behavior="CustomMovement" disabled="1" id="2" name="Set speed" sid="1151840199221148" type="Creatures">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">50</param>
+                </action>
+                <action id="-10" name="Set value" sid="6382669755767093" type="Creatures">
+                    <param id="0" name="Instance variable">targetX</param>
+                    <param id="1" name="Value">Creatures.Pathfinding2.NodeXAt(0)</param>
+                </action>
+                <action id="-10" name="Set value" sid="5541287671245979" type="Creatures">
+                    <param id="0" name="Instance variable">targetY</param>
+                    <param id="1" name="Value">Creatures.Pathfinding2.NodeYAt(0)</param>
+                </action>
+                <action behavior="Boids" id="1" name="Flock" sid="8030196672052329" type="Creatures">
+                    <param id="0" name="Target X">Self.targetX</param>
+                    <param id="1" name="Target Y">Self.targetY</param>
+                    <param id="2" name="Flock with">Creatures</param>
+                    <param id="3" name="Target Priority">50</param>
+                    <param id="4" name="Seperation Priority">5</param>
+                    <param id="5" name="Alignment Priority">0</param>
+                    <param id="6" name="Cohesion Priority">2</param>
+                    <param id="7" name="Seperation Distance">20</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="716297324367577">
-            <conditions />
-            <actions />
+            <sub-events>
+                <event-block sid="1852525330327098">
+                    <conditions>
+                        <condition id="-10" name="For" sid="6702691715147903" type="System">
+                            <param id="0" name="Name">&quot;&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">Creatures.Pathfinding2.NodeCount - 1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1751619875191843">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7002693172532217" type="System">
+                                    <param id="0" name="First value">loopindex</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">Creatures.Pathfinding2.NodeCount - 1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="8602599919677128" type="System">
+                                    <param id="0" name="Object to create">Node_ZombieEnd</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Creatures.Pathfinding2.NodeXAt(loopindex)</param>
+                                    <param id="3" name="Y">Creatures.Pathfinding2.NodeYAt(loopindex)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4493979777658574" type="Node_ZombieEnd">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Value">Creatures.UID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="2826033780832513" type="Node_ZombieEnd">
+                                    <param id="0" name="Instance variable">TargetX</param>
+                                    <param id="1" name="Value">Self.X</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8629854096219266" type="Node_ZombieEnd">
+                                    <param id="0" name="Instance variable">TargetY</param>
+                                    <param id="1" name="Value">Self.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9388810826474724">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9755014131454536" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="6245194307534299" type="System">
+                                    <param id="0" name="Object to create">Node_Zombie</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">Creatures.Pathfinding2.NodeXAt(loopindex)</param>
+                                    <param id="3" name="Y">Creatures.Pathfinding2.NodeYAt(loopindex)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5494469589923171" type="Node_Zombie">
+                                    <param id="0" name="Instance variable">node</param>
+                                    <param id="1" name="Value">loopindex</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8506334555542177" type="Node_Zombie">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Value">Creatures.UID</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="8353922156728937" type="Node_Zombie">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">TiledBackground</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="5076125921103814">
             <conditions>
                 <condition behavior="Turret" id="1" name="On shoot" sid="6733904678322689" type="Creatures" />
+                <condition id="9" name="Is overlapping at offset" sid="7725933753208022" type="Creatures">
+                    <param id="0" name="Object">People</param>
+                    <param id="1" name="Offset X">30 * cos(Creatures.Angle)</param>
+                    <param id="2" name="Offset Y">30 * sin(Creatures.Angle)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="8585977336344077" type="People">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-11" name="Add to" sid="2538442076749783" type="People">
+                    <param id="0" name="Instance variable">Fear</param>
+                    <param id="1" name="Value">int(Creatures.BloodCost / 4)</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="6566414704014706" type="People">
+                    <param id="0" name="Object">BulletImpactParticles</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="7012356264139534" type="People">
+                    <param id="0" name="Object">BloodSplatter1</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="1848618184622189" type="People">
+                    <param id="0" name="Object">Blood2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="9924165390517015">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1575149488072624" type="Creatures">
+                    <param id="0" name="Object">People</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding2" id="2" name="Stop" sid="458395941621866" type="Creatures" />
+                <action id="-12" name="Set group active" sid="4074630052627885" type="System">
+                    <param id="0" name="Group name">&quot;Advance!&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1966971901282953">
+            <conditions>
+                <condition id="-18" name="On created" sid="6269389781861036" type="Creatures" />
+            </conditions>
+            <actions>
+                <action behavior="Turret" id="1" name="Add object to target" sid="675698057679278" type="Creatures">
+                    <param id="0" name="Target">People</param>
+                </action>
+                <action behavior="Boids" id="1" name="Flock" sid="3295473240307931" type="Creatures">
+                    <param id="0" name="Target X">0</param>
+                    <param id="1" name="Target Y">0</param>
+                    <param id="2" name="Flock with">Creatures</param>
+                    <param id="3" name="Target Priority">1</param>
+                    <param id="4" name="Seperation Priority">60</param>
+                    <param id="5" name="Alignment Priority">1</param>
+                    <param id="6" name="Cohesion Priority">15</param>
+                    <param id="7" name="Seperation Distance">45</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="" disabled="1" sid="1779308127353322" title="Advance!">
+            <sub-events>
+                <event-block disabled="1" sid="4753689475504149">
+                    <conditions>
+                        <condition behavior="Turret" id="0" name="Has target" sid="5990869459989598" type="Creatures" />
+                        <condition behavior="Pathfinding2" id="4" inverted="1" name="Is moving along path" sid="8821700613944205" type="Creatures" />
+                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="424363458485545" type="Creatures">
+                            <param id="0" name="Object">Creatures</param>
+                            <param id="1" name="Offset X">2 * cos(Creatures.Angle)</param>
+                            <param id="2" name="Offset Y">2 * sin(Creatures.Angle)</param>
+                        </condition>
+                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="6208002751614566" type="Creatures">
+                            <param id="0" name="Object">Creatures</param>
+                            <param id="1" name="Offset X">2 * cos(Creatures.Angle)</param>
+                            <param id="2" name="Offset Y">2 * sin(Creatures.Angle)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Move forward" sid="567128951399327" type="Creatures">
+                            <param id="0" name="Distance">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block disabled="1" sid="3032270076439946">
+            <conditions>
+                <condition behavior="Turret" id="1" name="On shoot" sid="7743924588049844" type="Creatures" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="7979890191286448" type="Creatures">
+                    <param id="0" name="Object">Berries1</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="2300324750260469" type="Creatures">
+                    <param id="0" name="Object">BulletImpactParticles</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">&quot;attack&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="2159593194720095">
+            <conditions>
+                <condition behavior="CustomMovement" id="2" name="On step" sid="2481801970233433" type="Creatures" />
+                <condition behavior="CustomMovement" id="0" name="Is moving" sid="4071790314916964" type="Creatures" />
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="10" name="Push out solid" sid="1571494250564574" type="Creatures">
+                    <param id="0" name="Direction">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="576811294742218" type="Creatures">
+                    <param id="0" name="Angle">angle(Self.X, Self.Y, Self.targetX, Self.targetY)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block disabled="1" sid="6585903316582175">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="8866708079904108" type="System">
+                            <param id="0" name="First value">Creatures.Angle</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">Creatures.CustomMovement.MovingAngle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="0" name="Stop" sid="80402991550522" type="Creatures" />
+                        <action behavior="CustomMovement" id="4" name="Accelerate toward angle" sid="3927740086466691" type="Creatures">
+                            <param id="0" name="Acceleration">50</param>
+                            <param id="1" name="Angle">angle(Self.X, Self.Y, Self.targetX, Self.targetY)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="3476585531132091">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5773663019670923" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="0" name="Stop" sid="1015649102987744" type="Creatures" />
+                        <action behavior="CustomMovement" id="10" name="Push out solid" sid="423173516189372" type="Creatures">
+                            <param id="0" name="Direction">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8433823534879728">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="8771927420545809" type="Creatures">
+                    <param id="0" name="Object">Node_Zombie</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="2311009346707993" type="Node_Zombie">
+                    <param id="0" name="Instance variable">id</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Creatures.UID</param>
+                </condition>
+                <condition id="-21" name="Is between values" sid="5104470818721266" type="System">
+                    <param id="0" name="Value">Creatures.Y</param>
+                    <param id="1" name="Lower bound">Node_Zombie.Y - 1</param>
+                    <param id="2" name="Upper bound">Node_Zombie.Y  + 1</param>
+                </condition>
+                <condition id="-21" name="Is between values" sid="4550657633122788" type="System">
+                    <param id="0" name="Value">Creatures.X</param>
+                    <param id="1" name="Lower bound">Node_Zombie.X -1</param>
+                    <param id="2" name="Upper bound">Node_Zombie.X  + 1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" disabled="1" id="0" name="Stop" sid="9109770703776814" type="Creatures" />
+                <action behavior="CustomMovement" disabled="1" id="5" name="Accelerate toward position" sid="4654421458809576" type="Creatures">
+                    <param id="0" name="Acceleration">5</param>
+                    <param id="1" name="X">Creatures.Pathfinding2.NodeXAt(Node_Zombie.node )</param>
+                    <param id="2" name="Y">Creatures.Pathfinding2.NodeYAt(Node_Zombie.node)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7126705088262826">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6198382376537682" type="Node_Zombie">
+                            <param id="0" name="Instance variable">node</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Creatures.Pathfinding2.NodeCount - 1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="440671862918267" type="Node_ZombieEnd">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Creatures.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="8070837050988275" type="Creatures">
+                            <param id="0" name="Object">BulletImpactParticles</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4736730806028629" type="Creatures">
+                            <param id="0" name="Instance variable">targetX</param>
+                            <param id="1" name="Value">Creatures.Pathfinding2.NodeXAt(Node_Zombie.node)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="452002638590415" type="Creatures">
+                            <param id="0" name="Instance variable">targetY</param>
+                            <param id="1" name="Value">Creatures.Pathfinding2.NodeYAt(Node_Zombie.node)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2461497295572689" type="Creatures">
+                            <param id="0" name="Instance variable">manhattanDistance</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Boids" id="1" name="Flock" sid="8626747133665934" type="Creatures">
+                            <param id="0" name="Target X">Self.targetX</param>
+                            <param id="1" name="Target Y">Self.targetY</param>
+                            <param id="2" name="Flock with">Creatures</param>
+                            <param id="3" name="Target Priority">1</param>
+                            <param id="4" name="Seperation Priority">5</param>
+                            <param id="5" name="Alignment Priority">0</param>
+                            <param id="6" name="Cohesion Priority">2</param>
+                            <param id="7" name="Seperation Distance">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9828988962717662">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2458677105023015" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="734089065975712" type="Creatures">
+                            <param id="0" name="Object">BulletImpactParticles</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="CustomMovement" id="0" name="Stop" sid="7771147203463744" type="Creatures" />
+                        <action id="-10" name="Set value" sid="1005653523361912" type="Creatures">
+                            <param id="0" name="Instance variable">manhattanDistance</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1827835577511186" type="Creatures">
+                            <param id="0" name="Instance variable">targetX</param>
+                            <param id="1" name="Value">Creatures.Pathfinding2.NodeXAt(Node_Zombie.node + 1)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4171059947893853" type="Creatures">
+                            <param id="0" name="Instance variable">targetY</param>
+                            <param id="1" name="Value">Creatures.Pathfinding2.NodeYAt(Node_Zombie.node + 1)</param>
+                        </action>
+                        <action behavior="Boids" id="1" name="Flock" sid="7524796335331116" type="Creatures">
+                            <param id="0" name="Target X">Self.targetX</param>
+                            <param id="1" name="Target Y">Self.targetY</param>
+                            <param id="2" name="Flock with">Creatures</param>
+                            <param id="3" name="Target Priority">50</param>
+                            <param id="4" name="Seperation Priority">20</param>
+                            <param id="5" name="Alignment Priority">0</param>
+                            <param id="6" name="Cohesion Priority">20</param>
+                            <param id="7" name="Seperation Distance">20</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3015368168571401">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7728230544853506" type="Creatures">
+                    <param id="0" name="Object">Node_ZombieEnd</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5528740120525254" type="Node_ZombieEnd">
+                    <param id="0" name="Instance variable">id</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Creatures.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="0" name="Stop" sid="502867682128043" type="Creatures" />
+                <action id="0" name="Call function" sid="4837581493369307" type="Function">
+                    <param id="0" name="Name">&quot;DestroyNodes&quot;</param>
+                    <param id="1" name="Parameter {n}">Creatures.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6686348365544184">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="6120690527398912" type="Creatures">
+                    <param id="0" name="Object">Creatures</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="10" name="Push out solid" sid="4982915851612855" type="Creatures">
+                    <param id="0" name="Direction">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="4559902268622317" title="move forward" />
+        <event-block sid="3272073872706493">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="675110583151805" type="System">
+                    <param id="0" name="Interval (seconds)">0.2</param>
+                </condition>
+                <condition disabled="1" id="-15" name="Pick nearest/furthest" sid="2921998453548979" type="Creatures">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="X">0</param>
+                    <param id="2" name="Y">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="0" name="Set text" sid="1189812092710234" type="bloodCount2">
+                    <param id="0" name="Text">&quot;distance: &quot; &amp; abs(Creatures.X -Creatures.targetX) + abs(Creatures.Y - Creatures.targetY)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3543661494397593">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9954150718659341" type="Creatures">
+                            <param id="0" name="Instance variable">targetX</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="8405872561424047" type="System">
+                            <param id="0" name="First value">abs(Creatures.X -Creatures.targetX) + abs(Creatures.Y - Creatures.targetY)</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">Creatures.manhattanDistance</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3048179662387878" type="Creatures">
+                            <param id="0" name="Instance variable">manhattanDistance</param>
+                            <param id="1" name="Value">abs(Creatures.X - Creatures.targetX) + abs(Creatures.Y - Creatures.targetY)</param>
+                        </action>
+                        <action behavior="CustomMovement" id="0" name="Stop" sid="5626183651204194" type="Creatures" />
+                        <action id="0" name="Call function" sid="8400077219893736" type="Function">
+                            <param id="0" name="Name">&quot;DestroyNodes&quot;</param>
+                            <param id="1" name="Parameter {n}">Creatures.UID</param>
+                        </action>
+                        <action behavior="CustomMovement" disabled="1" id="5" name="Accelerate toward position" sid="6291727365249794" type="Creatures">
+                            <param id="0" name="Acceleration">5</param>
+                            <param id="1" name="X">Creatures.targetX</param>
+                            <param id="2" name="Y">Creatures.targetY</param>
+                        </action>
+                        <action behavior="CustomMovement" disabled="1" id="2" name="Set speed" sid="5732903363326892" type="Creatures">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Speed">50</param>
+                        </action>
+                        <action behavior="Pathfinding2" id="0" name="Find path" sid="2958318673365619" type="Creatures">
+                            <param id="0" name="X">Creatures.Pathfinding2.NodeXAt(Creatures.Pathfinding2.NodeCount - 1)</param>
+                            <param id="1" name="Y">Creatures.Pathfinding2.NodeYAt(Creatures.Pathfinding2.NodeCount - 1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3617198457143563">
+            <conditions>
+                <condition id="0" name="On function" sid="5387270061952006" type="Function">
+                    <param id="0" name="Name">&quot;DestroyNodes&quot;</param>
+                </condition>
             </conditions>
             <actions />
+            <sub-events>
+                <event-block sid="590328709899354">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3178432662695532" type="Node_ZombieEnd">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1267323982645263" type="Node_ZombieEnd" />
+                    </actions>
+                </event-block>
+                <event-block sid="5986333403195472">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="774503666398396" type="Node_Zombie">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8297946170251407" type="Node_Zombie" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1954582242509925">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2992134302947351" type="System" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-9" name="Destroy" sid="5801747424083775" type="Creatures" />
+                <action id="-9" name="Destroy" sid="1119057926834745" type="Node_ZombieEnd" />
+            </actions>
+        </event-block>
+        <event-block sid="9847507983887227">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="3753984573435354" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="4442333613783848" type="Creatures">
+                    <param id="0" name="Instance variable">targetX</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="9113350110254988" type="LOS">
+                    <param id="0" name="Object">Node_ZombieEnd</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="3429757184686595" type="LOS">
+                    <param id="0" name="X">Node_ZombieEnd.TargetX</param>
+                    <param id="1" name="Y">Node_ZombieEND.TargetY</param>
+                </action>
+                <action id="-5" name="Set width" sid="9261033140219153" type="LOS">
+                    <param id="0" name="Width">distance(Node_ZombieEnd.X, Node_ZombieEnd.Y, Node_ZombieEnd.TargetX, Node_ZombieEnd.TargetY)</param>
+                </action>
+                <action behavior="Boids" id="1" name="Flock" sid="7047596045835829" type="Node_ZombieEnd">
+                    <param id="0" name="Target X">Self.TargetX</param>
+                    <param id="1" name="Target Y">Self.TargetY</param>
+                    <param id="2" name="Flock with">Node_ZombieEnd</param>
+                    <param id="3" name="Target Priority">1</param>
+                    <param id="4" name="Seperation Priority">60</param>
+                    <param id="5" name="Alignment Priority">40</param>
+                    <param id="6" name="Cohesion Priority">20</param>
+                    <param id="7" name="Seperation Distance">20</param>
+                </action>
+                <action behavior="Boids" id="1" name="Flock" sid="5766263836921893" type="Creatures">
+                    <param id="0" name="Target X">Self.targetX</param>
+                    <param id="1" name="Target Y">Self.targetY</param>
+                    <param id="2" name="Flock with">Creatures</param>
+                    <param id="3" name="Target Priority">1</param>
+                    <param id="4" name="Seperation Priority">60</param>
+                    <param id="5" name="Alignment Priority">1</param>
+                    <param id="6" name="Cohesion Priority">1</param>
+                    <param id="7" name="Seperation Distance">45</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

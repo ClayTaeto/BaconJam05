@@ -77,34 +77,18 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
                         <health>30</health>
                         <Selected>false</Selected>
                         <Move>false</Move>
                     </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>32</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
-                                <max-speed>60</max-speed>
-                                <acceleration>9999</acceleration>
-                                <deceleration>9999</deceleration>
-                                <rotate-speed>140</rotate-speed>
-                                <rotate-object>Yes</rotate-object>
-                                <diagonals>Enabled</diagonals>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>608</x>
-                        <y>-48</y>
+                        <x>628</x>
+                        <y>137</y>
                         <z>0</z>
                         <width>72</width>
                         <height>72</height>
@@ -452,34 +436,18 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <instance-variables>
                         <health>30</health>
                         <Selected>false</Selected>
                         <Move>false</Move>
                     </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>32</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
-                                <max-speed>200</max-speed>
-                                <acceleration>1000</acceleration>
-                                <deceleration>2000</deceleration>
-                                <rotate-speed>135</rotate-speed>
-                                <rotate-object>Yes</rotate-object>
-                                <diagonals>Enabled</diagonals>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>448</x>
-                        <y>-48</y>
+                        <x>430</x>
+                        <y>142</y>
                         <z>0</z>
                         <width>60</width>
                         <height>60</height>
@@ -495,34 +463,13 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <health>30</health>
-                        <Selected>false</Selected>
-                        <Move>false</Move>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>30</cell-size>
-                                <cell-border>0</cell-border>
-                                <obstacles>Solids</obstacles>
-                                <max-speed>45</max-speed>
-                                <acceleration>1000</acceleration>
-                                <deceleration>2000</deceleration>
-                                <rotate-speed>135</rotate-speed>
-                                <rotate-object>Yes</rotate-object>
-                                <diagonals>Enabled</diagonals>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>544</x>
-                        <y>-48</y>
+                        <x>518</x>
+                        <y>141</y>
                         <z>0</z>
                         <width>45</width>
                         <height>50</height>
@@ -889,6 +836,9 @@
                         <FearCost>2</FearCost>
                         <BloodCost>10</BloodCost>
                         <Move>false</Move>
+                        <targetX>0</targetX>
+                        <targetY>0</targetY>
+                        <manhattanDistance>0</manhattanDistance>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding2">
@@ -896,7 +846,7 @@
                                 <cell-size>30</cell-size>
                                 <cell-border>0</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>200</max-speed>
+                                <max-speed>50</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
                                 <rotate-speed>135</rotate-speed>
@@ -913,6 +863,24 @@
                                 <target-mode>First in range</target-mode>
                                 <predictive-aim>No</predictive-aim>
                                 <projectile-speed>500</projectile-speed>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                        <behavior-instance type="Boids">
+                            <properties>
+                                <maxspeed>300</maxspeed>
+                                <maxforce>10</maxforce>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Pathfinding">
@@ -958,6 +926,9 @@
                         <FearCost>2</FearCost>
                         <BloodCost>10</BloodCost>
                         <Move>false</Move>
+                        <targetX>0</targetX>
+                        <targetY>0</targetY>
+                        <manhattanDistance>0</manhattanDistance>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding2">
@@ -965,7 +936,7 @@
                                 <cell-size>30</cell-size>
                                 <cell-border>0</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>200</max-speed>
+                                <max-speed>50</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
                                 <rotate-speed>135</rotate-speed>
@@ -984,6 +955,24 @@
                                 <projectile-speed>500</projectile-speed>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                        <behavior-instance type="Boids">
+                            <properties>
+                                <maxspeed>60</maxspeed>
+                                <maxforce>10</maxforce>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
@@ -995,8 +984,8 @@
                         <width>45</width>
                         <height>50</height>
                         <depth>0</depth>
-                        <hotspotX>0.51111114</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.48888889</hotspotX>
+                        <hotspotY>0.899999976</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1014,6 +1003,9 @@
                         <FearCost>2</FearCost>
                         <BloodCost>10</BloodCost>
                         <Move>false</Move>
+                        <targetX>0</targetX>
+                        <targetY>0</targetY>
+                        <manhattanDistance>0</manhattanDistance>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding2">
@@ -1021,7 +1013,7 @@
                                 <cell-size>30</cell-size>
                                 <cell-border>0</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>200</max-speed>
+                                <max-speed>50</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
                                 <rotate-speed>135</rotate-speed>
@@ -1040,6 +1032,24 @@
                                 <projectile-speed>500</projectile-speed>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>Linear</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                        <behavior-instance type="Boids">
+                            <properties>
+                                <maxspeed>45</maxspeed>
+                                <maxforce>1</maxforce>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
@@ -1051,8 +1061,8 @@
                         <width>72</width>
                         <height>72</height>
                         <depth>0</depth>
-                        <hotspotX>0.513888896</hotspotX>
-                        <hotspotY>0.513888896</hotspotY>
+                        <hotspotX>0.541666687</hotspotX>
+                        <hotspotY>0.916666687</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1066,10 +1076,10 @@
                     </properties>
                     <instance-variables>
                         <Fear>0</Fear>
-                        <Health>0</Health>
+                        <Health>100</Health>
                         <FearThreashold>5</FearThreashold>
-                        <canStarve>false</canStarve>
-                        <Hunger>0</Hunger>
+                        <canStarve>true</canStarve>
+                        <Hunger>100</Hunger>
                         <TempX>0</TempX>
                         <TempY>0</TempY>
                     </instance-variables>
@@ -1098,6 +1108,7 @@
                                 <projectile-speed>500</projectile-speed>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Solid" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1123,10 +1134,10 @@
                     </properties>
                     <instance-variables>
                         <Fear>0</Fear>
-                        <Health>0</Health>
+                        <Health>100</Health>
                         <FearThreashold>5</FearThreashold>
-                        <canStarve>false</canStarve>
-                        <Hunger>0</Hunger>
+                        <canStarve>true</canStarve>
+                        <Hunger>100</Hunger>
                         <TempX>0</TempX>
                         <TempY>0</TempY>
                     </instance-variables>
@@ -1155,6 +1166,7 @@
                                 <projectile-speed>500</projectile-speed>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Solid" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1165,8 +1177,8 @@
                         <width>60</width>
                         <height>60</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.550000012</hotspotX>
+                        <hotspotY>0.766666651</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1180,10 +1192,10 @@
                     </properties>
                     <instance-variables>
                         <Fear>0</Fear>
-                        <Health>0</Health>
-                        <FearThreashold>3</FearThreashold>
-                        <canStarve>false</canStarve>
-                        <Hunger>0</Hunger>
+                        <Health>100</Health>
+                        <FearThreashold>5</FearThreashold>
+                        <canStarve>true</canStarve>
+                        <Hunger>100</Hunger>
                         <TempX>0</TempX>
                         <TempY>0</TempY>
                     </instance-variables>
@@ -1212,6 +1224,7 @@
                                 <projectile-speed>500</projectile-speed>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Solid" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1235,6 +1248,42 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Fear>0</Fear>
+                        <Health>100</Health>
+                        <FearThreashold>5</FearThreashold>
+                        <canStarve>true</canStarve>
+                        <Hunger>100</Hunger>
+                        <TempX>0</TempX>
+                        <TempY>0</TempY>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pathfinding">
+                            <properties>
+                                <cell-size>30</cell-size>
+                                <cell-border>0</cell-border>
+                                <obstacles>Solids</obstacles>
+                                <max-speed>200</max-speed>
+                                <acceleration>1000</acceleration>
+                                <deceleration>2000</deceleration>
+                                <rotate-speed>135</rotate-speed>
+                                <rotate-object>Yes</rotate-object>
+                                <diagonals>Enabled</diagonals>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Turret">
+                            <properties>
+                                <range>300</range>
+                                <rate-of-fire>1</rate-of-fire>
+                                <rotate>Yes</rotate>
+                                <rotate-speed>180</rotate-speed>
+                                <target-mode>First in range</target-mode>
+                                <predictive-aim>No</predictive-aim>
+                                <projectile-speed>500</projectile-speed>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1244,8 +1293,8 @@
                         <width>45</width>
                         <height>45</height>
                         <depth>0</depth>
-                        <hotspotX>0.48888889</hotspotX>
-                        <hotspotY>0.48888889</hotspotY>
+                        <hotspotX>0.51111114</hotspotX>
+                        <hotspotY>0.844444454</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1257,6 +1306,42 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Fear>0</Fear>
+                        <Health>100</Health>
+                        <FearThreashold>5</FearThreashold>
+                        <canStarve>true</canStarve>
+                        <Hunger>100</Hunger>
+                        <TempX>0</TempX>
+                        <TempY>0</TempY>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pathfinding">
+                            <properties>
+                                <cell-size>30</cell-size>
+                                <cell-border>0</cell-border>
+                                <obstacles>Solids</obstacles>
+                                <max-speed>200</max-speed>
+                                <acceleration>1000</acceleration>
+                                <deceleration>2000</deceleration>
+                                <rotate-speed>135</rotate-speed>
+                                <rotate-object>Yes</rotate-object>
+                                <diagonals>Enabled</diagonals>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Turret">
+                            <properties>
+                                <range>300</range>
+                                <rate-of-fire>1</rate-of-fire>
+                                <rotate>Yes</rotate>
+                                <rotate-speed>180</rotate-speed>
+                                <target-mode>First in range</target-mode>
+                                <predictive-aim>No</predictive-aim>
+                                <projectile-speed>500</projectile-speed>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1267,7 +1352,7 @@
                         <height>45</height>
                         <depth>0</depth>
                         <hotspotX>0.48888889</hotspotX>
-                        <hotspotY>0.48888889</hotspotY>
+                        <hotspotY>0.844444454</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1301,6 +1386,42 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Fear>0</Fear>
+                        <Health>100</Health>
+                        <FearThreashold>5</FearThreashold>
+                        <canStarve>true</canStarve>
+                        <Hunger>100</Hunger>
+                        <TempX>0</TempX>
+                        <TempY>0</TempY>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pathfinding">
+                            <properties>
+                                <cell-size>30</cell-size>
+                                <cell-border>0</cell-border>
+                                <obstacles>Solids</obstacles>
+                                <max-speed>200</max-speed>
+                                <acceleration>1000</acceleration>
+                                <deceleration>2000</deceleration>
+                                <rotate-speed>135</rotate-speed>
+                                <rotate-object>Yes</rotate-object>
+                                <diagonals>Enabled</diagonals>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Turret">
+                            <properties>
+                                <range>300</range>
+                                <rate-of-fire>1</rate-of-fire>
+                                <rotate>Yes</rotate>
+                                <rotate-speed>180</rotate-speed>
+                                <target-mode>First in range</target-mode>
+                                <predictive-aim>No</predictive-aim>
+                                <projectile-speed>500</projectile-speed>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1310,8 +1431,8 @@
                         <width>45</width>
                         <height>45</height>
                         <depth>0</depth>
-                        <hotspotX>0.48888889</hotspotX>
-                        <hotspotY>0.48888889</hotspotY>
+                        <hotspotX>0.51111114</hotspotX>
+                        <hotspotY>0.844444454</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1345,6 +1466,42 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Fear>0</Fear>
+                        <Health>100</Health>
+                        <FearThreashold>5</FearThreashold>
+                        <canStarve>true</canStarve>
+                        <Hunger>100</Hunger>
+                        <TempX>0</TempX>
+                        <TempY>0</TempY>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pathfinding">
+                            <properties>
+                                <cell-size>30</cell-size>
+                                <cell-border>0</cell-border>
+                                <obstacles>Solids</obstacles>
+                                <max-speed>200</max-speed>
+                                <acceleration>1000</acceleration>
+                                <deceleration>2000</deceleration>
+                                <rotate-speed>135</rotate-speed>
+                                <rotate-object>Yes</rotate-object>
+                                <diagonals>Enabled</diagonals>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Turret">
+                            <properties>
+                                <range>300</range>
+                                <rate-of-fire>1</rate-of-fire>
+                                <rotate>Yes</rotate>
+                                <rotate-speed>180</rotate-speed>
+                                <target-mode>First in range</target-mode>
+                                <predictive-aim>No</predictive-aim>
+                                <projectile-speed>500</projectile-speed>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1355,7 +1512,7 @@
                         <height>45</height>
                         <depth>0</depth>
                         <hotspotX>0.48888889</hotspotX>
-                        <hotspotY>0.48888889</hotspotY>
+                        <hotspotY>0.844444454</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1545,7 +1702,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -1559,8 +1716,8 @@
                         <width>72</width>
                         <height>72</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.541666687</hotspotX>
+                        <hotspotY>0.916666687</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1584,9 +1741,156 @@
                         <width>45</width>
                         <height>50</height>
                         <depth>0</depth>
-                        <hotspotX>0.51111114</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.48888889</hotspotX>
+                        <hotspotY>0.920000017</hotspotY>
                         <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite_Goblin" uid="73">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1258</x>
+                        <y>-45</y>
+                        <z>0</z>
+                        <width>45</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.48888889</hotspotX>
+                        <hotspotY>0.920000017</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Node_Zombie" uid="74">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <node>0</node>
+                        <id>0</id>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1492</x>
+                        <y>-129</y>
+                        <z>0</z>
+                        <width>45</width>
+                        <height>45</height>
+                        <depth>0</depth>
+                        <hotspotX>0.51111114</hotspotX>
+                        <hotspotY>0.51111114</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Node_ZombieEnd" uid="75">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <id>0</id>
+                        <TargetX>0</TargetX>
+                        <TargetY>0</TargetY>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Boids">
+                            <properties>
+                                <maxspeed>100</maxspeed>
+                                <maxforce>7</maxforce>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1493</x>
+                        <y>-81</y>
+                        <z>0</z>
+                        <width>45</width>
+                        <height>45</height>
+                        <depth>0</depth>
+                        <hotspotX>0.51111114</hotspotX>
+                        <hotspotY>0.51111114</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LOS" uid="79">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>36</x>
+                        <y>-118</y>
+                        <z>0</z>
+                        <width>256</width>
+                        <height>1</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Blood2" uid="77">
+                    <properties>
+                        <rate>30</rate>
+                        <spray-cone>10</spray-cone>
+                        <type>One-shot</type>
+                        <initial-particle-properties></initial-particle-properties>
+                        <speed>200</speed>
+                        <size>4</size>
+                        <opacity>100</opacity>
+                        <grow-rate>0</grow-rate>
+                        <x-randomiser>2</x-randomiser>
+                        <y-randomiser>2</y-randomiser>
+                        <speed-randomiser->150</speed-randomiser->
+                        <size-randomiser>0</size-randomiser>
+                        <grow-rate-randomiser>0</grow-rate-randomiser>
+                        <particle-lifetime-properties></particle-lifetime-properties>
+                        <acceleration>-100</acceleration>
+                        <gravity>30</gravity>
+                        <angle-randomiser>0</angle-randomiser>
+                        <speed-randomiser>0</speed-randomiser>
+                        <opacity-randomiser>0</opacity-randomiser>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>4</timeout>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>796</x>
+                        <y>-114</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.047197819</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -1779,8 +2083,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>16</x>
-                        <y>16</y>
+                        <x>18</x>
+                        <y>17</y>
                         <z>0</z>
                         <width>128</width>
                         <height>32</height>
@@ -1982,8 +2286,8 @@
                     <blend-mode>8</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>288</x>
-                        <y>240</y>
+                        <x>299</x>
+                        <y>311</y>
                         <z>0</z>
                         <width>464</width>
                         <height>496</height>
@@ -1994,23 +2298,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-            </instances>
-            <effects />
-        </layer>
-        <layer name="Menu" sid="8186095121502295">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <blend-mode>2</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances>
                 <instance type="pauseMask" uid="43">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -2083,6 +2370,22 @@
                     </world>
                 </instance>
             </instances>
+            <effects />
+        </layer>
+        <layer name="Menu" sid="8186095121502295">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>2</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
             <effects />
         </layer>
     </layers>

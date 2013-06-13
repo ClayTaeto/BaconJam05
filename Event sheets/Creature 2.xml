@@ -5,13 +5,11 @@
     <events>
         <event-block sid="5904234828982759">
             <conditions>
-                <condition behavior="Pathfinding" id="0" name="On path found" sid="2701520931391261" type="Ghost" />
                 <condition id="-8" name="Is boolean instance variable set" sid="742210100922643" type="Ghost">
                     <param id="0" name="Instance variable">Move</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="1110638678631834" type="Ghost" />
                 <action disabled="1" id="-18" name="Rotate clockwise" sid="87315951861765" type="BulletImpactParticles">
                     <param id="0" name="Degrees">0</param>
                 </action>

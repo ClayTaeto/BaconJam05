@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>BoidTest</name>
+    <events>
+        <event-block disabled="1" sid="1559991374126615">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="8271063314725391" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="1818676747995142" type="LOS">
+                    <param id="0" name="Object">Node_ZombieEnd</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="213728299002691" type="LOS">
+                    <param id="0" name="X">Node_ZombieEnd.TargetX</param>
+                    <param id="1" name="Y">Node_ZombieEND.TargetY</param>
+                </action>
+                <action id="-5" name="Set width" sid="633025873844294" type="LOS">
+                    <param id="0" name="Width">distance(Node_ZombieEnd.X, Node_ZombieEnd.Y, Node_ZombieEnd.TargetX, Node_ZombieEnd.TargetY)</param>
+                </action>
+                <action behavior="Boids" id="1" name="Flock" sid="9325925213947714" type="Node_ZombieEnd">
+                    <param id="0" name="Target X">Self.TargetX</param>
+                    <param id="1" name="Target Y">Self.TargetY</param>
+                    <param id="2" name="Flock with">Node_ZombieEnd</param>
+                    <param id="3" name="Target Priority">1</param>
+                    <param id="4" name="Seperation Priority">100</param>
+                    <param id="5" name="Alignment Priority">1</param>
+                    <param id="6" name="Cohesion Priority">5</param>
+                    <param id="7" name="Seperation Distance">48</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9379779469528954">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="1367474072925602" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="370746765412167" type="LOS">
+                    <param id="0" name="Object">Node_ZombieEnd</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="990220464478424" type="LOS">
+                    <param id="0" name="X">Node_ZombieEnd.TargetX</param>
+                    <param id="1" name="Y">Node_ZombieEND.TargetY</param>
+                </action>
+                <action id="-5" name="Set width" sid="1268305830597127" type="LOS">
+                    <param id="0" name="Width">distance(Node_ZombieEnd.X, Node_ZombieEnd.Y, Node_ZombieEnd.TargetX, Node_ZombieEnd.TargetY)</param>
+                </action>
+                <action behavior="Boids" id="1" name="Flock" sid="4625452178286199" type="Node_ZombieEnd">
+                    <param id="0" name="Target X">Self.TargetX</param>
+                    <param id="1" name="Target Y">Self.TargetY</param>
+                    <param id="2" name="Flock with">Node_ZombieEnd</param>
+                    <param id="3" name="Target Priority">1</param>
+                    <param id="4" name="Seperation Priority">100</param>
+                    <param id="5" name="Alignment Priority">1</param>
+                    <param id="6" name="Cohesion Priority">5</param>
+                    <param id="7" name="Seperation Distance">48</param>
+                </action>
+                <action id="-10" name="Set value" sid="8163501188737538" type="Node_ZombieEnd">
+                    <param id="0" name="Instance variable">TargetX</param>
+                    <param id="1" name="Value">Mouse.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="4581593253083729" type="Node_ZombieEnd">
+                    <param id="0" name="Instance variable">TargetY</param>
+                    <param id="1" name="Value">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="341997753069551">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9094349707203756" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4080791339247146">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="5145600014934418" type="System">
+                            <param id="0" name="Count">10</param>
+                        </condition>
+                        <condition id="-15" name="Pick nearest/furthest" sid="9749334750969343" type="Node_ZombieEnd">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="X">0</param>
+                            <param id="2" name="Y">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="7447946783507059" type="Node_ZombieEnd">
+                            <param id="0" name="Object">Node_ZombieEnd</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

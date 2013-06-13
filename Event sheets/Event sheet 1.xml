@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <include>Zombie</include>
+        <include>Goblin</include>
         <include>Ghost</include>
         <include>Bunny</include>
         <include>People</include>
@@ -21,12 +23,7 @@
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="4291467809592885" type="System" />
                     </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" disabled="1" id="0" name="Find path" sid="9986921212340764" type="Zombie">
-                            <param id="0" name="X">EnemyTarget.X</param>
-                            <param id="1" name="Y">EnemyTarget.Y</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <comment>Every 2 seconds, but gradually reducing the interval, spawn a new enemy and move it to the target.</comment>
                 <event-block sid="3170365284224344">
@@ -41,23 +38,16 @@
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action behavior="Pathfinding" id="0" name="Find path" sid="9314192216507948" type="Zombie">
-                            <param id="0" name="X">EnemyTarget.X</param>
-                            <param id="1" name="Y">EnemyTarget.Y</param>
-                        </action>
                     </actions>
                 </event-block>
                 <comment>Once a path has been found, start moving along it.</comment>
                 <event-block sid="7901325410843667">
                     <conditions>
-                        <condition behavior="Pathfinding" id="0" name="On path found" sid="5386102689221836" type="Zombie" />
                         <condition id="-8" name="Is boolean instance variable set" sid="2822512110494792" type="Zombie">
                             <param id="0" name="Instance variable">Move</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="1" name="Move along path" sid="6223254490044665" type="Zombie" />
-                    </actions>
+                    <actions />
                 </event-block>
                 <comment>When bullets hit enemies, make it subtract from health and spawn some particles.</comment>
                 <event-block sid="5861753507382121">
@@ -327,9 +317,33 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="2232874792208561">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="3548012997606682" type="Mouse">
+                            <param id="0" name="Direction">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="6734130175511309" type="System">
+                            <param id="0" name="Scale">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8382972606943155">
+                    <conditions>
+                        <condition id="8" name="On mouse wheel" sid="3285684588461576" type="Mouse">
+                            <param id="0" name="Direction">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-20" name="Set layout scale" sid="4260503508966991" type="System">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8524059437359193" title="Spawning">
+        <event-group collapsed="1" description="" sid="8524059437359193" title="Spawning">
             <sub-events>
                 <event-block sid="3863908715721051">
                     <conditions>
@@ -338,7 +352,7 @@
                     <actions>
                         <action id="-3" name="Create object" sid="6990979379492462" type="System">
                             <param id="0" name="Object to create">Zombie</param>
-                            <param id="1" name="Layer">3</param>
+                            <param id="1" name="Layer">1</param>
                             <param id="2" name="X">Touch.X</param>
                             <param id="3" name="Y">Touch.Y</param>
                         </action>
@@ -347,7 +361,7 @@
                         </action>
                         <action id="-3" name="Create object" sid="9171458954140022" type="System">
                             <param id="0" name="Object to create">Ghost</param>
-                            <param id="1" name="Layer">3</param>
+                            <param id="1" name="Layer">1</param>
                             <param id="2" name="X">Touch.X</param>
                             <param id="3" name="Y">Touch.Y</param>
                         </action>
@@ -356,7 +370,7 @@
                         </action>
                         <action id="-3" name="Create object" sid="6207986878425605" type="System">
                             <param id="0" name="Object to create">Goblin</param>
-                            <param id="1" name="Layer">3</param>
+                            <param id="1" name="Layer">1</param>
                             <param id="2" name="X">Touch.X</param>
                             <param id="3" name="Y">Touch.Y</param>
                         </action>
@@ -391,7 +405,17 @@
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="8183147691501072" type="System" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-15" name="Set visible" sid="258622183232206" type="Zombie">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="8602136471276979" type="Goblin">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="6328630704836807" type="Ghost">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="217433390724376">
                                     <conditions>
@@ -440,10 +464,6 @@
                                     <param id="2" name="X">Touch.X</param>
                                     <param id="3" name="Y">Touch.Y</param>
                                 </action>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="6007359418121851" type="Zombie">
-                                    <param id="0" name="X">EnemyTarget.X</param>
-                                    <param id="1" name="Y">EnemyTarget.Y</param>
-                                </action>
                                 <action id="-11" name="Subtract from" sid="6472622537196469" type="System">
                                     <param id="0" name="Variable">Blood</param>
                                     <param id="1" name="Value">10</param>
@@ -485,7 +505,7 @@
                                 <event-block sid="2772625848744327">
                                     <conditions>
                                         <condition id="-16" name="Is on layer" sid="4251385684020678" type="Zombie">
-                                            <param id="0" name="Layer">3</param>
+                                            <param id="0" name="Layer">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -505,7 +525,7 @@
                                 <event-block sid="6171937064929222">
                                     <conditions>
                                         <condition id="-16" name="Is on layer" sid="1470807153212989" type="Zombie">
-                                            <param id="0" name="Layer">3</param>
+                                            <param id="0" name="Layer">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -519,39 +539,23 @@
                         </event-block>
                     </sub-events>
                 </event-group>
-                <event-group collapsed="1" description="" sid="6368619134729083" title="QueCreature2">
+                <event-group description="" sid="6368619134729083" title="QueCreature2">
                     <sub-events>
-                        <event-block collapsed="1" sid="6889264945558852">
+                        <event-block sid="2329249108349388">
                             <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="7989436541632016" type="System" />
+                                <condition id="-4" name="Trigger once while true" sid="5742963298677468" type="System" />
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="7150032465829052">
-                                    <conditions>
-                                        <condition id="-16" name="Is on layer" sid="3158763121617763" type="Ghost">
-                                            <param id="0" name="Layer">3</param>
-                                        </condition>
-                                        <condition id="-16" name="Is on layer" sid="5626499081949155" type="Zombie">
-                                            <param id="0" name="Layer">3</param>
-                                        </condition>
-                                        <condition id="-16" name="Is on layer" sid="6218130867761091" type="Goblin">
-                                            <param id="0" name="Layer">3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="7837079549821659" type="Ghost">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="1932023719084184" type="Zombie">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="7303433572696019" type="Goblin">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="201910708612125" type="Zombie">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="9129687133075871" type="Goblin">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="408757389623306" type="Ghost">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block any="1" sid="6609048196446418">
                             <conditions>
@@ -615,10 +619,6 @@
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="X">Touch.X</param>
                                     <param id="3" name="Y">Touch.Y</param>
-                                </action>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="6007359418121851" type="Ghost">
-                                    <param id="0" name="X">EnemyTarget.X</param>
-                                    <param id="1" name="Y">EnemyTarget.Y</param>
                                 </action>
                                 <action id="-11" name="Subtract from" sid="6472622537196469" type="System">
                                     <param id="0" name="Variable">Blood</param>
@@ -746,10 +746,6 @@
                                     <param id="2" name="X">Touch.X</param>
                                     <param id="3" name="Y">Touch.Y</param>
                                 </action>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="6007359418121851" type="Goblin">
-                                    <param id="0" name="X">EnemyTarget.X</param>
-                                    <param id="1" name="Y">EnemyTarget.Y</param>
-                                </action>
                                 <action id="-11" name="Subtract from" sid="6472622537196469" type="System">
                                     <param id="0" name="Variable">Blood</param>
                                     <param id="1" name="Value">10</param>
@@ -785,7 +781,7 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-group description="" sid="5655471655657409" title="UI">
+        <event-group collapsed="1" description="" sid="5655471655657409" title="UI">
             <sub-events>
                 <event-block sid="4954009397237554">
                     <conditions>
@@ -1020,7 +1016,7 @@
         </event-group>
         <event-group description="" sid="7842806570830404" title="NoContext">
             <sub-events>
-                <event-group description="" sid="188594481435406" title="Select Units">
+                <event-group collapsed="1" description="" sid="188594481435406" title="Select Units">
                     <sub-events>
                         <event-block sid="5072551909019524">
                             <conditions>
@@ -1117,10 +1113,15 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="9375239477119148" type="Function">
+                                            <param id="0" name="Name">&quot;DestroyNodes&quot;</param>
+                                            <param id="1" name="Parameter {n}">Creatures.UID</param>
+                                        </action>
                                         <action behavior="Pathfinding2" id="0" name="Find path" sid="3083962175347386" type="Creatures">
                                             <param id="0" name="X">Mouse.X</param>
                                             <param id="1" name="Y">Mouse.Y</param>
                                         </action>
+                                        <action behavior="CustomMovement" id="0" name="Stop" sid="4547656809881166" type="Creatures" />
                                     </actions>
                                 </event-block>
                             </sub-events>
