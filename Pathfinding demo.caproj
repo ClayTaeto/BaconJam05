@@ -59,7 +59,7 @@
     </configuration-settings>
     <object-folder expanded="1">
         <object-folder expanded="1" name="Creatures">
-            <object-folder expanded="1" name="Zombie">
+            <object-folder expanded="0" name="Zombie">
                 <object-type name="Zombie_Chest" sid="7163471033461134">
                     <plugin id="Sprite" />
                     <instance-variables>
@@ -114,11 +114,11 @@
                                 </collision-poly>
                             </frame>
                         </animation>
-                        <animation framecount="7" loop="0" name="WalkSE" pingpong="0" repeatcount="1" repeatto="0" sid="8139282441056505" speed="5">
+                        <animation framecount="7" loop="1" name="WalkSE" pingpong="0" repeatcount="1" repeatto="0" sid="8139282441056505" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <image-point name="LeftArm" x="0.652778" y="0.416667" />
                                 <image-point name="RightArm" x="0.444444" y="0.430556" />
-                                <image-point name="LeftLeg" x="0.597222" y="0.638889" />
+                                <image-point name="LeftLeg" x="0.625" y="0.638889" />
                                 <image-point name="RightLeg" x="0.513889" y="0.638889" />
                                 <image-point name="Chest" x="0.555556" y="0.472222" />
                                 <image-point name="Head" x="0.555556" y="0.375" />
@@ -136,7 +136,7 @@
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <image-point name="LeftArm" x="0.652778" y="0.416667" />
                                 <image-point name="RightArm" x="0.444444" y="0.430556" />
-                                <image-point name="LeftLeg" x="0.597222" y="0.638889" />
+                                <image-point name="LeftLeg" x="0.611111" y="0.638889" />
                                 <image-point name="RightLeg" x="0.555556" y="0.638889" />
                                 <image-point name="Chest" x="0.555556" y="0.472222" />
                                 <image-point name="Head" x="0.555556" y="0.375" />
@@ -154,80 +154,80 @@
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <image-point name="LeftArm" x="0.652778" y="0.416667" />
                                 <image-point name="RightArm" x="0.444444" y="0.430556" />
-                                <image-point name="LeftLeg" x="0.597222" y="0.638889" />
-                                <image-point name="RightLeg" x="0.583333" y="0.638889" />
-                                <image-point name="Chest" x="0.555556" y="0.472222" />
-                                <image-point name="Head" x="0.555556" y="0.375" />
-                                <collision-poly>
-                                    <point x="0.402778" y="0.402778" />
-                                    <point x="0.5" y="0.361111" />
-                                    <point x="0.638889" y="0.361111" />
-                                    <point x="0.666667" y="0.5" />
-                                    <point x="0.638889" y="0.638889" />
-                                    <point x="0.5" y="0.638889" />
-                                    <point x="0.444444" y="0.555556" />
-                                    <point x="0.444444" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <image-point name="LeftArm" x="0.652778" y="0.416667" />
-                                <image-point name="RightArm" x="0.444444" y="0.430556" />
-                                <image-point name="LeftLeg" x="0.597222" y="0.638889" />
-                                <image-point name="RightLeg" x="0.583333" y="0.638889" />
-                                <image-point name="Chest" x="0.555556" y="0.472222" />
-                                <image-point name="Head" x="0.555556" y="0.375" />
-                                <collision-poly>
-                                    <point x="0.402778" y="0.402778" />
-                                    <point x="0.5" y="0.361111" />
-                                    <point x="0.638889" y="0.361111" />
-                                    <point x="0.666667" y="0.5" />
-                                    <point x="0.638889" y="0.638889" />
-                                    <point x="0.5" y="0.638889" />
-                                    <point x="0.444444" y="0.555556" />
-                                    <point x="0.444444" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <image-point name="LeftArm" x="0.652778" y="0.416667" />
-                                <image-point name="RightArm" x="0.444444" y="0.430556" />
-                                <image-point name="LeftLeg" x="0.583333" y="0.638889" />
-                                <image-point name="RightLeg" x="0.541667" y="0.638889" />
-                                <image-point name="Chest" x="0.555556" y="0.472222" />
-                                <image-point name="Head" x="0.555556" y="0.375" />
-                                <collision-poly>
-                                    <point x="0.402778" y="0.402778" />
-                                    <point x="0.5" y="0.361111" />
-                                    <point x="0.638889" y="0.361111" />
-                                    <point x="0.666667" y="0.5" />
-                                    <point x="0.638889" y="0.638889" />
-                                    <point x="0.5" y="0.638889" />
-                                    <point x="0.444444" y="0.555556" />
-                                    <point x="0.444444" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <image-point name="LeftArm" x="0.652778" y="0.416667" />
-                                <image-point name="RightArm" x="0.444444" y="0.430556" />
-                                <image-point name="LeftLeg" x="0.583333" y="0.638889" />
-                                <image-point name="RightLeg" x="0.527778" y="0.638889" />
-                                <image-point name="Chest" x="0.555556" y="0.472222" />
-                                <image-point name="Head" x="0.555556" y="0.375" />
-                                <collision-poly>
-                                    <point x="0.402778" y="0.402778" />
-                                    <point x="0.5" y="0.361111" />
-                                    <point x="0.638889" y="0.361111" />
-                                    <point x="0.666667" y="0.5" />
-                                    <point x="0.638889" y="0.638889" />
-                                    <point x="0.5" y="0.638889" />
-                                    <point x="0.444444" y="0.555556" />
-                                    <point x="0.444444" y="0.5" />
-                                </collision-poly>
-                            </frame>
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                                <image-point name="LeftArm" x="0.652778" y="0.416667" />
-                                <image-point name="RightArm" x="0.444444" y="0.430556" />
                                 <image-point name="LeftLeg" x="0.569444" y="0.638889" />
+                                <image-point name="RightLeg" x="0.583333" y="0.638889" />
+                                <image-point name="Chest" x="0.555556" y="0.472222" />
+                                <image-point name="Head" x="0.555556" y="0.375" />
+                                <collision-poly>
+                                    <point x="0.402778" y="0.402778" />
+                                    <point x="0.5" y="0.361111" />
+                                    <point x="0.638889" y="0.361111" />
+                                    <point x="0.666667" y="0.5" />
+                                    <point x="0.638889" y="0.638889" />
+                                    <point x="0.5" y="0.638889" />
+                                    <point x="0.444444" y="0.555556" />
+                                    <point x="0.444444" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="LeftArm" x="0.652778" y="0.416667" />
+                                <image-point name="RightArm" x="0.444444" y="0.430556" />
+                                <image-point name="LeftLeg" x="0.541667" y="0.638889" />
+                                <image-point name="RightLeg" x="0.583333" y="0.638889" />
+                                <image-point name="Chest" x="0.555556" y="0.472222" />
+                                <image-point name="Head" x="0.555556" y="0.375" />
+                                <collision-poly>
+                                    <point x="0.402778" y="0.402778" />
+                                    <point x="0.5" y="0.361111" />
+                                    <point x="0.638889" y="0.361111" />
+                                    <point x="0.666667" y="0.5" />
+                                    <point x="0.638889" y="0.638889" />
+                                    <point x="0.5" y="0.638889" />
+                                    <point x="0.444444" y="0.555556" />
+                                    <point x="0.444444" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="LeftArm" x="0.652778" y="0.416667" />
+                                <image-point name="RightArm" x="0.444444" y="0.430556" />
+                                <image-point name="LeftLeg" x="0.513889" y="0.638889" />
+                                <image-point name="RightLeg" x="0.569444" y="0.638889" />
+                                <image-point name="Chest" x="0.555556" y="0.472222" />
+                                <image-point name="Head" x="0.555556" y="0.375" />
+                                <collision-poly>
+                                    <point x="0.402778" y="0.402778" />
+                                    <point x="0.5" y="0.361111" />
+                                    <point x="0.638889" y="0.361111" />
+                                    <point x="0.666667" y="0.5" />
+                                    <point x="0.638889" y="0.638889" />
+                                    <point x="0.5" y="0.638889" />
+                                    <point x="0.444444" y="0.555556" />
+                                    <point x="0.444444" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="LeftArm" x="0.652778" y="0.416667" />
+                                <image-point name="RightArm" x="0.444444" y="0.430556" />
+                                <image-point name="LeftLeg" x="0.555556" y="0.638889" />
                                 <image-point name="RightLeg" x="0.541667" y="0.638889" />
+                                <image-point name="Chest" x="0.555556" y="0.472222" />
+                                <image-point name="Head" x="0.555556" y="0.375" />
+                                <collision-poly>
+                                    <point x="0.402778" y="0.402778" />
+                                    <point x="0.5" y="0.361111" />
+                                    <point x="0.638889" y="0.361111" />
+                                    <point x="0.666667" y="0.5" />
+                                    <point x="0.638889" y="0.638889" />
+                                    <point x="0.5" y="0.638889" />
+                                    <point x="0.444444" y="0.555556" />
+                                    <point x="0.444444" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="LeftArm" x="0.652778" y="0.416667" />
+                                <image-point name="RightArm" x="0.444444" y="0.430556" />
+                                <image-point name="LeftLeg" x="0.652778" y="0.638889" />
+                                <image-point name="RightLeg" x="0.513889" y="0.638889" />
                                 <image-point name="Chest" x="0.555556" y="0.472222" />
                                 <image-point name="Head" x="0.555556" y="0.375" />
                                 <collision-poly>
@@ -516,7 +516,7 @@
                 </behaviors>
                 <container>
                     <type>Sprite_Zombie</type>
-                    <type>Zombie2</type>
+                    <type>Zombie</type>
                 </container>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4208284141386802" speed="5">
@@ -1048,7 +1048,7 @@
                 <texture />
             </object-type>
         </object-folder>
-        <object-type name="Zombie" sid="7178115717866501">
+        <object-type name="Zombie_Old" sid="7178115717866501">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="health" sid="3763008400110728" type="number" />
@@ -1121,7 +1121,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Zombie2" sid="2590242546663949">
+        <object-type name="Zombie" sid="2590242546663949">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Flash" sid="6773236533707395">
@@ -1130,7 +1130,7 @@
             </behaviors>
             <container>
                 <type>Sprite_Zombie</type>
-                <type>Zombie2</type>
+                <type>Zombie</type>
             </container>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3973232216956899" speed="5">
@@ -1321,7 +1321,7 @@
             <members>
                 <member>Ghost2</member>
                 <member>Goblin2</member>
-                <member>Zombie2</member>
+                <member>Zombie</member>
             </members>
             <instance-variables>
                 <instance-variable name="Health" sid="6913181233653111" type="number" />

@@ -100,6 +100,7 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">&quot;WalkingSE&quot;</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="325521251724657" type="System" />
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="3565632941519665" type="Zombie_Head">

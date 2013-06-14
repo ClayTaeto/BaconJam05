@@ -34,7 +34,7 @@
                     </conditions>
                     <actions>
                         <action disabled="1" id="0" name="Spawn another object" sid="923013566390055" type="EnemySpawner">
-                            <param id="0" name="Object">Zombie</param>
+                            <param id="0" name="Object">Zombie_Old</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
@@ -43,7 +43,7 @@
                 <comment>Once a path has been found, start moving along it.</comment>
                 <event-block sid="7901325410843667">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="2822512110494792" type="Zombie">
+                        <condition id="-8" name="Is boolean instance variable set" sid="2822512110494792" type="Zombie_Old">
                             <param id="0" name="Instance variable">Move</param>
                         </condition>
                     </conditions>
@@ -53,11 +53,11 @@
                 <event-block sid="5861753507382121">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="5488715961767722" type="Bullet">
-                            <param id="0" name="Object">Zombie</param>
+                            <param id="0" name="Object">Zombie_Old</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-12" name="Subtract from" sid="9184048061730992" type="Zombie">
+                        <action id="-12" name="Subtract from" sid="9184048061730992" type="Zombie_Old">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -72,30 +72,30 @@
                 <comment>Destroy enemies with no health left, throwing in a particles effect.</comment>
                 <event-block sid="3356815866989708">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="1778144000994426" type="Zombie">
+                        <condition id="-7" name="Compare instance variable" sid="1778144000994426" type="Zombie_Old">
                             <param id="0" name="Instance variable">health</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="3158816656207795" type="Zombie">
+                        <action id="0" name="Spawn another object" sid="3158816656207795" type="Zombie_Old">
                             <param id="0" name="Object">EnemyDeadParticles</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="Image point">0</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="5276173583269078" type="Zombie" />
+                        <action id="-9" name="Destroy" sid="5276173583269078" type="Zombie_Old" />
                     </actions>
                 </event-block>
                 <comment>When an enemy reaches the target, destroy it, but also pick a random turret and destroy that.</comment>
                 <event-block sid="2593212227813229">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="5473869411139468" type="Zombie">
+                        <condition id="0" name="On collision with another object" sid="5473869411139468" type="Zombie_Old">
                             <param id="0" name="Object">EnemyTarget</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="4615395961819782" type="Zombie" />
+                        <action id="-9" name="Destroy" sid="4615395961819782" type="Zombie_Old" />
                         <action id="-11" name="Subtract from" sid="3977904489036057" type="System">
                             <param id="0" name="Variable">CurFear</param>
                             <param id="1" name="Value">1</param>
@@ -130,7 +130,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Turret" id="1" name="Add object to target" sid="9466770740428628" type="Turret">
-                            <param id="0" name="Target">Zombie</param>
+                            <param id="0" name="Target">Zombie_Old</param>
                         </action>
                     </actions>
                 </event-block>
@@ -351,12 +351,12 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="6990979379492462" type="System">
-                            <param id="0" name="Object to create">Zombie</param>
+                            <param id="0" name="Object to create">Zombie_Old</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="X">Touch.X</param>
                             <param id="3" name="Y">Touch.Y</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="5136154775548218" type="Zombie">
+                        <action id="-15" name="Set visible" sid="5136154775548218" type="Zombie_Old">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-3" name="Create object" sid="9171458954140022" type="System">
@@ -406,7 +406,7 @@
                                 <condition id="-4" name="Trigger once while true" sid="8183147691501072" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="258622183232206" type="Zombie">
+                                <action id="-15" name="Set visible" sid="258622183232206" type="Zombie_Old">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="8602136471276979" type="Goblin">
@@ -422,7 +422,7 @@
                                         <condition id="-16" name="Is on layer" sid="4724443254019897" type="Ghost">
                                             <param id="0" name="Layer">3</param>
                                         </condition>
-                                        <condition id="-16" name="Is on layer" sid="4954059420660115" type="Zombie">
+                                        <condition id="-16" name="Is on layer" sid="4954059420660115" type="Zombie_Old">
                                             <param id="0" name="Layer">3</param>
                                         </condition>
                                         <condition id="-16" name="Is on layer" sid="3548836039739679" type="Goblin">
@@ -430,7 +430,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="2738184193948553" type="Zombie">
+                                        <action id="-15" name="Set visible" sid="2738184193948553" type="Zombie_Old">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="6576649402541116" type="Ghost">
@@ -459,7 +459,7 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Create object" sid="5789437434188027" type="System">
-                                    <param id="0" name="Object to create">Zombie2</param>
+                                    <param id="0" name="Object to create">Zombie</param>
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="X">Touch.X</param>
                                     <param id="3" name="Y">Touch.Y</param>
@@ -504,12 +504,12 @@
                             <sub-events>
                                 <event-block sid="2772625848744327">
                                     <conditions>
-                                        <condition id="-16" name="Is on layer" sid="4251385684020678" type="Zombie">
+                                        <condition id="-16" name="Is on layer" sid="4251385684020678" type="Zombie_Old">
                                             <param id="0" name="Layer">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="69471648364093" type="Zombie">
+                                        <action id="-15" name="Set visible" sid="69471648364093" type="Zombie_Old">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                     </actions>
@@ -524,12 +524,12 @@
                             <sub-events>
                                 <event-block sid="6171937064929222">
                                     <conditions>
-                                        <condition id="-16" name="Is on layer" sid="1470807153212989" type="Zombie">
+                                        <condition id="-16" name="Is on layer" sid="1470807153212989" type="Zombie_Old">
                                             <param id="0" name="Layer">1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-3" name="Set position" sid="7035547240016286" type="Zombie">
+                                        <action id="-3" name="Set position" sid="7035547240016286" type="Zombie_Old">
                                             <param id="0" name="X">Mouse.X</param>
                                             <param id="1" name="Y">Mouse.Y</param>
                                         </action>
@@ -546,7 +546,7 @@
                                 <condition id="-4" name="Trigger once while true" sid="5742963298677468" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="201910708612125" type="Zombie">
+                                <action id="-15" name="Set visible" sid="201910708612125" type="Zombie_Old">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="9129687133075871" type="Goblin">
@@ -664,7 +664,7 @@
                                 <condition id="-16" name="Is on layer" sid="4451541865806895" type="Ghost">
                                     <param id="0" name="Layer">3</param>
                                 </condition>
-                                <condition id="-16" name="Is on layer" sid="1144543621685397" type="Zombie">
+                                <condition id="-16" name="Is on layer" sid="1144543621685397" type="Zombie_Old">
                                     <param id="0" name="Layer">3</param>
                                 </condition>
                                 <condition id="-16" name="Is on layer" sid="2866619229204226" type="Goblin">
@@ -675,7 +675,7 @@
                                 <action id="-15" name="Set visible" sid="2702073000045109" type="Ghost">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="9306720170562552" type="Zombie">
+                                <action id="-15" name="Set visible" sid="9306720170562552" type="Zombie_Old">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="4117709910284386" type="Goblin">
