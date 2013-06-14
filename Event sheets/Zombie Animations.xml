@@ -9,15 +9,11 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="560266422711865" type="Zombie_LeftArm" />
-                <action id="-3" name="Create object" sid="4040323836524958" type="System">
+                <action disabled="1" id="-3" name="Create object" sid="4040323836524958" type="System">
                     <param id="0" name="Object to create">Zombie_Chest</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="X">100</param>
                     <param id="3" name="Y">100</param>
-                </action>
-                <action id="-10" name="Set value" sid="4831177895385199" type="Zombie_Chest">
-                    <param id="0" name="Instance variable">Animation</param>
-                    <param id="1" name="Value">&quot;WalkingSE&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -25,7 +21,12 @@
             <conditions>
                 <condition id="-18" name="On created" sid="1507631577550899" type="Zombie_Chest" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-10" name="Set value" sid="4831177895385199" type="Zombie_Chest">
+                    <param id="0" name="Instance variable">Animation</param>
+                    <param id="1" name="Value">&quot;WalkingSE&quot;</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="6017095392483548">
             <conditions>
@@ -100,7 +101,7 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">&quot;WalkingSE&quot;</param>
                 </condition>
-                <condition id="-4" name="Trigger once while true" sid="325521251724657" type="System" />
+                <condition disabled="1" id="-4" name="Trigger once while true" sid="325521251724657" type="System" />
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="3565632941519665" type="Zombie_Head">
