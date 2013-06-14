@@ -442,7 +442,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action disabled="1" id="0" name="Set text" sid="1189812092710234" type="bloodCount2">
+                <action disabled="1" id="0" name="Set text" sid="1189812092710234" type="Debug2">
                     <param id="0" name="Text">&quot;distance: &quot; &amp; abs(Creatures.X -Creatures.targetX) + abs(Creatures.Y - Creatures.targetY)</param>
                 </action>
             </actions>

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Zombie Animations</name>
+    <events>
+        <event-block sid="1722581744364677">
+            <conditions>
+                <condition id="-4" name="Trigger once while true" sid="953873974898125" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="560266422711865" type="Zombie_LeftArm" />
+                <action id="-3" name="Create object" sid="4040323836524958" type="System">
+                    <param id="0" name="Object to create">Zombie_Chest</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">100</param>
+                    <param id="3" name="Y">100</param>
+                </action>
+                <action id="-10" name="Set value" sid="4831177895385199" type="Zombie_Chest">
+                    <param id="0" name="Instance variable">Animation</param>
+                    <param id="1" name="Value">&quot;WalkingSE&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7073341770204435">
+            <conditions>
+                <condition id="-18" name="On created" sid="1507631577550899" type="Zombie_Chest" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="6017095392483548">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7407638897831977" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="927704303999207" type="Zombie_Head">
+                    <param id="0" name="Object">Zombie_Chest</param>
+                    <param id="1" name="Image point (optional)">&quot;Head&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="1150034187875037" type="Zombie_LeftArm">
+                    <param id="0" name="Object">Zombie_Chest</param>
+                    <param id="1" name="Image point (optional)">&quot;LeftArm&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="982908840917737" type="Zombie_RightArm">
+                    <param id="0" name="Object">Zombie_Chest</param>
+                    <param id="1" name="Image point (optional)">&quot;RightArm&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="2988396536341339" type="Zombie_LeftLeg">
+                    <param id="0" name="Object">Zombie_Chest</param>
+                    <param id="1" name="Image point (optional)">&quot;LeftLeg&quot;</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="9497538017302921" type="Zombie_RightLeg">
+                    <param id="0" name="Object">Zombie_Chest</param>
+                    <param id="1" name="Image point (optional)">&quot;RightLeg&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6463192823629331">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="4920587416767011" type="Zombie_Chest">
+                    <param id="0" name="Instance variable">Animation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Standing&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8253724301732388" type="Zombie_Head">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="4650333737268379" type="Zombie_Chest">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="4221868748313507" type="Zombie_LeftArm">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="5307982127595071" type="Zombie_RightArm">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="5068509439628901" type="Zombie_LeftLeg">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="4344714755164657" type="Zombie_RightLeg">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-29" name="Move to object" sid="125447781119457" type="Zombie_LeftArm">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">Zombie_Chest</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1690052719871639">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="7889276764660945" type="Zombie_Chest">
+                    <param id="0" name="Instance variable">Animation</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;WalkingSE&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="3565632941519665" type="Zombie_Head">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="7458287222813144" type="Zombie_Chest">
+                    <param id="0" name="Animation">&quot;WalkSE&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="7705094548761159" type="Zombie_LeftArm">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="9382073398425114" type="Zombie_RightArm">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="3279533061623628" type="Zombie_LeftLeg">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="6899246034292731" type="Zombie_RightLeg">
+                    <param id="0" name="Animation">&quot;Standing&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-29" name="Move to object" sid="575364208134094" type="Zombie_LeftArm">
+                    <param id="0" name="Where">1</param>
+                    <param id="1" name="Object">Zombie_Chest</param>
+                </action>
+                <action id="-29" name="Move to object" sid="9229276672559998" type="Zombie_RightLeg">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Object">Zombie_LeftLeg</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
