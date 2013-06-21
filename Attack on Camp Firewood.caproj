@@ -601,6 +601,11 @@
                 </object-type>
                 <object-type name="DarkOrange" sid="7920666243636101">
                     <plugin id="TiledBg" />
+                    <behaviors>
+                        <behavior-type name="Anchor" sid="687097329827129">
+                            <behavior id="Anchor" />
+                        </behavior-type>
+                    </behaviors>
                     <texture />
                 </object-type>
                 <object-type name="DarkPurple" sid="1487793104355452">
@@ -637,7 +642,7 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
-            <object-folder expanded="1" name="UI">
+            <object-folder expanded="0" name="UI">
                 <object-folder expanded="0" name="PauseScreen">
                     <object-type name="pauseImage" sid="7306487971123301">
                         <plugin id="Sprite" />
@@ -750,7 +755,7 @@
                     </object-type>
                 </object-folder>
             </object-folder>
-            <object-folder expanded="1" name="Debug">
+            <object-folder expanded="0" name="Debug">
                 <object-type name="Debug" sid="2269213083022195">
                     <plugin id="TextBox" />
                 </object-type>

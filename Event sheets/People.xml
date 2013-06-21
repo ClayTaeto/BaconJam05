@@ -160,36 +160,59 @@
         </event-group>
         <event-group description="" sid="7936397104655806" title="MindSets">
             <sub-events>
-                <event-group description="" sid="296769231319725" title="Dark">
+                <event-group collapsed="1" description="" sid="296769231319725" title="Dark">
                     <sub-events>
                         <event-block sid="9271854024099183">
                             <conditions>
                                 <condition id="-10" name="Compare opacity" sid="4798113438955196" type="Black">
                                     <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="Opacity">50</param>
+                                    <param id="1" name="Opacity">55</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="8036468819564016" type="People">
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3975565244548126">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="8036468819564016" type="People">
+                                            <param id="0" name="Instance variable">Status</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;Running to Light&quot;</param>
+                                        </condition>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="9110053935539812" type="People">
+                                            <param id="0" name="Object">Light</param>
+                                        </condition>
+                                        <condition id="-15" name="Pick nearest/furthest" sid="4387469029684916" type="Light">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="X">People.X</param>
+                                            <param id="2" name="Y">People.Y</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="4033281695052044" type="People">
+                                            <param id="0" name="Instance variable">Status</param>
+                                            <param id="1" name="Value">&quot;Running to Light&quot;</param>
+                                        </action>
+                                        <action behavior="Pathfinding" id="0" name="Find path" sid="2087675480592229" type="People">
+                                            <param id="0" name="X">Light.X</param>
+                                            <param id="1" name="Y">Light.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4937797004530224">
+                            <conditions>
+                                <condition behavior="Pathfinding" id="5" name="On arrived" sid="6319787417245692" type="People" />
+                                <condition id="-7" name="Compare instance variable" sid="3124482617479455" type="People">
                                     <param id="0" name="Instance variable">Status</param>
-                                    <param id="1" name="Comparison">1</param>
+                                    <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Running to Light&quot;</param>
-                                </condition>
-                                <condition id="1" inverted="1" name="Is overlapping another object" sid="9110053935539812" type="People">
-                                    <param id="0" name="Object">Light</param>
-                                </condition>
-                                <condition id="-15" name="Pick nearest/furthest" sid="4387469029684916" type="Light">
-                                    <param id="0" name="Which">0</param>
-                                    <param id="1" name="X">People.X</param>
-                                    <param id="2" name="Y">People.Y</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pathfinding" id="0" name="Find path" sid="2087675480592229" type="People">
-                                    <param id="0" name="X">Light.X</param>
-                                    <param id="1" name="Y">Light.Y</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="4033281695052044" type="People">
+                                <action id="-10" name="Set value" sid="4866390798530926" type="People">
                                     <param id="0" name="Instance variable">Status</param>
-                                    <param id="1" name="Value">&quot;Running to Light&quot;</param>
+                                    <param id="1" name="Value">&quot;derp&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -236,6 +259,10 @@
                 </action>
                 <action id="-9" name="Destroy" sid="9626688809333668" type="People" />
             </actions>
+        </event-block>
+        <event-block sid="1661621924179329">
+            <conditions />
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>
