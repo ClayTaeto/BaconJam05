@@ -1082,6 +1082,7 @@
                         <Hunger>100</Hunger>
                         <TempX>0</TempX>
                         <TempY>0</TempY>
+                        <Status>&quot;derp&quot;</Status>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -1140,6 +1141,7 @@
                         <Hunger>100</Hunger>
                         <TempX>0</TempX>
                         <TempY>0</TempY>
+                        <Status>&quot;derp&quot;</Status>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -1198,6 +1200,7 @@
                         <Hunger>100</Hunger>
                         <TempX>0</TempX>
                         <TempY>0</TempY>
+                        <Status>&quot;derp&quot;</Status>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -1256,6 +1259,7 @@
                         <Hunger>100</Hunger>
                         <TempX>0</TempX>
                         <TempY>0</TempY>
+                        <Status>&quot;derp&quot;</Status>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -1314,6 +1318,7 @@
                         <Hunger>100</Hunger>
                         <TempX>0</TempX>
                         <TempY>0</TempY>
+                        <Status>&quot;derp&quot;</Status>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -1394,6 +1399,7 @@
                         <Hunger>100</Hunger>
                         <TempX>0</TempX>
                         <TempY>0</TempY>
+                        <Status>&quot;derp&quot;</Status>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -1474,6 +1480,7 @@
                         <Hunger>100</Hunger>
                         <TempX>0</TempX>
                         <TempY>0</TempY>
+                        <Status>&quot;derp&quot;</Status>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
